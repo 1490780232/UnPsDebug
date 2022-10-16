@@ -1,11 +1,13 @@
 import torch
 import torch.nn.functional as F
 from torch import autograd, nn
+from torch.cuda.amp import custom_fwd, custom_bwd
 
 # from utils.distributed import tensor_gather
 
 class OIM(autograd.Function):
     @staticmethod
+    @custom_fwd(cast_inputs=torch.float32)
     def forward(ctx, inputs, targets, lut, cq, header, momentum):
         ctx.save_for_backward(inputs, targets, lut, cq, header, momentum)
         outputs_labeled = inputs.mm(lut.t())
@@ -13,6 +15,7 @@ class OIM(autograd.Function):
         return torch.cat([outputs_labeled, outputs_unlabeled], dim=1)
 
     @staticmethod
+    @custom_bwd
     def backward(ctx, grad_outputs):
         inputs, targets, lut, cq, header, momentum = ctx.saved_tensors
 

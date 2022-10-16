@@ -32,7 +32,7 @@ def main(args):
     train_loader = build_train_loader(cfg)
     cluster_loader = build_cluster_loader(cfg)
     gallery_loader, query_loader = build_test_loader(cfg)
-
+    scaler = torch.cuda.amp.GradScaler()
     if args.eval:
         assert args.ckpt, "--ckpt must be specified when --eval enabled"
         resume_from_ckpt(args.ckpt, model)
@@ -103,7 +103,7 @@ def main(args):
         print(embeddings_all.shape, labels.shape)
 
 
-        train_one_epoch(cfg, model, optimizer, train_loader, device, epoch, tfboard)
+        train_one_epoch(cfg, model, optimizer, train_loader, device, epoch, tfboard, scaler)
         lr_scheduler.step()
 
         if (epoch + 1) % cfg.EVAL_PERIOD == 0 or epoch == cfg.SOLVER.MAX_EPOCHS - 1:

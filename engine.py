@@ -18,7 +18,7 @@ def to_device(images, targets, device):
     return images, targets
 
 
-def train_one_epoch(cfg, model, optimizer, data_loader, device, epoch, tfboard=None):
+def train_one_epoch(cfg, model, optimizer, data_loader, device, epoch, tfboard=None, scalar=None):
     model.train()
     metric_logger = MetricLogger(delimiter="  ")
     metric_logger.add_meter("lr", SmoothedValue(window_size=1, fmt="{value:.6f}"))
@@ -35,28 +35,29 @@ def train_one_epoch(cfg, model, optimizer, data_loader, device, epoch, tfboard=N
         metric_logger.log_every(data_loader, cfg.DISP_PERIOD, header)
     ):
         images, targets = to_device(images, targets, device)
+        with torch.cuda.amp.autocast():
+            loss_dict = model(images, targets)
+            losses = sum(loss for loss in loss_dict.values())
 
-        loss_dict = model(images, targets)
-        losses = sum(loss for loss in loss_dict.values())
-
+        optimizer.zero_grad()
+        # losses.backward()
+        if cfg.SOLVER.CLIP_GRADIENTS > 0:
+            clip_grad_norm_(model.parameters(), cfg.SOLVER.CLIP_GRADIENTS)
+        scalar.scale(losses).backward()
+        scalar.step(optimizer)
+        scalar.update()
+        # optimizer.step()
+        if epoch == 0:
+            warmup_scheduler.step()
+    
         # reduce losses over all GPUs for logging purposes
         loss_dict_reduced = reduce_dict(loss_dict)
         losses_reduced = sum(loss for loss in loss_dict_reduced.values())
         loss_value = losses_reduced.item()
-
         if not math.isfinite(loss_value):
             print(f"Loss is {loss_value}, stopping training")
             print(loss_dict_reduced)
             sys.exit(1)
-
-        optimizer.zero_grad()
-        losses.backward()
-        if cfg.SOLVER.CLIP_GRADIENTS > 0:
-            clip_grad_norm_(model.parameters(), cfg.SOLVER.CLIP_GRADIENTS)
-        optimizer.step()
-
-        if epoch == 0:
-            warmup_scheduler.step()
 
         metric_logger.update(loss=loss_value, **loss_dict_reduced)
         metric_logger.update(lr=optimizer.param_groups[0]["lr"])
