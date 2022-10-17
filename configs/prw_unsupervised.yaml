@@ -1,6 +1,6 @@
 OUTPUT_DIR: "./exp_prw"
 INPUT:
-  DATASET: "PRW_unlabel"
+  DATASET: "PRWUnsupervised"
   DATA_ROOT: "data/PRW"
   BATCH_SIZE_TRAIN: 4
 SOLVER:

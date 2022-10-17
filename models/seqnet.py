@@ -347,7 +347,7 @@ class SeqRoIHeads(RoIHeads):
                 box_labels,
                 box_reg_targets,
             )
-            loss_box_reid = self.reid_loss(box_embeddings, box_pid_labels, box_indexes)
+            loss_box_reid = self.reid_loss(box_embeddings, box_pid_labels) #, box_indexes
             losses.update(loss_box_reid=loss_box_reid)
         else:
             # The IoUs of these boxes are higher than that of proposals,
@@ -484,12 +484,10 @@ class SeqRoIHeads(RoIHeads):
                 labels[keep],
                 embeddings[keep],
             )
-
             all_boxes.append(boxes)
             all_scores.append(scores)
             all_labels.append(labels)
             all_embeddings.append(embeddings)
-
         return all_boxes, all_scores, all_embeddings, all_labels
 
 

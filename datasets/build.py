@@ -5,6 +5,7 @@ from utils.utils import create_small_table
 
 from .cuhk_sysu import CUHKSYSU
 from .prw import PRW
+from .prw_unsupervised import PRWUnsupervised
 
 
 def print_statistics(dataset):
@@ -55,6 +56,9 @@ def build_dataset(dataset_name, root, transforms, split, verbose=True):
         dataset = CUHKSYSU(root, transforms, split)
     elif dataset_name == "PRW":
         dataset = PRW(root, transforms, split)
+    elif dataset_name == "PRWUnsupervised":
+        dataset = PRWUnsupervised(root, transforms, split)
+        
     else:
         raise NotImplementedError(f"Unknow dataset: {dataset_name}")
     if verbose:

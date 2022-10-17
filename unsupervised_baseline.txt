@@ -1,0 +1,22 @@
+Creating model
+Loading data
+=> PRWUnsupervised-train loaded:
+|     dataset     |  split  |  num_images  |  num_boxes  |  num_labeled_pids  |  min_labeled_pid  |  max_labeled_pid  |  unlabeled_pid  |
+|:---------------:|:-------:|:------------:|:-----------:|:------------------:|:-----------------:|:-----------------:|:---------------:|
+| PRWUnsupervised |  train  |     5704     |    18048    |       18047        |         1         |       18047       |      18048      |
+=> PRWUnsupervised-train loaded:
+|     dataset     |  split  |  num_images  |  num_boxes  |  num_labeled_pids  |  min_labeled_pid  |  max_labeled_pid  |  unlabeled_pid  |
+|:---------------:|:-------:|:------------:|:-----------:|:------------------:|:-----------------:|:-----------------:|:---------------:|
+| PRWUnsupervised |  train  |     5704     |    18048    |       18047        |         1         |       18047       |      18048      |
+=> PRWUnsupervised-gallery loaded:
+|     dataset     |  split  |  num_images  |  num_boxes  |  num_labeled_pids  |  min_labeled_pid  |  max_labeled_pid  |  unlabeled_pid  |
+|:---------------:|:-------:|:------------:|:-----------:|:------------------:|:-----------------:|:-----------------:|:---------------:|
+| PRWUnsupervised | gallery |     6112     |    25062    |        544         |         1         |        933        |      5555       |
+=> PRWUnsupervised-query loaded:
+|     dataset     |  split  |  num_images  |  num_boxes  |  num_labeled_pids  |  min_labeled_pid  |  max_labeled_pid  |
+|:---------------:|:-------:|:------------:|:-----------:|:------------------:|:-----------------:|:-----------------:|
+| PRWUnsupervised |  query  |     2057     |    2057     |        450         |        479        |        933        |
+Creating output folder
+Full config is saved to ./exp_prw/config.yaml
+TensorBoard files are saved to ./exp_prw/tf_log
+Start training

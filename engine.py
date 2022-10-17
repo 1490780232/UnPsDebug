@@ -49,7 +49,6 @@ def train_one_epoch(cfg, model, optimizer, data_loader, device, epoch, tfboard=N
         # optimizer.step()
         if epoch == 0:
             warmup_scheduler.step()
-    
         # reduce losses over all GPUs for logging purposes
         loss_dict_reduced = reduce_dict(loss_dict)
         losses_reduced = sum(loss for loss in loss_dict_reduced.values())
@@ -58,7 +57,6 @@ def train_one_epoch(cfg, model, optimizer, data_loader, device, epoch, tfboard=N
             print(f"Loss is {loss_value}, stopping training")
             print(loss_dict_reduced)
             sys.exit(1)
-
         metric_logger.update(loss=loss_value, **loss_dict_reduced)
         metric_logger.update(lr=optimizer.param_groups[0]["lr"])
         if tfboard:

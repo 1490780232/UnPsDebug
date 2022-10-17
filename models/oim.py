@@ -68,27 +68,27 @@ class OIMLoss(nn.Module):
         inds = label >= 0
         label = label[inds]
         inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
-        projected_ins = inputs.mm(self.ins_lut.t())
+        # projected_ins = inputs.mm(self.ins_lut.t())
         projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
         projected *= self.oim_scalar
-        projected_ins *= self.oim_scalar
-        temp_sims = projected_ins.detach().clone()
-        associate_loss=0
-        for k in range(len(label)):
-            if label[k]>5000:
-                continue
-            ori_asso_ind = torch.nonzero(self.ins_label == label[k]).squeeze(-1)
-            # print(ori_asso_ind.shape, label[k])
-            weights = F.softmax(1-temp_sims[k, ori_asso_ind],dim=0)
-            temp_sims[k, ori_asso_ind] = -10000.0  # mask out positive
-            sel_ind = torch.sort(temp_sims[k])[1][-1000:]
-            concated_input = torch.cat((projected_ins[k, ori_asso_ind], projected_ins[k, sel_ind]), dim=0)
-            concated_target = torch.zeros((len(concated_input)), dtype=concated_input.dtype).to(torch.device('cuda'))
-            concated_target[0:len(ori_asso_ind)] = weights #1.0 / len(ori_asso_ind)
-            associate_loss += -1 * (F.log_softmax(concated_input.unsqueeze(0), dim=1) * concated_target.unsqueeze(0)).sum()
-        loss_wincetance = 0.5 * associate_loss / len(label)
+        # projected_ins *= self.oim_scalar
+        # temp_sims = projected_ins.detach().clone()
+        # associate_loss=0
+        # for k in range(len(label)):
+        #     if label[k]>5000:
+        #         continue
+        #     ori_asso_ind = torch.nonzero(self.ins_label == label[k]).squeeze(-1)
+        #     # print(ori_asso_ind.shape, label[k])
+        #     weights = F.softmax(1-temp_sims[k, ori_asso_ind],dim=0)
+        #     temp_sims[k, ori_asso_ind] = -10000.0  # mask out positive
+        #     sel_ind = torch.sort(temp_sims[k])[1][-1000:]
+        #     concated_input = torch.cat((projected_ins[k, ori_asso_ind], projected_ins[k, sel_ind]), dim=0)
+        #     concated_target = torch.zeros((len(concated_input)), dtype=concated_input.dtype).to(torch.device('cuda'))
+        #     concated_target[0:len(ori_asso_ind)] = weights #1.0 / len(ori_asso_ind)
+        #     associate_loss += -1 * (F.log_softmax(concated_input.unsqueeze(0), dim=1) * concated_target.unsqueeze(0)).sum()
+        # loss_wincetance = 0.5 * associate_loss / len(label)
         self.header_cq = (
             self.header_cq + (label >= self.num_pids).long().sum().item()
         ) % self.num_unlabeled
-        loss_oim = F.cross_entropy(projected, label, ignore_index=5554) + loss_wincetance
+        loss_oim = F.cross_entropy(projected, label, ignore_index=5554) #+ loss_wincetance
         return loss_oim

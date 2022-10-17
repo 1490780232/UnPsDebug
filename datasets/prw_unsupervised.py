@@ -7,11 +7,11 @@ from scipy.io import loadmat
 from .base import BaseDataset
 
 
-class PRW(BaseDataset):
+class PRWUnsupervised(BaseDataset):
     def __init__(self, root, transforms, split):
-        self.name = "PRW"
+        self.name = "PRWUnsupervised"
         self.img_prefix = osp.join(root, "frames")
-        super(PRW, self).__init__(root, transforms, split)
+        super(PRWUnsupervised, self).__init__(root, transforms, split)
 
     def _get_cam_id(self, img_name):
         match = re.search(r"c\d", img_name).group().replace("c", "")
@@ -85,15 +85,8 @@ class PRW(BaseDataset):
                 indexes.append(id_index)
                 id_index+=1
             indexes = np.array(indexes)
-
-            # mask label
             if self.split=="train":
-                ids_new=[]
-                for i in range(len(ids)):
-                    ids_new.append(id_index)
-                    id_index+=1
-                ids = np.array(ids_new)
-
+                ids = indexes # np.array(ids_new)
             annotations.append(
                 {
                     "img_name": img_name,
