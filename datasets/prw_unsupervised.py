@@ -85,8 +85,10 @@ class PRWUnsupervised(BaseDataset):
                 indexes.append(id_index)
                 id_index+=1
             indexes = np.array(indexes)
+            
             if self.split=="train":
                 ids = indexes # np.array(ids_new)
+
             annotations.append(
                 {
                     "img_name": img_name,

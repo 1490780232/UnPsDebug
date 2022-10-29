@@ -2,11 +2,10 @@ import argparse
 import datetime
 import os.path as osp
 import time
-
 import torch
 import torch.utils.data
 from collections import defaultdict
-from datasets import build_test_loader, build_train_loader,build_cluster_loader
+from datasets import build_test_loader, build_train_loader,build_cluster_loader, build_dataset, build_transforms
 from defaults import get_default_cfg
 from engine import evaluate_performance, train_one_epoch, to_device
 from models.seqnet import SeqNet
@@ -18,6 +17,23 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 from utils.compute_dist import *
 
+def collate_fn(batch):
+    return tuple(zip(*batch))
+
+def build_cluster_loader(cfg):
+    transforms = build_transforms(is_train=False)
+    dataset = build_dataset(cfg.INPUT.DATASET, cfg.INPUT.DATA_ROOT, transforms, "train")
+    return torch.utils.data.DataLoader(
+        dataset,
+        batch_size=cfg.INPUT.BATCH_SIZE_TRAIN,
+        shuffle=False,
+        num_workers=cfg.INPUT.NUM_WORKERS_TRAIN,
+        pin_memory=True,
+        drop_last=False,
+        collate_fn=collate_fn,
+    )
+
+
 def main(args):
     cfg = get_default_cfg()
     if args.cfg_file:
@@ -28,11 +44,13 @@ def main(args):
     device = torch.device(cfg.DEVICE)
     if cfg.SEED >= 0:
         set_random_seed(cfg.SEED)
-
+    
     print("Creating model")
     model = SeqNet(cfg)
     model.to(device)
     print("Loading data")
+    transforms = build_transforms(is_train=True)
+    dataset = build_dataset(cfg.INPUT.DATASET, cfg.INPUT.DATA_ROOT, transforms, "train")
     train_loader = build_train_loader(cfg)
     cluster_loader = build_cluster_loader(cfg)
     gallery_loader, query_loader = build_test_loader(cfg)
@@ -89,50 +107,82 @@ def main(args):
     header = "init for oim"
     metric_logger = MetricLogger(delimiter="  ")
 
+    # dataset_target_train = build_dataset(cfg.INPUT.TDATASET, cfg.INPUT.TDATA_ROOT, transforms, "train", is_source=False)
+    # tgt_cluster_loader = build_cluster_loader(cfg, dataset_target_train)
+    
     for epoch in range(start_epoch, cfg.SOLVER.MAX_EPOCHS):
-
+        # dataset = build_dataset(cfg.INPUT.DATASET, cfg.INPUT.DATA_ROOT, transforms, "train")
         embeddings_all = []
         labels_all = []
-        for i, (images, targets) in enumerate(metric_logger.log_every(train_loader, cfg.DISP_PERIOD, header)):  
+        for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):  
             images, targets = to_device(images, targets, device)  
             embeddings, labels = model.inference_embeddings(images, targets) #[B*mean, 256] [B, 1]  
             embeddings_all.append(embeddings)  
             labels_all.append(labels) 
         embeddings_all=torch.cat(embeddings_all, dim=0)  #[N, 256]  
-        labels_all=torch.cat(labels_all, dim=0).numpy() # [N, 1]  
-        embeddings_all = F.normalize(embeddings_all, dim=1)  
+
+
+        # labels_all=torch.cat(labels_all, dim=0).numpy() # [N, 1]  
+        # embeddings_all = F.normalize(embeddings_all, dim=1)  
+
+
+        # torch.save(embeddings_all, "embeddings_all.pt")
         # dist = compute_cosine_distance(embeddings_all, embeddings_all, cuda=False) 
+        # embeddings_all = torch.load("embeddings_all.pt")
+
+
         dist = compute_jaccard_distance(embeddings_all, search_option=-1)
         cluster = DBSCAN(eps=0.6, min_samples=4, metric="precomputed", n_jobs=-1,)
         labels = cluster.fit_predict(dist)
         num_clusters = len(set(labels)) - (1 if -1 in labels else 0)
+        outliners = 0
+        for index, la in enumerate(labels):
+            if la == -1:
+                labels[index] = num_clusters+outliners
+                outliners +=1
+        num_clusters = len(set(labels)) - (1 if -1 in labels else 0)
         print(labels)
         print("number of clusters:==============",num_clusters)
-        labels+=1
+        # labels+=1
         print(labels)
-        labels[labels==0]=5555
+        # labels[labels==0]=5555
         centers = defaultdict(list)
         for embedding, label in zip(embeddings_all,labels):
-            if label > num_clusters+1: #for outliners and labels started on 1
-                continue
+            # if label > num_clusters+1:                                  #for outliners and labels started on 1
+            #     continue
             centers[label].append(embedding)
         centers = [torch.stack(centers[idx]).mean(0) for idx in sorted(centers.keys())]
         centers = torch.stack(centers, dim=0)
         print(centers.shape,"====")
-        print(labels)
         #insert background as 0
-        labels = np.insert(labels,0,0) #0,1
+        # loss = 
+        # labels = np.insert(labels,0,0) #0,1
         #labels remake
         #index_to_label = {}
         print(dist.shape)
+        # box_index = 0
+        # annotations = []
+        # for i, ann in enumerate(dataset.annotations):
+        #     num_box = len(ann["boxes"])
+        #     ann["pids"] = labels[box_index:box_index+num_box]
+        #     box_index+=num_box
+        #     if  len(np.unique(ann["pids"]))==1 and 5555 in np.unique(ann["pids"]):
+        #         continue
+        #     annotations.append(ann)
+        # dataset.annotations = annotations
+        # # print(box_index, "====", ann["pids"], "===", np.unique(ann["pids"]),ann["pids"]==[5555])
+        # train_loader = torch.utils.data.DataLoader(dataset, batch_size=cfg.INPUT.BATCH_SIZE_TRAIN,shuffle=True,num_workers=cfg.INPUT.NUM_WORKERS_TRAIN,pin_memory=True,drop_last=True, collate_fn=collate_fn,)
+
         oim =OIMUnsupervisedLoss(256, num_pids=centers.shape[0],
                 # num_cq_size=cfg.MODEL.LOSS.CQ_SIZE, 
                 oim_momentum=cfg.MODEL.LOSS.OIM_MOMENTUM,
                 oim_scalar=cfg.MODEL.LOSS.OIM_SCALAR,num_samples=num_clusters).cuda()
+        # centers = torch.load("embeddings_all.pt").cuda()
+        # model.roi_heads.reid_loss.lut = F.normalize(centers, dim=1).cuda()
+        # oim.labels = torch.from_numpy(labels).cuda()
+        # print(labels, oim.labels.shape)
         oim.lut = F.normalize(centers, dim=1).cuda()
         oim.labels = torch.from_numpy(labels).cuda()
-        # model.roi_heads.reid_loss.lut = F.normalize(centers, dim=1).cuda()
-        # model.roi_head.reid_loss.label = labels
         model.roi_heads.reid_loss=oim
         # for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):
         #     images, targets = to_device(images, targets, device)
@@ -146,8 +196,6 @@ def main(args):
         # model.roi_heads.reid_loss.ins_lut = F.normalize(embeddings_all, dim=1).cuda()
         # model.roi_heads.reid_loss.ins_label = labels_all.cuda()
         # print(embeddings_all.shape, labels.shape)
-
-
         train_one_epoch(cfg, model, optimizer, train_loader, device, epoch, tfboard, scaler)
         lr_scheduler.step()
 
