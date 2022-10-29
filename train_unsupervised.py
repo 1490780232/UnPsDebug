@@ -93,8 +93,8 @@ def main(args):
 
         embeddings_all = []
         labels_all = []
-        for i, (images, targets) in enumerate(metric_logger.log_every(train_loader, cfg.DISP_PERIOD, header)):  
-            images, targets = to_device(images, targets, device)  
+        for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):  
+            images, targets = to_device(images, targets, device)
             embeddings, labels = model.inference_embeddings(images, targets) #[B*mean, 256] [B, 1]  
             embeddings_all.append(embeddings)  
             labels_all.append(labels) 
