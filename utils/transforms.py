@@ -35,6 +35,7 @@ class ToTensor:
 
 
 def build_transforms(is_train):
+
     transforms = []
     transforms.append(ToTensor())
     if is_train:

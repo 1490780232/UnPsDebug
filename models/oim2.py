@@ -68,17 +68,95 @@ class OIMUnsupervisedLoss(nn.Module):
         self.num_samples = num_samples
         self.register_buffer("lut", torch.zeros(self.num_pids, self.num_features))
         self.register_buffer("labels", torch.zeros(self.num_samples))
+    # def forward(self, inputs, roi_label):
+    #     # merge into one batch, background label = 0
+    #     # import pdb;pdb.set_trace()
+    #     targets = torch.cat(roi_label)
+    #     # print(targets, self.labels.shape)
+    #     targets = targets - 1
+    #     inds = targets >= 0
+    #     label = targets[inds]
+    #     # inputs = inputs[inds]
+    #     label = self.labels[label]
+    #     # print(inputs.shape)
+    #     inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+    #     print(inputs.shape, label)
+        
+    #     # projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
+    #     projected = oim(inputs, label, self.lut, momentum=self.momentum)
+    #     projected *= self.oim_scalar
+    #     loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
+    #     return loss_oim
     def forward(self, inputs, roi_label):
         # merge into one batch, background label = 0
         # import pdb;pdb.set_trace()
         targets = torch.cat(roi_label)
+        # print(targets)
         targets = self.labels[targets]
-        label = targets - 1  # background label = -1
-        inds = label >= 0
-        label = label[inds]
+        # print(targets)
+        # label = targets - 1  # background label = -1
+        inds = targets >= 1
+        label = targets[inds]-1
+        # print(targets, self.labels.shape, label, self.lut.shape)
         inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+        # projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
+        
+        projected = oim(inputs, label, self.lut, momentum=self.momentum)
+        projected *= self.oim_scalar
+        loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
+        return loss_oim
+
+
+
+
+
+class OIMUnsupervisedLoss(nn.Module):
+    def __init__(self, num_features,  num_pids,  oim_momentum, oim_scalar,num_samples=0):
+        super(OIMUnsupervisedLoss, self).__init__()
+        self.num_features = num_features
+        self.num_pids = num_pids
+        self.momentum = oim_momentum
+        self.oim_scalar = oim_scalar
+        self.num_samples = num_samples
+        self.register_buffer("lut", torch.zeros(self.num_pids, self.num_features))
+        self.register_buffer("labels", torch.zeros(self.num_samples))
+    def forward(self, inputs, roi_label):
+        # merge into one batch, background label = 0
+        # import pdb;pdb.set_trace()
+        targets = torch.cat(roi_label)
+        # print(targets)
+        # print(self.labels)
+        # print(targets, self.labels.shape)
+        targets = targets - 1
+        inds = targets >= 0
+        label = targets[inds]
+        # inputs = inputs[inds]
+        label = self.labels[label]
+        # print(inputs.shape)
+        inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+        # print(inputs.shape, label)
         # projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
         projected = oim(inputs, label, self.lut, momentum=self.momentum)
         projected *= self.oim_scalar
         loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
         return loss_oim
+
+    
+    # def forward(self, inputs, roi_label):
+    #     # merge into one batch, background label = 0
+    #     # import pdb;pdb.set_trace()
+    #     targets = torch.cat(roi_label)
+    #     # print(targets)
+    #     targets = self.labels[targets]
+    #     # print(targets)
+    #     # label = targets - 1  # background label = -1
+    #     inds = targets >= 1
+    #     label = targets[inds]-1
+    #     # print(targets, self.labels.shape, label, self.lut.shape)
+    #     inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+    #     # projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
+        
+    #     projected = oim(inputs, label, self.lut, momentum=self.momentum)
+    #     projected *= self.oim_scalar
+    #     loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
+    #     return loss_oim

@@ -5,7 +5,6 @@ from scipy.io import loadmat
 
 from .base import BaseDataset
 
-
 class CUHKSYSU(BaseDataset):
     def __init__(self, root, transforms, split):
         self.name = "CUHK-SYSU"
