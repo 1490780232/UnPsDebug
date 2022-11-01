@@ -67,6 +67,8 @@ class OIMUnsupervisedLoss(nn.Module):
         self.oim_scalar = oim_scalar
         self.num_samples = num_samples
         self.register_buffer("lut", torch.zeros(self.num_pids, self.num_features))
+        self.register_buffer("lut_instance", torch.zeros(self.num_pids, self.num_features))
+
         self.register_buffer("labels", torch.zeros(self.num_samples))
     # def forward(self, inputs, roi_label):
     #     # merge into one batch, background label = 0
@@ -87,6 +89,7 @@ class OIMUnsupervisedLoss(nn.Module):
     #     projected *= self.oim_scalar
     #     loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
     #     return loss_oim
+    
     def forward(self, inputs, roi_label):
         # merge into one batch, background label = 0
         # import pdb;pdb.set_trace()
@@ -97,13 +100,16 @@ class OIMUnsupervisedLoss(nn.Module):
         # label = targets - 1  # background label = -1
         inds = targets >= 1
         label = targets[inds]-1
+
         # print(targets, self.labels.shape, label, self.lut.shape)
         inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+
         # projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
         
         projected = oim(inputs, label, self.lut, momentum=self.momentum)
         projected *= self.oim_scalar
         loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
+
         return loss_oim
 
 
@@ -119,17 +125,14 @@ class OIMUnsupervisedLoss(nn.Module):
         self.oim_scalar = oim_scalar
         self.num_samples = num_samples
         self.register_buffer("lut", torch.zeros(self.num_pids, self.num_features))
+        self.register_buffer("lut_instance", torch.zeros(self.num_pids, self.num_features))
         self.register_buffer("labels", torch.zeros(self.num_samples))
     def forward(self, inputs, roi_label):
-        # merge into one batch, background label = 0
-        # import pdb;pdb.set_trace()
         targets = torch.cat(roi_label)
-        # print(targets)
-        # print(self.labels)
-        # print(targets, self.labels.shape)
         targets = targets - 1
         inds = targets >= 0
         label = targets[inds]
+        re_id_features = self.lut_instance[label]
         # inputs = inputs[inds]
         label = self.labels[label]
         # print(inputs.shape)
@@ -139,7 +142,8 @@ class OIMUnsupervisedLoss(nn.Module):
         projected = oim(inputs, label, self.lut, momentum=self.momentum)
         projected *= self.oim_scalar
         loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
-        return loss_oim
+        feature_consistency = torch.mean(1-torch.cosine_similarity(re_id_features, inputs))
+        return loss_oim+feature_consistency
 
     
     # def forward(self, inputs, roi_label):

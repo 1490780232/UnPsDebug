@@ -85,6 +85,7 @@ def build_train_loader(cfg):
 def build_cluster_loader(cfg):
     transforms = build_transforms(is_train=False)
     dataset = build_dataset(cfg.INPUT.DATASET, cfg.INPUT.DATA_ROOT, transforms, "train")
+    
     return torch.utils.data.DataLoader(
         dataset,
         batch_size=cfg.INPUT.BATCH_SIZE_TRAIN,

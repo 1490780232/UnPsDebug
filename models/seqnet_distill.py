@@ -10,16 +10,20 @@ from torchvision.models.detection.rpn import AnchorGenerator, RegionProposalNetw
 from torchvision.models.detection.transform import GeneralizedRCNNTransform
 from torchvision.ops import MultiScaleRoIAlign
 from torchvision.ops import boxes as box_ops
-
 from models.oim import OIMLoss
 from models.resnet import build_resnet
+from reid import models
 
-
-class SeqNet(nn.Module):
+class SeqNetDis(nn.Module):
     def __init__(self, cfg):
-        super(SeqNet, self).__init__()
+        super(SeqNetDis, self).__init__()
 
         backbone, box_head = build_resnet(name="resnet50", pretrained=True)
+
+        reid_model = models.create("resnet50", num_features=0, norm=True, dropout=0,
+                        num_classes=0, pooling_type="gem")
+        reid_model = reid_model.cuda()
+
 
         anchor_generator = AnchorGenerator(
             sizes=((32, 64, 128, 256, 512),), aspect_ratios=((0.5, 1.0, 2.0),)
@@ -149,6 +153,8 @@ class SeqNet(nn.Module):
             return self.inference(images, targets, query_img_as_gallery)
 
         images, targets = self.transform(images, targets)
+
+
         features = self.backbone(images.tensors)
         proposals, proposal_losses = self.rpn(images, features, targets)
         _, detector_losses = self.roi_heads(features, proposals, images.image_sizes, targets)

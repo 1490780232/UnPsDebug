@@ -7,13 +7,18 @@ import pickle
 import random
 import time
 from collections import defaultdict, deque
-
+import sys
 import numpy as np
 import torch
 import torch.distributed as dist
 from tabulate import tabulate
 
-
+def mkdir_if_missing(dir_path):
+    try:
+        os.makedirs(dir_path)
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise
 # -------------------------------------------------------- #
 #                          Logger                          #
 # -------------------------------------------------------- #
@@ -193,17 +198,14 @@ class MetricLogger(object):
 def all_gather(data):
     """
     Run all_gather on arbitrary picklable data (not necessarily tensors)
-
     Args:
         data: any picklable object
-
     Returns:
         list[data]: list of data gathered from each rank
     """
     world_size = get_world_size()
     if world_size == 1:
         return [data]
-
     # serialized to a Tensor
     buffer = pickle.dumps(data)
     storage = torch.ByteStorage.from_buffer(buffer)
@@ -430,3 +432,39 @@ def set_random_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
     os.environ["PYTHONHASHSEED"] = str(seed)
+
+
+
+
+class Logger(object):
+    def __init__(self, fpath=None):
+        self.console = sys.stdout
+        self.file = None
+        if fpath is not None:
+            mkdir_if_missing(os.path.dirname(fpath))
+            self.file = open(fpath, 'w')
+
+    def __del__(self):
+        self.close()
+
+    def __enter__(self):
+        pass
+
+    def __exit__(self, *args):
+        self.close()
+
+    def write(self, msg):
+        self.console.write(msg)
+        if self.file is not None:
+            self.file.write(msg)
+
+    def flush(self):
+        self.console.flush()
+        if self.file is not None:
+            self.file.flush()
+            os.fsync(self.file.fileno())
+
+    def close(self):
+        self.console.close()
+        if self.file is not None:
+            self.file.close()
