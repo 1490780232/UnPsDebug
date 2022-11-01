@@ -35,6 +35,11 @@ class PRWUnsupervised(BaseDataset):
             roi = np.array([x, y, x + w, y + h]).astype(np.int32)
             roi = np.clip(roi, 0, None)  # several coordinates are negative
             img_name = linelist[5][:-2] + ".jpg"
+            # indexes = []
+            # for i in range(len(ids)):
+            #     indexes.append(id_index)
+            #     id_index+=1
+            # indexes = np.array(indexes)
             queries.append(
                 {
                     "img_name": img_name,

@@ -8,14 +8,16 @@ from collections import defaultdict
 from datasets import build_test_loader, build_train_loader,build_cluster_loader, build_dataset, build_transforms
 from defaults import get_default_cfg
 from engine import evaluate_performance, train_one_epoch, to_device
-from models.seqnet import SeqNet
+# from models.seqnet import SeqNet
+from models.seqnet_distill import SeqNetDis as SeqNet
 from utils.utils import mkdir, resume_from_ckpt, save_on_master, set_random_seed
-from utils.utils import MetricLogger, SmoothedValue, mkdir, reduce_dict, warmup_lr_scheduler
+from utils.utils import MetricLogger, SmoothedValue, mkdir, reduce_dict, warmup_lr_scheduler,Logger
 import torch.nn.functional as F
 from models.oim2 import OIMUnsupervisedLoss
 import numpy as np
 from sklearn.cluster import DBSCAN
 from utils.compute_dist import *
+import sys
 
 def collate_fn(batch):
     return tuple(zip(*batch))
@@ -44,7 +46,7 @@ def main(args):
     device = torch.device(cfg.DEVICE)
     if cfg.SEED >= 0:
         set_random_seed(cfg.SEED)
-    
+    sys.stdout = Logger(osp.join("./", 'log_test.txt'))
     print("Creating model")
     model = SeqNet(cfg)
     model.to(device)
@@ -54,6 +56,7 @@ def main(args):
     train_loader = build_train_loader(cfg)
     cluster_loader = build_cluster_loader(cfg)
     gallery_loader, query_loader = build_test_loader(cfg)
+
     scaler = torch.cuda.amp.GradScaler()
     if args.eval:
         assert args.ckpt, "--ckpt must be specified when --eval enabled"
@@ -96,7 +99,6 @@ def main(args):
     tfboard = None
     if cfg.TF_BOARD:
         from torch.utils.tensorboard import SummaryWriter
-
         tf_log_path = osp.join(output_dir, "tf_log")
         mkdir(tf_log_path)
         tfboard = SummaryWriter(log_dir=tf_log_path)
@@ -173,7 +175,7 @@ def main(args):
         # # print(box_index, "====", ann["pids"], "===", np.unique(ann["pids"]),ann["pids"]==[5555])
         # train_loader = torch.utils.data.DataLoader(dataset, batch_size=cfg.INPUT.BATCH_SIZE_TRAIN,shuffle=True,num_workers=cfg.INPUT.NUM_WORKERS_TRAIN,pin_memory=True,drop_last=True, collate_fn=collate_fn,)
 
-        oim =OIMUnsupervisedLoss(256, num_pids=centers.shape[0],
+        oim =OIMUnsupervisedLoss(2048, num_pids=centers.shape[0],
                 # num_cq_size=cfg.MODEL.LOSS.CQ_SIZE, 
                 oim_momentum=cfg.MODEL.LOSS.OIM_MOMENTUM,
                 oim_scalar=cfg.MODEL.LOSS.OIM_SCALAR,num_samples=num_clusters).cuda()
@@ -183,6 +185,8 @@ def main(args):
         # print(labels, oim.labels.shape)
         oim.lut = F.normalize(centers, dim=1).cuda()
         oim.labels = torch.from_numpy(labels).cuda()
+        oim.lut_instance = F.normalize(torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/cluster-contrast-reid/features_instance.pt"), dim=1).cuda()
+        print(oim.lut_instance.shape)
         model.roi_heads.reid_loss=oim
         # for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):
         #     images, targets = to_device(images, targets, device)
