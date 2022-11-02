@@ -46,7 +46,7 @@ def main(args):
     device = torch.device(cfg.DEVICE)
     if cfg.SEED >= 0:
         set_random_seed(cfg.SEED)
-    sys.stdout = Logger(osp.join("./", 'log_test.txt'))
+    sys.stdout = Logger(osp.join("./", 'log_only_featrure_consistency.txt'))
     print("Creating model")
     model = SeqNet(cfg)
     model.to(device)
@@ -117,11 +117,7 @@ def main(args):
         embeddings_all = []
         labels_all = []
         for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):  
-<<<<<<< HEAD
-            images, targets = to_device(images, targets, device)
-=======
             images, targets = to_device(images, targets, device)  
->>>>>>> 4013a1a4dcb210aa66e9658078baac91451cc1db
             embeddings, labels = model.inference_embeddings(images, targets) #[B*mean, 256] [B, 1]  
             embeddings_all.append(embeddings)  
             labels_all.append(labels) 

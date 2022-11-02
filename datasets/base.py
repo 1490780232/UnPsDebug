@@ -43,10 +43,6 @@ class BaseDataset:
         return len(self.annotations)
 
 
-
-
-
-
 class BaseDatasetDistill:
     """
     Base class of person search dataset.

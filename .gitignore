@@ -1,3 +1,6 @@
+log*
+instance*
+
 cluster-contrast-reid
 # customization
 data
