@@ -1,6 +1,6 @@
 log*
 instance*
-
+features_instance.pt
 cluster-contrast-reid
 # customization
 data
