@@ -164,4 +164,3 @@ class OIMUnsupervisedLoss(nn.Module):
     #     projected *= self.oim_scalar
     #     loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
     #     return loss_oim
-    

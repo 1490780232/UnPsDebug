@@ -86,6 +86,8 @@ class ClusterMemory(nn.Module, ABC):
         self.use_hard = use_hard
 
         self.register_buffer('features', torch.zeros(num_samples, num_features))
+        self.register_buffer('labels', torch.zeros(num_samples, num_features))
+        self.register_buffer('instance_features', torch.zeros(num_samples, num_features))
 
     def forward(self, inputs, targets):
 
