@@ -46,7 +46,7 @@ def main(args):
     device = torch.device(cfg.DEVICE)
     if cfg.SEED >= 0:
         set_random_seed(cfg.SEED)
-    sys.stdout = Logger(osp.join("./", 'log_test.txt'))
+    sys.stdout = Logger(osp.join("./", 'log_oim_consistency_cluster_reuse_zhanka.txt'))
     print("Creating model")
     model = SeqNet(cfg)
     model.to(device)
@@ -114,6 +114,8 @@ def main(args):
     
     for epoch in range(start_epoch, cfg.SOLVER.MAX_EPOCHS):
         # dataset = build_dataset(cfg.INPUT.DATASET, cfg.INPUT.DATA_ROOT, transforms, "train")
+
+
         embeddings_all = []
         labels_all = []
         for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):  
@@ -122,6 +124,8 @@ def main(args):
             embeddings_all.append(embeddings)  
             labels_all.append(labels) 
         embeddings_all=torch.cat(embeddings_all, dim=0)  #[N, 256]  
+
+        embeddings_all = F.normalize(torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/cluster-contrast-reid/features_instance.pt"), dim=1).cuda()
 
 
         # labels_all=torch.cat(labels_all, dim=0).numpy() # [N, 1]  
