@@ -127,6 +127,30 @@ class OIMUnsupervisedLoss(nn.Module):
         self.register_buffer("lut", torch.zeros(self.num_pids, self.num_features))
         self.register_buffer("lut_instance", torch.zeros(self.num_pids, self.num_features))
         self.register_buffer("labels", torch.zeros(self.num_samples))
+        self.register_buffer("reid_lut", torch.zeros(self.num_samples))
+        self.register_buffer("reid_labels", torch.zeros(self.num_samples))
+        self.criterion_mse = nn.MSELoss()
+    # def forward(self, inputs, roi_label):
+    #     targets = torch.cat(roi_label)
+    #     targets = targets - 1
+    #     inds = targets >= 0
+    #     label = targets[inds]
+    #     re_id_features = self.lut_instance[label]
+    #     # inputs = inputs[inds]
+    #     label = self.labels[label]
+    #     # print(inputs.shape)
+    #     inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+    #     # print(inputs.shape, label)
+    #     # projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
+
+    #     projected = oim(inputs, label, self.lut, momentum=self.momentum)
+    #     projected *= self.oim_scalar
+    #     loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
+    #     feature_consistency = torch.mean(1-torch.cosine_similarity(re_id_features, inputs))
+    #     return loss_oim+feature_consistency
+    # def criterion_instence(self, re_id_features, inputs, label):
+    #     logits = torch.einsum("nc, kc->nk", [inputs, self.lut_instence.clone().detach()])
+
     def forward(self, inputs, roi_label):
         targets = torch.cat(roi_label)
         targets = targets - 1
@@ -134,17 +158,60 @@ class OIMUnsupervisedLoss(nn.Module):
         label = targets[inds]
         re_id_features = self.lut_instance[label]
         # inputs = inputs[inds]
+        label_reid = self.reid_labels[label]
         label = self.labels[label]
         # print(inputs.shape)
         inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
         # print(inputs.shape, label)
         # projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
-        projected = oim(inputs, label, self.lut, momentum=self.momentum)
-        projected *= self.oim_scalar
-        loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
-        feature_consistency = torch.mean(1-torch.cosine_similarity(re_id_features, inputs))
-        return loss_oim+feature_consistency
+        # projected = oim(inputs, label, self.lut, momentum=self.momentum)
+        # projected *= self.oim_scalar
+        # loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
+        # feature_consistency = torch.mean(1-torch.cosine_similarity(re_id_features, inputs))
+        feature_consistency = self.criterion_mse(re_id_features, inputs)
+        index_reid = label_reid>=0
+        label_reid = label_reid[index_reid]
+        inputs_reid = inputs[index_reid.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+        outputs_reid = inputs_reid.mm(self.reid_lut.t())
+        outputs_reid *= self.oim_scalar
+        # print(label_reid, label_reid.shape, outputs_reid.shape, projected.shape, label)
+        loss_oim_reid = F.cross_entropy(outputs_reid, label_reid, ignore_index=5554)
+        # print(inputs.shape, label)
+        return feature_consistency+loss_oim_reid # +loss_oim
 
+
+    # def forward(self, inputs, roi_label):
+    #     targets = torch.cat(roi_label)
+    #     targets = targets - 1
+    #     inds = targets >= 0
+    #     label = targets[inds]
+    #     re_id_features = self.lut_instance[label]
+    #     # inputs = inputs[inds]
+    #     label_reid = self.reid_labels[label]
+    #     label = self.labels[label]
+    #     # print(inputs.shape)
+    #     inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+    #     # print(inputs.shape, label)
+    #     # projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
+    #     # projected = oim(inputs, label, self.lut, momentum=self.momentum)
+    #     # projected *= self.oim_scalar
+    #     # loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
+    #     # feature_consistency = torch.mean(1-torch.cosine_similarity(re_id_features, inputs))
+    #     feature_consistency = self.criterion_mse(re_id_features, inputs)
+
+    #     instance_consistency = self.criterion_instence(re_id_features, inputs, label)
+    #     index_reid = label_reid>=0
+    #     label_reid = label_reid[index_reid]
+
+    #     inputs_reid = inputs[index_reid.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+    #     outputs_reid = inputs_reid.mm(self.reid_lut.t())
+    #     outputs_reid *= self.oim_scalar
+    #     # print(label_reid, label_reid.shape, outputs_reid.shape, projected.shape, label)
+    #     loss_oim_reid = F.cross_entropy(outputs_reid, label_reid, ignore_index=5554)
+
+    #     # print(inputs.shape, label)
+    #     return feature_consistency+loss_oim_reid # +loss_oim
+    
     
     # def forward(self, inputs, roi_label):
     #     # merge into one batch, background label = 0

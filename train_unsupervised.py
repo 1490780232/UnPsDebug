@@ -46,7 +46,7 @@ def main(args):
     device = torch.device(cfg.DEVICE)
     if cfg.SEED >= 0:
         set_random_seed(cfg.SEED)
-    sys.stdout = Logger(osp.join("./", 'log_oim_consistency_cluster_reuse_zhanka.txt'))
+    sys.stdout = Logger(osp.join("./", 'log_oim_consistency_cluster_reuse_openlayer_mse_loss2.txt'))
     print("Creating model")
     model = SeqNet(cfg)
     model.to(device)
@@ -118,28 +118,27 @@ def main(args):
 
         embeddings_all = []
         labels_all = []
-        for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):  
-            images, targets = to_device(images, targets, device)  
-            embeddings, labels = model.inference_embeddings(images, targets) #[B*mean, 256] [B, 1]  
-            embeddings_all.append(embeddings)  
-            labels_all.append(labels) 
-        embeddings_all=torch.cat(embeddings_all, dim=0)  #[N, 256]  
+        # for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):  
+        #     images, targets = to_device(images, targets, device)  
+        #     embeddings, labels = model.inference_embeddings(images, targets) #[B*mean, 256] [B, 1]  
+        #     embeddings_all.append(embeddings)  
+        #     labels_all.append(labels) 
+        # embeddings_all=torch.cat(embeddings_all, dim=0)  #[N, 256]  
 
-        embeddings_all = F.normalize(torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/cluster-contrast-reid/features_instance.pt"), dim=1).cuda()
-
-
+        embeddings_all = F.normalize(torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/features_instance.pt"), dim=1).cuda()  #/home/lzy/un_PS/SeqNet/ori/UnPsDebug/cluster-contrast-reid/features_instance.pt
         # labels_all=torch.cat(labels_all, dim=0).numpy() # [N, 1]  
         # embeddings_all = F.normalize(embeddings_all, dim=1)  
-
 
         # torch.save(embeddings_all, "embeddings_all.pt")
         # dist = compute_cosine_distance(embeddings_all, embeddings_all, cuda=False) 
         # embeddings_all = torch.load("embeddings_all.pt")
 
+        # dist = compute_jaccard_distance(embeddings_all, search_option=-1)
+        # cluster = DBSCAN(eps=0.6, min_samples=4, metric="precomputed", n_jobs=-1,)
+        # labels = cluster.fit_predict(dist)
 
-        dist = compute_jaccard_distance(embeddings_all, search_option=-1)
-        cluster = DBSCAN(eps=0.6, min_samples=4, metric="precomputed", n_jobs=-1,)
-        labels = cluster.fit_predict(dist)
+        labels = torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/pseudo_labels.pt")
+        print(labels, type(labels), labels.shape)
         num_clusters = len(set(labels)) - (1 if -1 in labels else 0)
         outliners = 0
         for index, la in enumerate(labels):
@@ -165,7 +164,7 @@ def main(args):
         # labels = np.insert(labels,0,0) #0,1
         #labels remake
         #index_to_label = {}
-        print(dist.shape)
+        # print(dist.shape)
         # box_index = 0
         # annotations = []
         # for i, ann in enumerate(dataset.annotations):
@@ -189,9 +188,13 @@ def main(args):
         # print(labels, oim.labels.shape)
         oim.lut = F.normalize(centers, dim=1).cuda()
         oim.labels = torch.from_numpy(labels).cuda()
-        oim.lut_instance = F.normalize(torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/cluster-contrast-reid/features_instance.pt"), dim=1).cuda()
+        oim.lut_instance = F.normalize(torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/features_instance.pt"), dim=1).cuda() #/home/lzy/un_PS/SeqNet/ori/UnPsDebug/cluster-contrast-reid/features_instance
         print(oim.lut_instance.shape)
         model.roi_heads.reid_loss=oim
+
+        oim.reid_lut  = torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/memory_feature.pt").features.cuda()
+        print("reid_lut",oim.reid_lut.shape )
+        oim.reid_labels  =torch.tensor( torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/pseudo_labels.pt"), dtype=int).cuda()
         # for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):
         #     images, targets = to_device(images, targets, device)
         #     embeddings, labels = model.inference_embeddings(images, targets)

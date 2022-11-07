@@ -44,8 +44,8 @@ def build_resnet(name="resnet50", pretrained=True):
     resnet = torchvision.models.resnet.__dict__[name](pretrained=pretrained)
 
     # freeze layers
-    resnet.conv1.weight.requires_grad_(False)
-    resnet.bn1.weight.requires_grad_(False)
-    resnet.bn1.bias.requires_grad_(False)
+    # resnet.conv1.weight.requires_grad_(False)
+    # resnet.bn1.weight.requires_grad_(False)
+    # resnet.bn1.bias.requires_grad_(False)
 
     return Backbone(resnet), Res5Head(resnet)
