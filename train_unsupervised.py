@@ -46,7 +46,7 @@ def main(args):
     device = torch.device(cfg.DEVICE)
     if cfg.SEED >= 0:
         set_random_seed(cfg.SEED)
-    sys.stdout = Logger(osp.join("./", 'log_only_featrure_consistency.txt'))
+    sys.stdout = Logger(osp.join("./", 'log_test.txt'))
     print("Creating model")
     model = SeqNet(cfg)
     model.to(device)
@@ -185,7 +185,7 @@ def main(args):
         # print(labels, oim.labels.shape)
         oim.lut = F.normalize(centers, dim=1).cuda()
         oim.labels = torch.from_numpy(labels).cuda()
-        oim.lut_instance = F.normalize(torch.load("/home/lzy/un_PS/SeqNet/ori/UnPsDebug/cluster-contrast-reid/features_instance.pt"), dim=1).cuda()
+        oim.lut_instance = F.normalize(torch.load("/home/lzy/UN_PS/UnPsDebug/features_instance.pt"), dim=1).cuda()
         print(oim.lut_instance.shape)
         model.roi_heads.reid_loss=oim
         # for i, (images, targets) in enumerate(metric_logger.log_every(cluster_loader, cfg.DISP_PERIOD, header)):

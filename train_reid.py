@@ -207,20 +207,30 @@ def main_worker(args):
                       print_freq=args.print_freq, train_iters=len(train_loader))
 
         if (epoch + 1) % args.eval_step == 0 or (epoch == args.epochs - 1):
-            mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, cmc_flag=False)
-            is_best = (mAP > best_mAP)
-            if is_best:
-                torch.save(memory, "memory_feature.pt")
-                torch.save(pseudo_labels, "pseudo_labels.pt")
-            best_mAP = max(mAP, best_mAP)
+            torch.save(memory, "memory_feature_cuhk_0.7.pt")
+            torch.save(pseudo_labels, "pseudo_labels_cuhk_0.7.pt")
             save_checkpoint({
                 'state_dict': model.state_dict(),
                 'epoch': epoch + 1,
-                'best_mAP': best_mAP,
-            }, is_best, fpath=osp.join(args.logs_dir, 'checkpoint.pth.tar'))
+                'best_mAP': 1,
+            }, True, fpath=osp.join(args.logs_dir, 'checkpoint.pth.tar'))
 
-            print('\n * Finished epoch {:3d}  model mAP: {:5.1%}  best: {:5.1%}{}\n'.
-                  format(epoch, mAP, best_mAP, ' *' if is_best else ''))
+
+        # if (epoch + 1) % args.eval_step == 0 or (epoch == args.epochs - 1):
+        #     mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, cmc_flag=False)
+        #     is_best = (mAP > best_mAP)
+        #     if is_best:
+        #         torch.save(memory, "memory_feature.pt")
+        #         torch.save(pseudo_labels, "pseudo_labels.pt")
+        #     best_mAP = max(mAP, best_mAP)
+        #     save_checkpoint({
+        #         'state_dict': model.state_dict(),
+        #         'epoch': epoch + 1,
+        #         'best_mAP': best_mAP,
+        #     }, is_best, fpath=osp.join(args.logs_dir, 'checkpoint.pth.tar'))
+
+        #     print('\n * Finished epoch {:3d}  model mAP: {:5.1%}  best: {:5.1%}{}\n'.
+        #           format(epoch, mAP, best_mAP, ' *' if is_best else ''))
 
         lr_scheduler.step()
 

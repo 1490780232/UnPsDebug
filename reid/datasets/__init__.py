@@ -7,14 +7,15 @@ from .personx import PersonX
 from .veri import VeRi
 from .dukemtmcreid import DukeMTMCreID
 from .prw import PRW
-
+from .cuhk import CUHK
 __factory = {
     'market1501': Market1501,
     'msmt17': MSMT17,
     'personx': PersonX,
     'veri': VeRi,
     'dukemtmcreid': DukeMTMCreID,
-    'prw': PRW
+    'prw': PRW,
+    'cuhk_sysu': CUHK,
 }
 
 
