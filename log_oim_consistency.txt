@@ -5528,8 +5528,804 @@ all detection:
   recall = 95.86%
   ap = 93.45%
 search ranking:
-  mAP = 17.76%
-  top- 1 = 69.66%
-  top- 5 = 80.07%
-  top-10 = 82.60%
-Total training time 1 day, 19:58:29
+  mAP = 19.13%
+  top- 1 = 72.73%
+  top- 5 = 81.67%
+  top-10 = 84.35%
+init for oim  [  0/571]  eta: 0:26:54    time: 2.8271  data: 2.5889  max mem: 20585
+init for oim  [ 10/571]  eta: 0:04:33    time: 0.4884  data: 0.2513  max mem: 20585
+init for oim  [ 20/571]  eta: 0:03:24    time: 0.2479  data: 0.0089  max mem: 20585
+init for oim  [ 30/571]  eta: 0:02:55    time: 0.2338  data: 0.0003  max mem: 20585
+init for oim  [ 40/571]  eta: 0:02:41    time: 0.2355  data: 0.0003  max mem: 20585
+init for oim  [ 50/571]  eta: 0:02:32    time: 0.2442  data: 0.0003  max mem: 20585
+init for oim  [ 60/571]  eta: 0:02:25    time: 0.2431  data: 0.0003  max mem: 20585
+init for oim  [ 70/571]  eta: 0:02:18    time: 0.2360  data: 0.0002  max mem: 20585
+init for oim  [ 80/571]  eta: 0:02:13    time: 0.2352  data: 0.0003  max mem: 20585
+init for oim  [ 90/571]  eta: 0:02:09    time: 0.2408  data: 0.0002  max mem: 20585
+init for oim  [100/571]  eta: 0:02:04    time: 0.2365  data: 0.0002  max mem: 20585
+init for oim  [110/571]  eta: 0:02:00    time: 0.2310  data: 0.0002  max mem: 20585
+init for oim  [120/571]  eta: 0:01:57    time: 0.2319  data: 0.0002  max mem: 20585
+init for oim  [130/571]  eta: 0:01:53    time: 0.2338  data: 0.0002  max mem: 20585
+init for oim  [140/571]  eta: 0:01:50    time: 0.2305  data: 0.0002  max mem: 20585
+init for oim  [150/571]  eta: 0:01:47    time: 0.2322  data: 0.0002  max mem: 20585
+init for oim  [160/571]  eta: 0:01:43    time: 0.2331  data: 0.0002  max mem: 20585
+init for oim  [170/571]  eta: 0:01:40    time: 0.2300  data: 0.0003  max mem: 20585
+init for oim  [180/571]  eta: 0:01:38    time: 0.2351  data: 0.0003  max mem: 20585
+init for oim  [190/571]  eta: 0:01:35    time: 0.2374  data: 0.0003  max mem: 20585
+init for oim  [200/571]  eta: 0:01:32    time: 0.2421  data: 0.0002  max mem: 20585
+init for oim  [210/571]  eta: 0:01:30    time: 0.2443  data: 0.0002  max mem: 20585
+init for oim  [220/571]  eta: 0:01:27    time: 0.2397  data: 0.0002  max mem: 20585
+init for oim  [230/571]  eta: 0:01:24    time: 0.2353  data: 0.0002  max mem: 20585
+init for oim  [240/571]  eta: 0:01:21    time: 0.2304  data: 0.0002  max mem: 20585
+init for oim  [250/571]  eta: 0:01:19    time: 0.2299  data: 0.0002  max mem: 20585
+init for oim  [260/571]  eta: 0:01:16    time: 0.2348  data: 0.0002  max mem: 20585
+init for oim  [270/571]  eta: 0:01:14    time: 0.2373  data: 0.0002  max mem: 20585
+init for oim  [280/571]  eta: 0:01:11    time: 0.2322  data: 0.0002  max mem: 20585
+init for oim  [290/571]  eta: 0:01:08    time: 0.2293  data: 0.0002  max mem: 20585
+init for oim  [300/571]  eta: 0:01:06    time: 0.2282  data: 0.0002  max mem: 20585
+init for oim  [310/571]  eta: 0:01:03    time: 0.2268  data: 0.0002  max mem: 20585
+init for oim  [320/571]  eta: 0:01:01    time: 0.2276  data: 0.0002  max mem: 20585
+init for oim  [330/571]  eta: 0:00:58    time: 0.2298  data: 0.0002  max mem: 20585
+init for oim  [340/571]  eta: 0:00:56    time: 0.2290  data: 0.0002  max mem: 20585
+init for oim  [350/571]  eta: 0:00:53    time: 0.2320  data: 0.0002  max mem: 20585
+init for oim  [360/571]  eta: 0:00:51    time: 0.2323  data: 0.0002  max mem: 20585
+init for oim  [370/571]  eta: 0:00:48    time: 0.2304  data: 0.0002  max mem: 20585
+init for oim  [380/571]  eta: 0:00:46    time: 0.2339  data: 0.0002  max mem: 20585
+init for oim  [390/571]  eta: 0:00:43    time: 0.2335  data: 0.0002  max mem: 20585
+init for oim  [400/571]  eta: 0:00:41    time: 0.2307  data: 0.0002  max mem: 20585
+init for oim  [410/571]  eta: 0:00:38    time: 0.2317  data: 0.0002  max mem: 20585
+init for oim  [420/571]  eta: 0:00:36    time: 0.2377  data: 0.0002  max mem: 20585
+init for oim  [430/571]  eta: 0:00:33    time: 0.2374  data: 0.0002  max mem: 20585
+init for oim  [440/571]  eta: 0:00:31    time: 0.2352  data: 0.0002  max mem: 20585
+init for oim  [450/571]  eta: 0:00:29    time: 0.2258  data: 0.0002  max mem: 20585
+init for oim  [460/571]  eta: 0:00:26    time: 0.1975  data: 0.0002  max mem: 20585
+init for oim  [470/571]  eta: 0:00:23    time: 0.1818  data: 0.0002  max mem: 20585
+init for oim  [480/571]  eta: 0:00:21    time: 0.1898  data: 0.0003  max mem: 20585
+init for oim  [490/571]  eta: 0:00:19    time: 0.2008  data: 0.0005  max mem: 20585
+init for oim  [500/571]  eta: 0:00:16    time: 0.2032  data: 0.0006  max mem: 20585
+init for oim  [510/571]  eta: 0:00:14    time: 0.2053  data: 0.0005  max mem: 20585
+init for oim  [520/571]  eta: 0:00:11    time: 0.2212  data: 0.0006  max mem: 20585
+init for oim  [530/571]  eta: 0:00:09    time: 0.2454  data: 0.0009  max mem: 20585
+init for oim  [540/571]  eta: 0:00:07    time: 0.2395  data: 0.0011  max mem: 20585
+init for oim  [550/571]  eta: 0:00:04    time: 0.2246  data: 0.0011  max mem: 20585
+init for oim  [560/571]  eta: 0:00:02    time: 0.2686  data: 0.0017  max mem: 20585
+init for oim  [570/571]  eta: 0:00:00    time: 0.3350  data: 0.0019  max mem: 20585
+init for oim Total time: 0:02:16 (0.2392 s / it)
+Computing jaccard distance...
+Jaccard distance computing time cost: 184.36311721801758
+[  0   1   1 ... 533 503 494]
+number of clusters:============== 1944
+[  0   1   1 ... 533 503 494]
+torch.Size([1944, 2048]) ====
+(18048, 18048)
+torch.Size([18048, 2048])
+Epoch: [11]  [  0/570]  eta: 0:51:44  lr: 0.000300  loss: 1.6811 (1.6811)  loss_proposal_cls: 0.0493 (0.0493)  loss_proposal_reg: 0.6254 (0.6254)  loss_box_cls: 0.0596 (0.0596)  loss_box_reg: 0.1204 (0.1204)  loss_box_reid: 0.8131 (0.8131)  loss_rpn_reg: 0.0067 (0.0067)  loss_rpn_cls: 0.0065 (0.0065)  time: 5.4463  data: 2.7938  max mem: 20585
+Epoch: [11]  [ 10/570]  eta: 0:23:19  lr: 0.000300  loss: 2.4805 (2.3374)  loss_proposal_cls: 0.0493 (0.0477)  loss_proposal_reg: 0.4398 (0.5532)  loss_box_cls: 0.0795 (0.0800)  loss_box_reg: 0.1059 (0.1087)  loss_box_reid: 1.5256 (1.5253)  loss_rpn_reg: 0.0069 (0.0090)  loss_rpn_cls: 0.0097 (0.0134)  time: 2.4987  data: 0.2544  max mem: 20585
+Epoch: [11]  [ 20/570]  eta: 0:21:37  lr: 0.000300  loss: 2.3319 (2.3690)  loss_proposal_cls: 0.0457 (0.0460)  loss_proposal_reg: 0.4398 (0.5126)  loss_box_cls: 0.0777 (0.0801)  loss_box_reg: 0.0909 (0.1029)  loss_box_reid: 1.6488 (1.6054)  loss_rpn_reg: 0.0070 (0.0091)  loss_rpn_cls: 0.0097 (0.0130)  time: 2.2056  data: 0.0004  max mem: 20585
+Epoch: [11]  [ 30/570]  eta: 0:20:51  lr: 0.000300  loss: 2.3319 (2.4387)  loss_proposal_cls: 0.0459 (0.0469)  loss_proposal_reg: 0.4720 (0.5222)  loss_box_cls: 0.0796 (0.0824)  loss_box_reg: 0.1030 (0.1061)  loss_box_reid: 1.6588 (1.6589)  loss_rpn_reg: 0.0080 (0.0089)  loss_rpn_cls: 0.0126 (0.0132)  time: 2.2172  data: 0.0004  max mem: 20585
+Epoch: [11]  [ 40/570]  eta: 0:20:16  lr: 0.000300  loss: 2.3052 (2.4500)  loss_proposal_cls: 0.0470 (0.0464)  loss_proposal_reg: 0.4831 (0.5212)  loss_box_cls: 0.0849 (0.0841)  loss_box_reg: 0.1051 (0.1043)  loss_box_reid: 1.5681 (1.6725)  loss_rpn_reg: 0.0071 (0.0087)  loss_rpn_cls: 0.0135 (0.0129)  time: 2.2283  data: 0.0004  max mem: 20585
+Epoch: [11]  [ 50/570]  eta: 0:19:49  lr: 0.000300  loss: 2.4460 (2.4681)  loss_proposal_cls: 0.0457 (0.0472)  loss_proposal_reg: 0.5003 (0.5283)  loss_box_cls: 0.0816 (0.0835)  loss_box_reg: 0.1005 (0.1050)  loss_box_reid: 1.5527 (1.6831)  loss_rpn_reg: 0.0071 (0.0087)  loss_rpn_cls: 0.0098 (0.0124)  time: 2.2396  data: 0.0004  max mem: 20585
+Epoch: [11]  [ 60/570]  eta: 0:19:23  lr: 0.000300  loss: 2.5104 (2.4948)  loss_proposal_cls: 0.0479 (0.0471)  loss_proposal_reg: 0.5081 (0.5301)  loss_box_cls: 0.0783 (0.0838)  loss_box_reg: 0.1029 (0.1055)  loss_box_reid: 1.7419 (1.7079)  loss_rpn_reg: 0.0070 (0.0086)  loss_rpn_cls: 0.0097 (0.0118)  time: 2.2538  data: 0.0004  max mem: 20585
+Epoch: [11]  [ 70/570]  eta: 0:19:57  lr: 0.000300  loss: 2.6710 (2.5627)  loss_proposal_cls: 0.0479 (0.0468)  loss_proposal_reg: 0.5467 (0.5314)  loss_box_cls: 0.0907 (0.0848)  loss_box_reg: 0.1066 (0.1054)  loss_box_reid: 1.8198 (1.7740)  loss_rpn_reg: 0.0060 (0.0085)  loss_rpn_cls: 0.0098 (0.0119)  time: 2.6729  data: 0.0021  max mem: 20585
+Epoch: [11]  [ 80/570]  eta: 0:19:26  lr: 0.000300  loss: 2.7999 (2.5929)  loss_proposal_cls: 0.0486 (0.0477)  loss_proposal_reg: 0.5523 (0.5463)  loss_box_cls: 0.0907 (0.0869)  loss_box_reg: 0.1089 (0.1069)  loss_box_reid: 1.8764 (1.7847)  loss_rpn_reg: 0.0066 (0.0084)  loss_rpn_cls: 0.0119 (0.0120)  time: 2.6807  data: 0.0021  max mem: 20585
+Epoch: [11]  [ 90/570]  eta: 0:18:58  lr: 0.000300  loss: 2.5741 (2.5843)  loss_proposal_cls: 0.0511 (0.0479)  loss_proposal_reg: 0.6053 (0.5504)  loss_box_cls: 0.0845 (0.0865)  loss_box_reg: 0.1094 (0.1076)  loss_box_reid: 1.7303 (1.7718)  loss_rpn_reg: 0.0068 (0.0083)  loss_rpn_cls: 0.0110 (0.0118)  time: 2.2887  data: 0.0004  max mem: 20585
+Epoch: [11]  [100/570]  eta: 0:18:32  lr: 0.000300  loss: 2.3764 (2.5650)  loss_proposal_cls: 0.0458 (0.0476)  loss_proposal_reg: 0.4529 (0.5370)  loss_box_cls: 0.0771 (0.0859)  loss_box_reg: 0.1037 (0.1058)  loss_box_reid: 1.6788 (1.7683)  loss_rpn_reg: 0.0065 (0.0082)  loss_rpn_cls: 0.0080 (0.0123)  time: 2.3106  data: 0.0004  max mem: 20585
+Epoch: [11]  [110/570]  eta: 0:18:07  lr: 0.000300  loss: 2.4470 (2.5717)  loss_proposal_cls: 0.0443 (0.0476)  loss_proposal_reg: 0.4519 (0.5354)  loss_box_cls: 0.0819 (0.0860)  loss_box_reg: 0.0955 (0.1054)  loss_box_reid: 1.6788 (1.7771)  loss_rpn_reg: 0.0065 (0.0081)  loss_rpn_cls: 0.0090 (0.0121)  time: 2.3238  data: 0.0004  max mem: 20585
+Epoch: [11]  [120/570]  eta: 0:17:46  lr: 0.000300  loss: 2.5699 (2.5999)  loss_proposal_cls: 0.0481 (0.0481)  loss_proposal_reg: 0.5521 (0.5458)  loss_box_cls: 0.0887 (0.0866)  loss_box_reg: 0.1034 (0.1063)  loss_box_reid: 1.7648 (1.7928)  loss_rpn_reg: 0.0072 (0.0082)  loss_rpn_cls: 0.0100 (0.0121)  time: 2.3932  data: 0.0006  max mem: 20585
+Epoch: [11]  [130/570]  eta: 0:17:23  lr: 0.000300  loss: 2.6198 (2.5991)  loss_proposal_cls: 0.0468 (0.0480)  loss_proposal_reg: 0.5254 (0.5440)  loss_box_cls: 0.0791 (0.0858)  loss_box_reg: 0.1034 (0.1056)  loss_box_reid: 1.7404 (1.7955)  loss_rpn_reg: 0.0082 (0.0082)  loss_rpn_cls: 0.0121 (0.0121)  time: 2.4225  data: 0.0006  max mem: 20585
+Epoch: [11]  [140/570]  eta: 0:16:58  lr: 0.000300  loss: 2.6712 (2.6117)  loss_proposal_cls: 0.0434 (0.0477)  loss_proposal_reg: 0.4967 (0.5474)  loss_box_cls: 0.0788 (0.0864)  loss_box_reg: 0.1002 (0.1058)  loss_box_reid: 1.7162 (1.8040)  loss_rpn_reg: 0.0055 (0.0081)  loss_rpn_cls: 0.0125 (0.0122)  time: 2.3612  data: 0.0004  max mem: 20585
+Epoch: [11]  [150/570]  eta: 0:16:34  lr: 0.000300  loss: 2.7255 (2.6206)  loss_proposal_cls: 0.0441 (0.0476)  loss_proposal_reg: 0.5123 (0.5466)  loss_box_cls: 0.0929 (0.0868)  loss_box_reg: 0.1021 (0.1059)  loss_box_reid: 1.9581 (1.8132)  loss_rpn_reg: 0.0062 (0.0081)  loss_rpn_cls: 0.0123 (0.0123)  time: 2.3331  data: 0.0005  max mem: 20585
+Epoch: [11]  [160/570]  eta: 0:16:09  lr: 0.000300  loss: 2.4062 (2.6134)  loss_proposal_cls: 0.0452 (0.0476)  loss_proposal_reg: 0.4716 (0.5422)  loss_box_cls: 0.0848 (0.0867)  loss_box_reg: 0.0982 (0.1051)  loss_box_reid: 1.7299 (1.8116)  loss_rpn_reg: 0.0062 (0.0079)  loss_rpn_cls: 0.0086 (0.0122)  time: 2.3209  data: 0.0004  max mem: 20585
+Epoch: [11]  [170/570]  eta: 0:15:44  lr: 0.000300  loss: 2.4537 (2.6177)  loss_proposal_cls: 0.0452 (0.0477)  loss_proposal_reg: 0.4716 (0.5424)  loss_box_cls: 0.0800 (0.0867)  loss_box_reg: 0.0999 (0.1055)  loss_box_reid: 1.7991 (1.8154)  loss_rpn_reg: 0.0062 (0.0079)  loss_rpn_cls: 0.0099 (0.0121)  time: 2.3247  data: 0.0004  max mem: 20585
+Epoch: [11]  [180/570]  eta: 0:15:21  lr: 0.000300  loss: 2.7583 (2.6288)  loss_proposal_cls: 0.0455 (0.0476)  loss_proposal_reg: 0.5267 (0.5432)  loss_box_cls: 0.0766 (0.0868)  loss_box_reg: 0.1062 (0.1052)  loss_box_reid: 1.8399 (1.8261)  loss_rpn_reg: 0.0067 (0.0079)  loss_rpn_cls: 0.0107 (0.0121)  time: 2.3579  data: 0.0004  max mem: 20585
+Epoch: [11]  [190/570]  eta: 0:14:56  lr: 0.000300  loss: 2.5389 (2.6136)  loss_proposal_cls: 0.0446 (0.0474)  loss_proposal_reg: 0.5295 (0.5431)  loss_box_cls: 0.0780 (0.0866)  loss_box_reg: 0.1002 (0.1051)  loss_box_reid: 1.7262 (1.8114)  loss_rpn_reg: 0.0067 (0.0079)  loss_rpn_cls: 0.0111 (0.0121)  time: 2.3431  data: 0.0004  max mem: 20585
+Epoch: [11]  [200/570]  eta: 0:14:32  lr: 0.000300  loss: 2.6309 (2.6211)  loss_proposal_cls: 0.0453 (0.0475)  loss_proposal_reg: 0.4938 (0.5444)  loss_box_cls: 0.0866 (0.0869)  loss_box_reg: 0.1002 (0.1053)  loss_box_reid: 1.7262 (1.8169)  loss_rpn_reg: 0.0067 (0.0079)  loss_rpn_cls: 0.0117 (0.0122)  time: 2.3201  data: 0.0004  max mem: 20585
+Epoch: [11]  [210/570]  eta: 0:14:08  lr: 0.000300  loss: 2.6330 (2.6214)  loss_proposal_cls: 0.0482 (0.0474)  loss_proposal_reg: 0.4591 (0.5419)  loss_box_cls: 0.0913 (0.0870)  loss_box_reg: 0.1000 (0.1049)  loss_box_reid: 1.8422 (1.8201)  loss_rpn_reg: 0.0055 (0.0079)  loss_rpn_cls: 0.0101 (0.0121)  time: 2.3188  data: 0.0004  max mem: 20585
+Epoch: [11]  [220/570]  eta: 0:13:44  lr: 0.000300  loss: 2.5777 (2.6228)  loss_proposal_cls: 0.0476 (0.0474)  loss_proposal_reg: 0.4753 (0.5413)  loss_box_cls: 0.0895 (0.0872)  loss_box_reg: 0.1000 (0.1049)  loss_box_reid: 1.8209 (1.8219)  loss_rpn_reg: 0.0057 (0.0079)  loss_rpn_cls: 0.0101 (0.0122)  time: 2.3359  data: 0.0004  max mem: 20585
+Epoch: [11]  [230/570]  eta: 0:13:20  lr: 0.000300  loss: 2.6145 (2.6244)  loss_proposal_cls: 0.0476 (0.0473)  loss_proposal_reg: 0.5129 (0.5412)  loss_box_cls: 0.0863 (0.0872)  loss_box_reg: 0.0993 (0.1049)  loss_box_reid: 1.8209 (1.8236)  loss_rpn_reg: 0.0071 (0.0080)  loss_rpn_cls: 0.0114 (0.0122)  time: 2.3396  data: 0.0004  max mem: 20585
+Epoch: [11]  [240/570]  eta: 0:12:56  lr: 0.000300  loss: 2.7658 (2.6236)  loss_proposal_cls: 0.0436 (0.0472)  loss_proposal_reg: 0.5156 (0.5433)  loss_box_cls: 0.0826 (0.0873)  loss_box_reg: 0.0993 (0.1053)  loss_box_reid: 1.8456 (1.8203)  loss_rpn_reg: 0.0075 (0.0080)  loss_rpn_cls: 0.0107 (0.0122)  time: 2.3189  data: 0.0003  max mem: 20585
+Epoch: [11]  [250/570]  eta: 0:12:32  lr: 0.000300  loss: 2.7658 (2.6321)  loss_proposal_cls: 0.0461 (0.0474)  loss_proposal_reg: 0.6025 (0.5476)  loss_box_cls: 0.0852 (0.0876)  loss_box_reg: 0.1049 (0.1057)  loss_box_reid: 1.8456 (1.8235)  loss_rpn_reg: 0.0075 (0.0080)  loss_rpn_cls: 0.0115 (0.0123)  time: 2.3274  data: 0.0004  max mem: 20585
+Epoch: [11]  [260/570]  eta: 0:12:08  lr: 0.000300  loss: 2.5718 (2.6352)  loss_proposal_cls: 0.0522 (0.0475)  loss_proposal_reg: 0.5710 (0.5498)  loss_box_cls: 0.0857 (0.0876)  loss_box_reg: 0.1063 (0.1063)  loss_box_reid: 1.8056 (1.8235)  loss_rpn_reg: 0.0093 (0.0081)  loss_rpn_cls: 0.0119 (0.0124)  time: 2.3289  data: 0.0004  max mem: 20585
+Epoch: [11]  [270/570]  eta: 0:11:45  lr: 0.000300  loss: 2.4142 (2.6360)  loss_proposal_cls: 0.0520 (0.0477)  loss_proposal_reg: 0.5583 (0.5512)  loss_box_cls: 0.0883 (0.0879)  loss_box_reg: 0.1132 (0.1065)  loss_box_reid: 1.6563 (1.8223)  loss_rpn_reg: 0.0074 (0.0081)  loss_rpn_cls: 0.0103 (0.0123)  time: 2.3295  data: 0.0003  max mem: 20585
+Epoch: [11]  [280/570]  eta: 0:11:21  lr: 0.000300  loss: 2.3722 (2.6237)  loss_proposal_cls: 0.0472 (0.0477)  loss_proposal_reg: 0.5363 (0.5506)  loss_box_cls: 0.0876 (0.0876)  loss_box_reg: 0.1087 (0.1065)  loss_box_reid: 1.6331 (1.8108)  loss_rpn_reg: 0.0071 (0.0081)  loss_rpn_cls: 0.0103 (0.0124)  time: 2.3218  data: 0.0003  max mem: 20585
+Epoch: [11]  [290/570]  eta: 0:10:58  lr: 0.000300  loss: 2.3055 (2.6126)  loss_proposal_cls: 0.0480 (0.0477)  loss_proposal_reg: 0.5024 (0.5521)  loss_box_cls: 0.0717 (0.0876)  loss_box_reg: 0.1077 (0.1067)  loss_box_reid: 1.4507 (1.7980)  loss_rpn_reg: 0.0071 (0.0081)  loss_rpn_cls: 0.0095 (0.0124)  time: 2.3673  data: 0.0004  max mem: 20585
+Epoch: [11]  [300/570]  eta: 0:10:34  lr: 0.000300  loss: 2.3481 (2.6080)  loss_proposal_cls: 0.0480 (0.0478)  loss_proposal_reg: 0.5037 (0.5515)  loss_box_cls: 0.0797 (0.0876)  loss_box_reg: 0.1037 (0.1066)  loss_box_reid: 1.5326 (1.7942)  loss_rpn_reg: 0.0074 (0.0081)  loss_rpn_cls: 0.0098 (0.0123)  time: 2.3679  data: 0.0004  max mem: 20585
+Epoch: [11]  [310/570]  eta: 0:10:10  lr: 0.000300  loss: 2.4536 (2.6036)  loss_proposal_cls: 0.0444 (0.0478)  loss_proposal_reg: 0.5294 (0.5523)  loss_box_cls: 0.0833 (0.0877)  loss_box_reg: 0.1037 (0.1065)  loss_box_reid: 1.6860 (1.7888)  loss_rpn_reg: 0.0069 (0.0081)  loss_rpn_cls: 0.0099 (0.0123)  time: 2.3179  data: 0.0004  max mem: 20585
+Epoch: [11]  [320/570]  eta: 0:09:47  lr: 0.000300  loss: 2.5519 (2.6000)  loss_proposal_cls: 0.0458 (0.0478)  loss_proposal_reg: 0.5829 (0.5537)  loss_box_cls: 0.0826 (0.0878)  loss_box_reg: 0.1049 (0.1066)  loss_box_reid: 1.5220 (1.7834)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0099 (0.0126)  time: 2.3263  data: 0.0004  max mem: 20585
+Epoch: [11]  [330/570]  eta: 0:09:23  lr: 0.000300  loss: 2.5141 (2.6005)  loss_proposal_cls: 0.0458 (0.0478)  loss_proposal_reg: 0.5829 (0.5562)  loss_box_cls: 0.0861 (0.0878)  loss_box_reg: 0.1092 (0.1069)  loss_box_reid: 1.6085 (1.7812)  loss_rpn_reg: 0.0072 (0.0081)  loss_rpn_cls: 0.0103 (0.0125)  time: 2.3319  data: 0.0004  max mem: 20585
+Epoch: [11]  [340/570]  eta: 0:09:00  lr: 0.000300  loss: 2.5434 (2.5996)  loss_proposal_cls: 0.0468 (0.0477)  loss_proposal_reg: 0.5863 (0.5572)  loss_box_cls: 0.0865 (0.0880)  loss_box_reg: 0.1239 (0.1071)  loss_box_reid: 1.6777 (1.7790)  loss_rpn_reg: 0.0072 (0.0081)  loss_rpn_cls: 0.0103 (0.0125)  time: 2.3271  data: 0.0004  max mem: 20585
+Epoch: [11]  [350/570]  eta: 0:08:36  lr: 0.000300  loss: 2.4165 (2.5994)  loss_proposal_cls: 0.0468 (0.0477)  loss_proposal_reg: 0.5749 (0.5581)  loss_box_cls: 0.0882 (0.0882)  loss_box_reg: 0.1136 (0.1073)  loss_box_reid: 1.6205 (1.7774)  loss_rpn_reg: 0.0083 (0.0082)  loss_rpn_cls: 0.0092 (0.0124)  time: 2.3219  data: 0.0004  max mem: 20585
+Epoch: [11]  [360/570]  eta: 0:08:12  lr: 0.000300  loss: 2.4039 (2.5929)  loss_proposal_cls: 0.0473 (0.0477)  loss_proposal_reg: 0.5143 (0.5565)  loss_box_cls: 0.0852 (0.0879)  loss_box_reg: 0.1106 (0.1072)  loss_box_reid: 1.5452 (1.7729)  loss_rpn_reg: 0.0084 (0.0082)  loss_rpn_cls: 0.0110 (0.0125)  time: 2.3291  data: 0.0004  max mem: 20585
+Epoch: [11]  [370/570]  eta: 0:07:49  lr: 0.000300  loss: 2.4296 (2.5888)  loss_proposal_cls: 0.0475 (0.0477)  loss_proposal_reg: 0.5089 (0.5578)  loss_box_cls: 0.0838 (0.0880)  loss_box_reg: 0.1083 (0.1074)  loss_box_reid: 1.5658 (1.7670)  loss_rpn_reg: 0.0084 (0.0082)  loss_rpn_cls: 0.0124 (0.0126)  time: 2.3323  data: 0.0004  max mem: 20585
+Epoch: [11]  [380/570]  eta: 0:07:25  lr: 0.000300  loss: 2.5120 (2.5888)  loss_proposal_cls: 0.0411 (0.0476)  loss_proposal_reg: 0.5307 (0.5573)  loss_box_cls: 0.0803 (0.0878)  loss_box_reg: 0.1022 (0.1073)  loss_box_reid: 1.6831 (1.7680)  loss_rpn_reg: 0.0071 (0.0082)  loss_rpn_cls: 0.0114 (0.0126)  time: 2.3265  data: 0.0004  max mem: 20585
+Epoch: [11]  [390/570]  eta: 0:07:02  lr: 0.000300  loss: 2.5915 (2.5912)  loss_proposal_cls: 0.0423 (0.0475)  loss_proposal_reg: 0.5244 (0.5568)  loss_box_cls: 0.0787 (0.0877)  loss_box_reg: 0.1007 (0.1074)  loss_box_reid: 1.8383 (1.7711)  loss_rpn_reg: 0.0063 (0.0082)  loss_rpn_cls: 0.0113 (0.0126)  time: 2.3321  data: 0.0005  max mem: 20585
+Epoch: [11]  [400/570]  eta: 0:06:38  lr: 0.000300  loss: 2.5265 (2.5884)  loss_proposal_cls: 0.0470 (0.0475)  loss_proposal_reg: 0.5220 (0.5565)  loss_box_cls: 0.0819 (0.0878)  loss_box_reg: 0.1007 (0.1073)  loss_box_reid: 1.7892 (1.7685)  loss_rpn_reg: 0.0064 (0.0082)  loss_rpn_cls: 0.0116 (0.0126)  time: 2.3404  data: 0.0004  max mem: 20585
+Epoch: [11]  [410/570]  eta: 0:06:15  lr: 0.000300  loss: 2.5252 (2.5949)  loss_proposal_cls: 0.0462 (0.0475)  loss_proposal_reg: 0.5655 (0.5566)  loss_box_cls: 0.0860 (0.0877)  loss_box_reg: 0.1039 (0.1072)  loss_box_reid: 1.6967 (1.7753)  loss_rpn_reg: 0.0073 (0.0082)  loss_rpn_cls: 0.0114 (0.0125)  time: 2.3322  data: 0.0004  max mem: 20585
+Epoch: [11]  [420/570]  eta: 0:05:51  lr: 0.000300  loss: 2.5544 (2.5936)  loss_proposal_cls: 0.0414 (0.0474)  loss_proposal_reg: 0.5759 (0.5581)  loss_box_cls: 0.0860 (0.0879)  loss_box_reg: 0.1108 (0.1074)  loss_box_reid: 1.6979 (1.7723)  loss_rpn_reg: 0.0059 (0.0081)  loss_rpn_cls: 0.0104 (0.0125)  time: 2.3325  data: 0.0004  max mem: 20585
+Epoch: [11]  [430/570]  eta: 0:05:28  lr: 0.000300  loss: 2.4754 (2.5880)  loss_proposal_cls: 0.0437 (0.0473)  loss_proposal_reg: 0.5696 (0.5568)  loss_box_cls: 0.0840 (0.0877)  loss_box_reg: 0.1026 (0.1072)  loss_box_reid: 1.6290 (1.7685)  loss_rpn_reg: 0.0059 (0.0081)  loss_rpn_cls: 0.0104 (0.0124)  time: 2.3319  data: 0.0004  max mem: 20585
+Epoch: [11]  [440/570]  eta: 0:05:04  lr: 0.000300  loss: 2.1904 (2.5844)  loss_proposal_cls: 0.0437 (0.0472)  loss_proposal_reg: 0.5206 (0.5561)  loss_box_cls: 0.0774 (0.0876)  loss_box_reg: 0.0989 (0.1071)  loss_box_reid: 1.5655 (1.7658)  loss_rpn_reg: 0.0072 (0.0081)  loss_rpn_cls: 0.0097 (0.0125)  time: 2.3305  data: 0.0004  max mem: 20585
+Epoch: [11]  [450/570]  eta: 0:04:41  lr: 0.000300  loss: 2.6450 (2.5872)  loss_proposal_cls: 0.0439 (0.0473)  loss_proposal_reg: 0.5804 (0.5589)  loss_box_cls: 0.0838 (0.0878)  loss_box_reg: 0.1139 (0.1074)  loss_box_reid: 1.6955 (1.7653)  loss_rpn_reg: 0.0072 (0.0081)  loss_rpn_cls: 0.0097 (0.0125)  time: 2.3329  data: 0.0004  max mem: 20585
+Epoch: [11]  [460/570]  eta: 0:04:17  lr: 0.000300  loss: 2.5625 (2.5807)  loss_proposal_cls: 0.0443 (0.0472)  loss_proposal_reg: 0.5517 (0.5570)  loss_box_cls: 0.0804 (0.0876)  loss_box_reg: 0.1106 (0.1073)  loss_box_reid: 1.6976 (1.7611)  loss_rpn_reg: 0.0066 (0.0081)  loss_rpn_cls: 0.0110 (0.0125)  time: 2.3384  data: 0.0004  max mem: 20585
+Epoch: [11]  [470/570]  eta: 0:03:54  lr: 0.000300  loss: 2.3982 (2.5785)  loss_proposal_cls: 0.0447 (0.0472)  loss_proposal_reg: 0.4743 (0.5576)  loss_box_cls: 0.0792 (0.0876)  loss_box_reg: 0.1012 (0.1073)  loss_box_reid: 1.6250 (1.7582)  loss_rpn_reg: 0.0066 (0.0081)  loss_rpn_cls: 0.0114 (0.0125)  time: 2.3415  data: 0.0004  max mem: 20585
+Epoch: [11]  [480/570]  eta: 0:03:30  lr: 0.000300  loss: 2.3915 (2.5760)  loss_proposal_cls: 0.0431 (0.0471)  loss_proposal_reg: 0.4957 (0.5555)  loss_box_cls: 0.0810 (0.0875)  loss_box_reg: 0.1014 (0.1071)  loss_box_reid: 1.6806 (1.7582)  loss_rpn_reg: 0.0062 (0.0081)  loss_rpn_cls: 0.0106 (0.0125)  time: 2.3494  data: 0.0004  max mem: 20585
+Epoch: [11]  [490/570]  eta: 0:03:07  lr: 0.000300  loss: 2.3359 (2.5696)  loss_proposal_cls: 0.0429 (0.0470)  loss_proposal_reg: 0.4282 (0.5543)  loss_box_cls: 0.0829 (0.0874)  loss_box_reg: 0.0981 (0.1070)  loss_box_reid: 1.7370 (1.7533)  loss_rpn_reg: 0.0065 (0.0081)  loss_rpn_cls: 0.0086 (0.0124)  time: 2.4016  data: 0.0005  max mem: 20585
+Epoch: [11]  [500/570]  eta: 0:02:44  lr: 0.000300  loss: 2.3985 (2.5656)  loss_proposal_cls: 0.0466 (0.0471)  loss_proposal_reg: 0.4568 (0.5538)  loss_box_cls: 0.0830 (0.0874)  loss_box_reg: 0.1018 (0.1070)  loss_box_reid: 1.5416 (1.7497)  loss_rpn_reg: 0.0078 (0.0082)  loss_rpn_cls: 0.0105 (0.0125)  time: 2.3850  data: 0.0004  max mem: 20585
+Epoch: [11]  [510/570]  eta: 0:02:20  lr: 0.000300  loss: 2.5807 (2.5646)  loss_proposal_cls: 0.0470 (0.0471)  loss_proposal_reg: 0.5520 (0.5540)  loss_box_cls: 0.0830 (0.0873)  loss_box_reg: 0.1083 (0.1069)  loss_box_reid: 1.6228 (1.7485)  loss_rpn_reg: 0.0084 (0.0082)  loss_rpn_cls: 0.0118 (0.0125)  time: 2.3317  data: 0.0004  max mem: 20585
+Epoch: [11]  [520/570]  eta: 0:01:57  lr: 0.000300  loss: 2.4221 (2.5628)  loss_proposal_cls: 0.0470 (0.0472)  loss_proposal_reg: 0.5520 (0.5545)  loss_box_cls: 0.0859 (0.0874)  loss_box_reg: 0.1117 (0.1069)  loss_box_reid: 1.6220 (1.7460)  loss_rpn_reg: 0.0079 (0.0082)  loss_rpn_cls: 0.0118 (0.0125)  time: 2.5648  data: 0.0024  max mem: 20585
+Epoch: [11]  [530/570]  eta: 0:01:34  lr: 0.000300  loss: 2.4286 (2.5626)  loss_proposal_cls: 0.0496 (0.0472)  loss_proposal_reg: 0.5223 (0.5541)  loss_box_cls: 0.0871 (0.0875)  loss_box_reg: 0.1071 (0.1069)  loss_box_reid: 1.5831 (1.7461)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0114 (0.0125)  time: 2.5660  data: 0.0024  max mem: 20585
+Epoch: [11]  [540/570]  eta: 0:01:10  lr: 0.000300  loss: 2.4829 (2.5610)  loss_proposal_cls: 0.0504 (0.0473)  loss_proposal_reg: 0.5472 (0.5546)  loss_box_cls: 0.0871 (0.0875)  loss_box_reg: 0.1065 (0.1070)  loss_box_reid: 1.6094 (1.7437)  loss_rpn_reg: 0.0064 (0.0083)  loss_rpn_cls: 0.0114 (0.0126)  time: 2.3267  data: 0.0005  max mem: 20585
+Epoch: [11]  [550/570]  eta: 0:00:47  lr: 0.000300  loss: 2.4306 (2.5586)  loss_proposal_cls: 0.0468 (0.0473)  loss_proposal_reg: 0.5577 (0.5552)  loss_box_cls: 0.0834 (0.0876)  loss_box_reg: 0.1015 (0.1069)  loss_box_reid: 1.5985 (1.7408)  loss_rpn_reg: 0.0080 (0.0083)  loss_rpn_cls: 0.0094 (0.0126)  time: 2.3163  data: 0.0005  max mem: 20585
+Epoch: [11]  [560/570]  eta: 0:00:23  lr: 0.000300  loss: 2.6259 (2.5629)  loss_proposal_cls: 0.0455 (0.0473)  loss_proposal_reg: 0.5532 (0.5560)  loss_box_cls: 0.0813 (0.0877)  loss_box_reg: 0.1026 (0.1070)  loss_box_reid: 1.7111 (1.7439)  loss_rpn_reg: 0.0081 (0.0083)  loss_rpn_cls: 0.0104 (0.0127)  time: 2.4429  data: 0.0015  max mem: 20585
+Epoch: [11]  [569/570]  eta: 0:00:02  lr: 0.000300  loss: 2.7508 (2.5633)  loss_proposal_cls: 0.0459 (0.0472)  loss_proposal_reg: 0.5532 (0.5557)  loss_box_cls: 0.0803 (0.0875)  loss_box_reg: 0.1045 (0.1069)  loss_box_reid: 1.8586 (1.7451)  loss_rpn_reg: 0.0077 (0.0082)  loss_rpn_cls: 0.0105 (0.0127)  time: 2.4398  data: 0.0014  max mem: 20585
+Epoch: [11] Total time: 0:22:23 (2.3565 s / it)
+all detection:
+  recall = 96.59%
+  ap = 93.71%
+search ranking:
+  mAP = 19.30%
+  top- 1 = 72.53%
+  top- 5 = 81.96%
+  top-10 = 84.93%
+init for oim  [  0/571]  eta: 0:22:58    time: 2.4142  data: 2.1853  max mem: 20585
+init for oim  [ 10/571]  eta: 0:04:06    time: 0.4395  data: 0.2056  max mem: 20585
+init for oim  [ 20/571]  eta: 0:03:05    time: 0.2333  data: 0.0040  max mem: 20585
+init for oim  [ 30/571]  eta: 0:02:42    time: 0.2238  data: 0.0002  max mem: 20585
+init for oim  [ 40/571]  eta: 0:02:29    time: 0.2230  data: 0.0002  max mem: 20585
+init for oim  [ 50/571]  eta: 0:02:21    time: 0.2273  data: 0.0003  max mem: 20585
+init for oim  [ 60/571]  eta: 0:02:16    time: 0.2378  data: 0.0003  max mem: 20585
+init for oim  [ 70/571]  eta: 0:02:12    time: 0.2426  data: 0.0003  max mem: 20585
+init for oim  [ 80/571]  eta: 0:02:06    time: 0.2327  data: 0.0003  max mem: 20585
+init for oim  [ 90/571]  eta: 0:02:02    time: 0.2252  data: 0.0003  max mem: 20585
+init for oim  [100/571]  eta: 0:01:59    time: 0.2334  data: 0.0003  max mem: 20585
+init for oim  [110/571]  eta: 0:01:56    time: 0.2374  data: 0.0003  max mem: 20585
+init for oim  [120/571]  eta: 0:01:52    time: 0.2334  data: 0.0003  max mem: 20585
+init for oim  [130/571]  eta: 0:01:49    time: 0.2335  data: 0.0002  max mem: 20585
+init for oim  [140/571]  eta: 0:01:47    time: 0.2384  data: 0.0002  max mem: 20585
+init for oim  [150/571]  eta: 0:01:44    time: 0.2390  data: 0.0003  max mem: 20585
+init for oim  [160/571]  eta: 0:01:41    time: 0.2376  data: 0.0003  max mem: 20585
+init for oim  [170/571]  eta: 0:01:38    time: 0.2360  data: 0.0003  max mem: 20585
+init for oim  [180/571]  eta: 0:01:36    time: 0.2333  data: 0.0002  max mem: 20585
+init for oim  [190/571]  eta: 0:01:33    time: 0.2370  data: 0.0002  max mem: 20585
+init for oim  [200/571]  eta: 0:01:30    time: 0.2386  data: 0.0002  max mem: 20585
+init for oim  [210/571]  eta: 0:01:28    time: 0.2336  data: 0.0002  max mem: 20585
+init for oim  [220/571]  eta: 0:01:35    time: 0.5296  data: 0.0008  max mem: 20585
+init for oim  [230/571]  eta: 0:01:31    time: 0.5361  data: 0.0036  max mem: 20585
+init for oim  [240/571]  eta: 0:01:28    time: 0.2422  data: 0.0030  max mem: 20585
+init for oim  [250/571]  eta: 0:01:25    time: 0.2369  data: 0.0002  max mem: 20585
+init for oim  [260/571]  eta: 0:01:22    time: 0.2356  data: 0.0002  max mem: 20585
+init for oim  [270/571]  eta: 0:01:19    time: 0.2396  data: 0.0002  max mem: 20585
+init for oim  [280/571]  eta: 0:01:16    time: 0.2374  data: 0.0002  max mem: 20585
+init for oim  [290/571]  eta: 0:01:13    time: 0.2373  data: 0.0002  max mem: 20585
+init for oim  [300/571]  eta: 0:01:11    time: 0.2383  data: 0.0003  max mem: 20585
+init for oim  [310/571]  eta: 0:01:08    time: 0.2343  data: 0.0003  max mem: 20585
+init for oim  [320/571]  eta: 0:01:05    time: 0.2310  data: 0.0003  max mem: 20585
+init for oim  [330/571]  eta: 0:01:02    time: 0.2383  data: 0.0003  max mem: 20585
+init for oim  [340/571]  eta: 0:00:59    time: 0.2437  data: 0.0003  max mem: 20585
+init for oim  [350/571]  eta: 0:00:57    time: 0.2399  data: 0.0003  max mem: 20585
+init for oim  [360/571]  eta: 0:00:54    time: 0.2374  data: 0.0004  max mem: 20585
+init for oim  [370/571]  eta: 0:00:51    time: 0.2397  data: 0.0004  max mem: 20585
+init for oim  [380/571]  eta: 0:00:49    time: 0.2459  data: 0.0003  max mem: 20585
+init for oim  [390/571]  eta: 0:00:46    time: 0.2408  data: 0.0003  max mem: 20585
+init for oim  [400/571]  eta: 0:00:43    time: 0.2382  data: 0.0003  max mem: 20585
+init for oim  [410/571]  eta: 0:00:41    time: 0.2361  data: 0.0003  max mem: 20585
+init for oim  [420/571]  eta: 0:00:38    time: 0.2360  data: 0.0003  max mem: 20585
+init for oim  [430/571]  eta: 0:00:35    time: 0.2411  data: 0.0003  max mem: 20585
+init for oim  [440/571]  eta: 0:00:33    time: 0.2378  data: 0.0003  max mem: 20585
+init for oim  [450/571]  eta: 0:00:30    time: 0.2190  data: 0.0002  max mem: 20585
+init for oim  [460/571]  eta: 0:00:27    time: 0.1892  data: 0.0002  max mem: 20585
+init for oim  [470/571]  eta: 0:00:25    time: 0.1760  data: 0.0002  max mem: 20585
+init for oim  [480/571]  eta: 0:00:22    time: 0.1768  data: 0.0002  max mem: 20585
+init for oim  [490/571]  eta: 0:00:20    time: 0.1769  data: 0.0002  max mem: 20585
+init for oim  [500/571]  eta: 0:00:17    time: 0.1767  data: 0.0002  max mem: 20585
+init for oim  [510/571]  eta: 0:00:14    time: 0.1774  data: 0.0002  max mem: 20585
+init for oim  [520/571]  eta: 0:00:12    time: 0.1786  data: 0.0002  max mem: 20585
+init for oim  [530/571]  eta: 0:00:09    time: 0.1811  data: 0.0002  max mem: 20585
+init for oim  [540/571]  eta: 0:00:07    time: 0.1832  data: 0.0002  max mem: 20585
+init for oim  [550/571]  eta: 0:00:05    time: 0.1848  data: 0.0002  max mem: 20585
+init for oim  [560/571]  eta: 0:00:02    time: 0.1850  data: 0.0002  max mem: 20585
+init for oim  [570/571]  eta: 0:00:00    time: 0.2510  data: 0.0006  max mem: 20585
+init for oim Total time: 0:02:17 (0.2410 s / it)
+Computing jaccard distance...
+Jaccard distance computing time cost: 135.0773401260376
+[  0   1   1 ... 542 511 502]
+number of clusters:============== 1898
+[  0   1   1 ... 542 511 502]
+torch.Size([1898, 2048]) ====
+(18048, 18048)
+torch.Size([18048, 2048])
+Epoch: [12]  [  0/570]  eta: 0:51:04  lr: 0.000300  loss: 1.6667 (1.6667)  loss_proposal_cls: 0.0381 (0.0381)  loss_proposal_reg: 0.6071 (0.6071)  loss_box_cls: 0.0782 (0.0782)  loss_box_reg: 0.1108 (0.1108)  loss_box_reid: 0.8177 (0.8177)  loss_rpn_reg: 0.0072 (0.0072)  loss_rpn_cls: 0.0076 (0.0076)  time: 5.3772  data: 3.1415  max mem: 20585
+Epoch: [12]  [ 10/570]  eta: 0:23:35  lr: 0.000300  loss: 2.4128 (2.3225)  loss_proposal_cls: 0.0476 (0.0457)  loss_proposal_reg: 0.6278 (0.6029)  loss_box_cls: 0.0782 (0.0819)  loss_box_reg: 0.1140 (0.1107)  loss_box_reid: 1.4578 (1.4631)  loss_rpn_reg: 0.0057 (0.0080)  loss_rpn_cls: 0.0105 (0.0101)  time: 2.5268  data: 0.2870  max mem: 20585
+Epoch: [12]  [ 20/570]  eta: 0:21:44  lr: 0.000300  loss: 2.4079 (2.3724)  loss_proposal_cls: 0.0380 (0.0431)  loss_proposal_reg: 0.4824 (0.5301)  loss_box_cls: 0.0829 (0.0831)  loss_box_reg: 0.1014 (0.1007)  loss_box_reid: 1.5911 (1.5968)  loss_rpn_reg: 0.0058 (0.0077)  loss_rpn_cls: 0.0106 (0.0108)  time: 2.2221  data: 0.0009  max mem: 20585
+Epoch: [12]  [ 30/570]  eta: 0:20:53  lr: 0.000300  loss: 2.2824 (2.4512)  loss_proposal_cls: 0.0405 (0.0446)  loss_proposal_reg: 0.4788 (0.5435)  loss_box_cls: 0.0700 (0.0792)  loss_box_reg: 0.0948 (0.1020)  loss_box_reid: 1.5787 (1.6629)  loss_rpn_reg: 0.0071 (0.0079)  loss_rpn_cls: 0.0114 (0.0111)  time: 2.2091  data: 0.0003  max mem: 20585
+Epoch: [12]  [ 40/570]  eta: 0:20:19  lr: 0.000300  loss: 2.4241 (2.4565)  loss_proposal_cls: 0.0437 (0.0454)  loss_proposal_reg: 0.5208 (0.5385)  loss_box_cls: 0.0673 (0.0794)  loss_box_reg: 0.1012 (0.1033)  loss_box_reid: 1.5787 (1.6709)  loss_rpn_reg: 0.0076 (0.0080)  loss_rpn_cls: 0.0105 (0.0110)  time: 2.2265  data: 0.0003  max mem: 20585
+Epoch: [12]  [ 50/570]  eta: 0:19:50  lr: 0.000300  loss: 2.5678 (2.5097)  loss_proposal_cls: 0.0448 (0.0469)  loss_proposal_reg: 0.5402 (0.5422)  loss_box_cls: 0.0825 (0.0811)  loss_box_reg: 0.1066 (0.1040)  loss_box_reid: 1.7006 (1.7147)  loss_rpn_reg: 0.0075 (0.0083)  loss_rpn_cls: 0.0105 (0.0127)  time: 2.2384  data: 0.0003  max mem: 20585
+Epoch: [12]  [ 60/570]  eta: 0:19:23  lr: 0.000300  loss: 2.7100 (2.5784)  loss_proposal_cls: 0.0434 (0.0458)  loss_proposal_reg: 0.5185 (0.5420)  loss_box_cls: 0.0800 (0.0802)  loss_box_reg: 0.1055 (0.1039)  loss_box_reid: 1.9950 (1.7844)  loss_rpn_reg: 0.0075 (0.0082)  loss_rpn_cls: 0.0116 (0.0139)  time: 2.2417  data: 0.0004  max mem: 20585
+Epoch: [12]  [ 70/570]  eta: 0:18:59  lr: 0.000300  loss: 2.8185 (2.5740)  loss_proposal_cls: 0.0393 (0.0458)  loss_proposal_reg: 0.5210 (0.5405)  loss_box_cls: 0.0774 (0.0798)  loss_box_reg: 0.1076 (0.1046)  loss_box_reid: 1.9780 (1.7814)  loss_rpn_reg: 0.0074 (0.0082)  loss_rpn_cls: 0.0116 (0.0137)  time: 2.2539  data: 0.0004  max mem: 20585
+Epoch: [12]  [ 80/570]  eta: 0:18:37  lr: 0.000300  loss: 2.4725 (2.5697)  loss_proposal_cls: 0.0429 (0.0458)  loss_proposal_reg: 0.5256 (0.5383)  loss_box_cls: 0.0785 (0.0804)  loss_box_reg: 0.1076 (0.1047)  loss_box_reid: 1.8447 (1.7790)  loss_rpn_reg: 0.0067 (0.0080)  loss_rpn_cls: 0.0114 (0.0135)  time: 2.2761  data: 0.0004  max mem: 20585
+Epoch: [12]  [ 90/570]  eta: 0:18:15  lr: 0.000300  loss: 2.6244 (2.5811)  loss_proposal_cls: 0.0492 (0.0466)  loss_proposal_reg: 0.5557 (0.5444)  loss_box_cls: 0.0840 (0.0821)  loss_box_reg: 0.1054 (0.1054)  loss_box_reid: 1.6366 (1.7809)  loss_rpn_reg: 0.0066 (0.0084)  loss_rpn_cls: 0.0113 (0.0133)  time: 2.2926  data: 0.0004  max mem: 20585
+Epoch: [12]  [100/570]  eta: 0:17:54  lr: 0.000300  loss: 2.5558 (2.5914)  loss_proposal_cls: 0.0493 (0.0464)  loss_proposal_reg: 0.5298 (0.5371)  loss_box_cls: 0.0899 (0.0826)  loss_box_reg: 0.1054 (0.1048)  loss_box_reid: 1.8451 (1.7990)  loss_rpn_reg: 0.0065 (0.0083)  loss_rpn_cls: 0.0096 (0.0131)  time: 2.3124  data: 0.0004  max mem: 20585
+Epoch: [12]  [110/570]  eta: 0:17:32  lr: 0.000300  loss: 2.5558 (2.5968)  loss_proposal_cls: 0.0442 (0.0467)  loss_proposal_reg: 0.4786 (0.5349)  loss_box_cls: 0.0803 (0.0827)  loss_box_reg: 0.0956 (0.1044)  loss_box_reid: 1.9180 (1.8071)  loss_rpn_reg: 0.0059 (0.0082)  loss_rpn_cls: 0.0084 (0.0128)  time: 2.3186  data: 0.0003  max mem: 20585
+Epoch: [12]  [120/570]  eta: 0:17:11  lr: 0.000300  loss: 2.5847 (2.5893)  loss_proposal_cls: 0.0502 (0.0468)  loss_proposal_reg: 0.4832 (0.5326)  loss_box_cls: 0.0747 (0.0824)  loss_box_reg: 0.0957 (0.1041)  loss_box_reid: 1.8171 (1.8027)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0092 (0.0126)  time: 2.3151  data: 0.0004  max mem: 20585
+Epoch: [12]  [130/570]  eta: 0:16:48  lr: 0.000300  loss: 2.5753 (2.5939)  loss_proposal_cls: 0.0473 (0.0468)  loss_proposal_reg: 0.4832 (0.5282)  loss_box_cls: 0.0741 (0.0824)  loss_box_reg: 0.0957 (0.1037)  loss_box_reid: 1.7641 (1.8117)  loss_rpn_reg: 0.0079 (0.0083)  loss_rpn_cls: 0.0106 (0.0127)  time: 2.3136  data: 0.0004  max mem: 20585
+Epoch: [12]  [140/570]  eta: 0:16:28  lr: 0.000300  loss: 2.5556 (2.5964)  loss_proposal_cls: 0.0480 (0.0470)  loss_proposal_reg: 0.4911 (0.5348)  loss_box_cls: 0.0843 (0.0828)  loss_box_reg: 0.0997 (0.1043)  loss_box_reid: 1.7035 (1.8063)  loss_rpn_reg: 0.0082 (0.0085)  loss_rpn_cls: 0.0121 (0.0127)  time: 2.3521  data: 0.0004  max mem: 20585
+Epoch: [12]  [150/570]  eta: 0:16:06  lr: 0.000300  loss: 2.5024 (2.5946)  loss_proposal_cls: 0.0490 (0.0471)  loss_proposal_reg: 0.5259 (0.5349)  loss_box_cls: 0.0872 (0.0829)  loss_box_reg: 0.1011 (0.1042)  loss_box_reid: 1.7035 (1.8044)  loss_rpn_reg: 0.0076 (0.0084)  loss_rpn_cls: 0.0107 (0.0126)  time: 2.3552  data: 0.0004  max mem: 20585
+Epoch: [12]  [160/570]  eta: 0:15:43  lr: 0.000300  loss: 2.4850 (2.5887)  loss_proposal_cls: 0.0483 (0.0472)  loss_proposal_reg: 0.5259 (0.5351)  loss_box_cls: 0.0808 (0.0829)  loss_box_reg: 0.1011 (0.1043)  loss_box_reid: 1.6995 (1.7982)  loss_rpn_reg: 0.0075 (0.0084)  loss_rpn_cls: 0.0112 (0.0128)  time: 2.3161  data: 0.0004  max mem: 20585
+Epoch: [12]  [170/570]  eta: 0:15:22  lr: 0.000300  loss: 2.4781 (2.5814)  loss_proposal_cls: 0.0441 (0.0469)  loss_proposal_reg: 0.5302 (0.5342)  loss_box_cls: 0.0796 (0.0831)  loss_box_reg: 0.1029 (0.1042)  loss_box_reid: 1.6995 (1.7919)  loss_rpn_reg: 0.0077 (0.0085)  loss_rpn_cls: 0.0115 (0.0126)  time: 2.3371  data: 0.0004  max mem: 20585
+Epoch: [12]  [180/570]  eta: 0:14:58  lr: 0.000300  loss: 2.3053 (2.5707)  loss_proposal_cls: 0.0413 (0.0468)  loss_proposal_reg: 0.4870 (0.5312)  loss_box_cls: 0.0791 (0.0832)  loss_box_reg: 0.0990 (0.1040)  loss_box_reid: 1.6426 (1.7842)  loss_rpn_reg: 0.0072 (0.0085)  loss_rpn_cls: 0.0115 (0.0128)  time: 2.3296  data: 0.0004  max mem: 20585
+Epoch: [12]  [190/570]  eta: 0:14:36  lr: 0.000300  loss: 2.3069 (2.5638)  loss_proposal_cls: 0.0463 (0.0470)  loss_proposal_reg: 0.4646 (0.5288)  loss_box_cls: 0.0886 (0.0839)  loss_box_reg: 0.0979 (0.1038)  loss_box_reid: 1.5945 (1.7793)  loss_rpn_reg: 0.0068 (0.0084)  loss_rpn_cls: 0.0115 (0.0127)  time: 2.3136  data: 0.0005  max mem: 20585
+Epoch: [12]  [200/570]  eta: 0:14:13  lr: 0.000300  loss: 2.3893 (2.5603)  loss_proposal_cls: 0.0452 (0.0469)  loss_proposal_reg: 0.4718 (0.5272)  loss_box_cls: 0.0790 (0.0837)  loss_box_reg: 0.0996 (0.1038)  loss_box_reid: 1.6884 (1.7779)  loss_rpn_reg: 0.0054 (0.0083)  loss_rpn_cls: 0.0115 (0.0126)  time: 2.3159  data: 0.0004  max mem: 20585
+Epoch: [12]  [210/570]  eta: 0:13:52  lr: 0.000300  loss: 2.3893 (2.5635)  loss_proposal_cls: 0.0455 (0.0471)  loss_proposal_reg: 0.5363 (0.5295)  loss_box_cls: 0.0819 (0.0846)  loss_box_reg: 0.1059 (0.1043)  loss_box_reid: 1.7501 (1.7773)  loss_rpn_reg: 0.0060 (0.0083)  loss_rpn_cls: 0.0119 (0.0126)  time: 2.3613  data: 0.0005  max mem: 20585
+Epoch: [12]  [220/570]  eta: 0:13:29  lr: 0.000300  loss: 2.4616 (2.5534)  loss_proposal_cls: 0.0446 (0.0467)  loss_proposal_reg: 0.5243 (0.5274)  loss_box_cls: 0.0826 (0.0842)  loss_box_reg: 0.1045 (0.1042)  loss_box_reid: 1.7203 (1.7701)  loss_rpn_reg: 0.0060 (0.0082)  loss_rpn_cls: 0.0089 (0.0125)  time: 2.3824  data: 0.0004  max mem: 20585
+Epoch: [12]  [230/570]  eta: 0:13:06  lr: 0.000300  loss: 2.5183 (2.5575)  loss_proposal_cls: 0.0443 (0.0468)  loss_proposal_reg: 0.5064 (0.5268)  loss_box_cls: 0.0817 (0.0846)  loss_box_reg: 0.1049 (0.1044)  loss_box_reid: 1.8015 (1.7743)  loss_rpn_reg: 0.0067 (0.0082)  loss_rpn_cls: 0.0075 (0.0124)  time: 2.3296  data: 0.0004  max mem: 20585
+Epoch: [12]  [240/570]  eta: 0:12:43  lr: 0.000300  loss: 2.5573 (2.5525)  loss_proposal_cls: 0.0482 (0.0469)  loss_proposal_reg: 0.5072 (0.5263)  loss_box_cls: 0.0916 (0.0851)  loss_box_reg: 0.1031 (0.1043)  loss_box_reid: 1.8015 (1.7691)  loss_rpn_reg: 0.0074 (0.0082)  loss_rpn_cls: 0.0118 (0.0126)  time: 2.3102  data: 0.0005  max mem: 20585
+Epoch: [12]  [250/570]  eta: 0:12:19  lr: 0.000300  loss: 2.4240 (2.5482)  loss_proposal_cls: 0.0454 (0.0469)  loss_proposal_reg: 0.4941 (0.5269)  loss_box_cls: 0.0811 (0.0848)  loss_box_reg: 0.1029 (0.1046)  loss_box_reid: 1.6873 (1.7642)  loss_rpn_reg: 0.0064 (0.0082)  loss_rpn_cls: 0.0122 (0.0126)  time: 2.3080  data: 0.0004  max mem: 20585
+Epoch: [12]  [260/570]  eta: 0:11:56  lr: 0.000300  loss: 2.4240 (2.5425)  loss_proposal_cls: 0.0426 (0.0469)  loss_proposal_reg: 0.5125 (0.5267)  loss_box_cls: 0.0779 (0.0848)  loss_box_reg: 0.1033 (0.1046)  loss_box_reid: 1.5957 (1.7586)  loss_rpn_reg: 0.0077 (0.0083)  loss_rpn_cls: 0.0123 (0.0126)  time: 2.3073  data: 0.0004  max mem: 20585
+Epoch: [12]  [270/570]  eta: 0:11:34  lr: 0.000300  loss: 2.4114 (2.5411)  loss_proposal_cls: 0.0424 (0.0468)  loss_proposal_reg: 0.5014 (0.5262)  loss_box_cls: 0.0842 (0.0851)  loss_box_reg: 0.1033 (0.1046)  loss_box_reid: 1.6497 (1.7575)  loss_rpn_reg: 0.0091 (0.0083)  loss_rpn_cls: 0.0116 (0.0126)  time: 2.3256  data: 0.0004  max mem: 20585
+Epoch: [12]  [280/570]  eta: 0:11:10  lr: 0.000300  loss: 2.4183 (2.5359)  loss_proposal_cls: 0.0435 (0.0469)  loss_proposal_reg: 0.4702 (0.5249)  loss_box_cls: 0.0832 (0.0849)  loss_box_reg: 0.1011 (0.1045)  loss_box_reid: 1.6669 (1.7539)  loss_rpn_reg: 0.0082 (0.0083)  loss_rpn_cls: 0.0112 (0.0126)  time: 2.3253  data: 0.0004  max mem: 20585
+Epoch: [12]  [290/570]  eta: 0:10:48  lr: 0.000300  loss: 2.4397 (2.5353)  loss_proposal_cls: 0.0483 (0.0470)  loss_proposal_reg: 0.5140 (0.5263)  loss_box_cls: 0.0830 (0.0854)  loss_box_reg: 0.1047 (0.1048)  loss_box_reid: 1.7444 (1.7508)  loss_rpn_reg: 0.0074 (0.0083)  loss_rpn_cls: 0.0110 (0.0126)  time: 2.3302  data: 0.0004  max mem: 20585
+Epoch: [12]  [300/570]  eta: 0:10:24  lr: 0.000300  loss: 2.4210 (2.5279)  loss_proposal_cls: 0.0501 (0.0470)  loss_proposal_reg: 0.5402 (0.5265)  loss_box_cls: 0.0928 (0.0856)  loss_box_reg: 0.1101 (0.1050)  loss_box_reid: 1.4884 (1.7430)  loss_rpn_reg: 0.0078 (0.0083)  loss_rpn_cls: 0.0107 (0.0126)  time: 2.3284  data: 0.0005  max mem: 20585
+Epoch: [12]  [310/570]  eta: 0:10:01  lr: 0.000300  loss: 2.2422 (2.5297)  loss_proposal_cls: 0.0501 (0.0472)  loss_proposal_reg: 0.5348 (0.5282)  loss_box_cls: 0.0893 (0.0858)  loss_box_reg: 0.1115 (0.1054)  loss_box_reid: 1.4783 (1.7418)  loss_rpn_reg: 0.0082 (0.0084)  loss_rpn_cls: 0.0113 (0.0129)  time: 2.3132  data: 0.0004  max mem: 20585
+Epoch: [12]  [320/570]  eta: 0:09:38  lr: 0.000300  loss: 2.5077 (2.5315)  loss_proposal_cls: 0.0502 (0.0472)  loss_proposal_reg: 0.5267 (0.5279)  loss_box_cls: 0.0895 (0.0859)  loss_box_reg: 0.1101 (0.1053)  loss_box_reid: 1.6040 (1.7439)  loss_rpn_reg: 0.0071 (0.0083)  loss_rpn_cls: 0.0119 (0.0129)  time: 2.3226  data: 0.0004  max mem: 20585
+Epoch: [12]  [330/570]  eta: 0:09:15  lr: 0.000300  loss: 2.5077 (2.5239)  loss_proposal_cls: 0.0461 (0.0472)  loss_proposal_reg: 0.5233 (0.5286)  loss_box_cls: 0.0903 (0.0861)  loss_box_reg: 0.1087 (0.1054)  loss_box_reid: 1.6428 (1.7352)  loss_rpn_reg: 0.0066 (0.0083)  loss_rpn_cls: 0.0114 (0.0130)  time: 2.3272  data: 0.0004  max mem: 20585
+Epoch: [12]  [340/570]  eta: 0:08:52  lr: 0.000300  loss: 2.1753 (2.5203)  loss_proposal_cls: 0.0457 (0.0473)  loss_proposal_reg: 0.5233 (0.5277)  loss_box_cls: 0.0840 (0.0862)  loss_box_reg: 0.1047 (0.1054)  loss_box_reid: 1.4944 (1.7325)  loss_rpn_reg: 0.0066 (0.0083)  loss_rpn_cls: 0.0087 (0.0129)  time: 2.3265  data: 0.0004  max mem: 20585
+Epoch: [12]  [350/570]  eta: 0:08:29  lr: 0.000300  loss: 2.2827 (2.5172)  loss_proposal_cls: 0.0468 (0.0473)  loss_proposal_reg: 0.4730 (0.5280)  loss_box_cls: 0.0837 (0.0860)  loss_box_reg: 0.1015 (0.1054)  loss_box_reid: 1.5886 (1.7293)  loss_rpn_reg: 0.0057 (0.0083)  loss_rpn_cls: 0.0101 (0.0129)  time: 2.3158  data: 0.0004  max mem: 20585
+Epoch: [12]  [360/570]  eta: 0:08:06  lr: 0.000300  loss: 2.3093 (2.5125)  loss_proposal_cls: 0.0437 (0.0472)  loss_proposal_reg: 0.4758 (0.5273)  loss_box_cls: 0.0779 (0.0860)  loss_box_reg: 0.0968 (0.1053)  loss_box_reid: 1.6031 (1.7254)  loss_rpn_reg: 0.0069 (0.0083)  loss_rpn_cls: 0.0112 (0.0129)  time: 2.3168  data: 0.0004  max mem: 20585
+Epoch: [12]  [370/570]  eta: 0:07:43  lr: 0.000300  loss: 2.3572 (2.5047)  loss_proposal_cls: 0.0422 (0.0471)  loss_proposal_reg: 0.4662 (0.5263)  loss_box_cls: 0.0773 (0.0858)  loss_box_reg: 0.0985 (0.1053)  loss_box_reid: 1.5529 (1.7191)  loss_rpn_reg: 0.0073 (0.0083)  loss_rpn_cls: 0.0095 (0.0129)  time: 2.3388  data: 0.0004  max mem: 20585
+Epoch: [12]  [380/570]  eta: 0:07:20  lr: 0.000300  loss: 2.3081 (2.5045)  loss_proposal_cls: 0.0430 (0.0472)  loss_proposal_reg: 0.4982 (0.5276)  loss_box_cls: 0.0800 (0.0860)  loss_box_reg: 0.1075 (0.1055)  loss_box_reid: 1.5529 (1.7171)  loss_rpn_reg: 0.0062 (0.0082)  loss_rpn_cls: 0.0113 (0.0129)  time: 2.3322  data: 0.0004  max mem: 20585
+Epoch: [12]  [390/570]  eta: 0:06:56  lr: 0.000300  loss: 2.2922 (2.4996)  loss_proposal_cls: 0.0472 (0.0471)  loss_proposal_reg: 0.5079 (0.5258)  loss_box_cls: 0.0872 (0.0860)  loss_box_reg: 0.1075 (0.1053)  loss_box_reid: 1.6550 (1.7143)  loss_rpn_reg: 0.0062 (0.0082)  loss_rpn_cls: 0.0115 (0.0128)  time: 2.3124  data: 0.0005  max mem: 20585
+Epoch: [12]  [400/570]  eta: 0:06:33  lr: 0.000300  loss: 2.1678 (2.4958)  loss_proposal_cls: 0.0483 (0.0473)  loss_proposal_reg: 0.4622 (0.5260)  loss_box_cls: 0.0872 (0.0863)  loss_box_reg: 0.0983 (0.1054)  loss_box_reid: 1.5254 (1.7098)  loss_rpn_reg: 0.0068 (0.0082)  loss_rpn_cls: 0.0089 (0.0128)  time: 2.3134  data: 0.0006  max mem: 20585
+Epoch: [12]  [410/570]  eta: 0:06:10  lr: 0.000300  loss: 2.1621 (2.4938)  loss_proposal_cls: 0.0484 (0.0473)  loss_proposal_reg: 0.4605 (0.5244)  loss_box_cls: 0.0840 (0.0863)  loss_box_reg: 0.0971 (0.1052)  loss_box_reid: 1.4901 (1.7097)  loss_rpn_reg: 0.0069 (0.0082)  loss_rpn_cls: 0.0102 (0.0127)  time: 2.3152  data: 0.0004  max mem: 20585
+Epoch: [12]  [420/570]  eta: 0:05:47  lr: 0.000300  loss: 2.4880 (2.4947)  loss_proposal_cls: 0.0480 (0.0474)  loss_proposal_reg: 0.5060 (0.5254)  loss_box_cls: 0.0938 (0.0864)  loss_box_reg: 0.1045 (0.1055)  loss_box_reid: 1.4228 (1.7091)  loss_rpn_reg: 0.0077 (0.0082)  loss_rpn_cls: 0.0097 (0.0127)  time: 2.3470  data: 0.0004  max mem: 20585
+Epoch: [12]  [430/570]  eta: 0:05:24  lr: 0.000300  loss: 2.2110 (2.4862)  loss_proposal_cls: 0.0480 (0.0473)  loss_proposal_reg: 0.4770 (0.5240)  loss_box_cls: 0.0946 (0.0866)  loss_box_reg: 0.1110 (0.1054)  loss_box_reid: 1.3698 (1.7019)  loss_rpn_reg: 0.0085 (0.0082)  loss_rpn_cls: 0.0094 (0.0127)  time: 2.3390  data: 0.0004  max mem: 20585
+Epoch: [12]  [440/570]  eta: 0:05:01  lr: 0.000300  loss: 2.1510 (2.4808)  loss_proposal_cls: 0.0442 (0.0473)  loss_proposal_reg: 0.4709 (0.5233)  loss_box_cls: 0.0864 (0.0866)  loss_box_reg: 0.1087 (0.1054)  loss_box_reid: 1.3657 (1.6974)  loss_rpn_reg: 0.0085 (0.0082)  loss_rpn_cls: 0.0126 (0.0127)  time: 2.3036  data: 0.0004  max mem: 20585
+Epoch: [12]  [450/570]  eta: 0:04:38  lr: 0.000300  loss: 2.2409 (2.4765)  loss_proposal_cls: 0.0442 (0.0473)  loss_proposal_reg: 0.4774 (0.5234)  loss_box_cls: 0.0805 (0.0866)  loss_box_reg: 0.1115 (0.1055)  loss_box_reid: 1.5119 (1.6928)  loss_rpn_reg: 0.0080 (0.0083)  loss_rpn_cls: 0.0106 (0.0126)  time: 2.3282  data: 0.0005  max mem: 20585
+Epoch: [12]  [460/570]  eta: 0:04:15  lr: 0.000300  loss: 2.3892 (2.4775)  loss_proposal_cls: 0.0466 (0.0473)  loss_proposal_reg: 0.5381 (0.5238)  loss_box_cls: 0.0762 (0.0866)  loss_box_reg: 0.1036 (0.1055)  loss_box_reid: 1.6025 (1.6935)  loss_rpn_reg: 0.0073 (0.0082)  loss_rpn_cls: 0.0096 (0.0126)  time: 2.3547  data: 0.0004  max mem: 20585
+Epoch: [12]  [470/570]  eta: 0:03:51  lr: 0.000300  loss: 2.6046 (2.4785)  loss_proposal_cls: 0.0453 (0.0472)  loss_proposal_reg: 0.5114 (0.5238)  loss_box_cls: 0.0784 (0.0865)  loss_box_reg: 0.1066 (0.1056)  loss_box_reid: 1.7246 (1.6947)  loss_rpn_reg: 0.0068 (0.0082)  loss_rpn_cls: 0.0094 (0.0126)  time: 2.3305  data: 0.0004  max mem: 20585
+Epoch: [12]  [480/570]  eta: 0:03:28  lr: 0.000300  loss: 2.4564 (2.4779)  loss_proposal_cls: 0.0458 (0.0474)  loss_proposal_reg: 0.5283 (0.5264)  loss_box_cls: 0.0867 (0.0869)  loss_box_reg: 0.1126 (0.1061)  loss_box_reid: 1.5695 (1.6903)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0100 (0.0126)  time: 2.3122  data: 0.0004  max mem: 20585
+Epoch: [12]  [490/570]  eta: 0:03:05  lr: 0.000300  loss: 2.5379 (2.4835)  loss_proposal_cls: 0.0545 (0.0475)  loss_proposal_reg: 0.6651 (0.5289)  loss_box_cls: 0.0910 (0.0869)  loss_box_reg: 0.1216 (0.1062)  loss_box_reid: 1.5695 (1.6932)  loss_rpn_reg: 0.0065 (0.0082)  loss_rpn_cls: 0.0097 (0.0126)  time: 2.3425  data: 0.0003  max mem: 20585
+Epoch: [12]  [500/570]  eta: 0:02:42  lr: 0.000300  loss: 2.6690 (2.4868)  loss_proposal_cls: 0.0468 (0.0475)  loss_proposal_reg: 0.5960 (0.5303)  loss_box_cls: 0.0844 (0.0868)  loss_box_reg: 0.1125 (0.1063)  loss_box_reid: 1.7103 (1.6951)  loss_rpn_reg: 0.0088 (0.0083)  loss_rpn_cls: 0.0115 (0.0126)  time: 2.3397  data: 0.0004  max mem: 20585
+Epoch: [12]  [510/570]  eta: 0:02:19  lr: 0.000300  loss: 2.4401 (2.4854)  loss_proposal_cls: 0.0465 (0.0475)  loss_proposal_reg: 0.5315 (0.5297)  loss_box_cls: 0.0841 (0.0869)  loss_box_reg: 0.1031 (0.1062)  loss_box_reid: 1.6149 (1.6944)  loss_rpn_reg: 0.0077 (0.0082)  loss_rpn_cls: 0.0099 (0.0125)  time: 2.3260  data: 0.0004  max mem: 20585
+Epoch: [12]  [520/570]  eta: 0:01:55  lr: 0.000300  loss: 2.3562 (2.4824)  loss_proposal_cls: 0.0449 (0.0474)  loss_proposal_reg: 0.5189 (0.5291)  loss_box_cls: 0.0771 (0.0867)  loss_box_reg: 0.1014 (0.1061)  loss_box_reid: 1.5749 (1.6921)  loss_rpn_reg: 0.0055 (0.0082)  loss_rpn_cls: 0.0085 (0.0127)  time: 2.3323  data: 0.0004  max mem: 20585
+Epoch: [12]  [530/570]  eta: 0:01:32  lr: 0.000300  loss: 2.3457 (2.4785)  loss_proposal_cls: 0.0434 (0.0474)  loss_proposal_reg: 0.5189 (0.5290)  loss_box_cls: 0.0743 (0.0865)  loss_box_reg: 0.1036 (0.1061)  loss_box_reid: 1.5495 (1.6887)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0088 (0.0126)  time: 2.3278  data: 0.0004  max mem: 20585
+Epoch: [12]  [540/570]  eta: 0:01:09  lr: 0.000300  loss: 2.4566 (2.4789)  loss_proposal_cls: 0.0427 (0.0473)  loss_proposal_reg: 0.4738 (0.5282)  loss_box_cls: 0.0768 (0.0864)  loss_box_reg: 0.1024 (0.1060)  loss_box_reid: 1.6172 (1.6902)  loss_rpn_reg: 0.0064 (0.0082)  loss_rpn_cls: 0.0107 (0.0126)  time: 2.3170  data: 0.0004  max mem: 20585
+Epoch: [12]  [550/570]  eta: 0:00:46  lr: 0.000300  loss: 2.4570 (2.4796)  loss_proposal_cls: 0.0427 (0.0473)  loss_proposal_reg: 0.4943 (0.5290)  loss_box_cls: 0.0803 (0.0865)  loss_box_reg: 0.1031 (0.1061)  loss_box_reid: 1.6813 (1.6898)  loss_rpn_reg: 0.0064 (0.0082)  loss_rpn_cls: 0.0117 (0.0127)  time: 2.3181  data: 0.0004  max mem: 20585
+Epoch: [12]  [560/570]  eta: 0:00:23  lr: 0.000300  loss: 2.4594 (2.4822)  loss_proposal_cls: 0.0503 (0.0473)  loss_proposal_reg: 0.5663 (0.5305)  loss_box_cls: 0.0923 (0.0866)  loss_box_reg: 0.1106 (0.1062)  loss_box_reid: 1.6394 (1.6906)  loss_rpn_reg: 0.0073 (0.0083)  loss_rpn_cls: 0.0098 (0.0127)  time: 2.3410  data: 0.0004  max mem: 20585
+Epoch: [12]  [569/570]  eta: 0:00:02  lr: 0.000300  loss: 2.4271 (2.4820)  loss_proposal_cls: 0.0520 (0.0475)  loss_proposal_reg: 0.6470 (0.5321)  loss_box_cls: 0.0897 (0.0867)  loss_box_reg: 0.1202 (0.1065)  loss_box_reid: 1.6370 (1.6883)  loss_rpn_reg: 0.0069 (0.0082)  loss_rpn_cls: 0.0120 (0.0127)  time: 2.3390  data: 0.0004  max mem: 20585
+Epoch: [12] Total time: 0:22:02 (2.3209 s / it)
+all detection:
+  recall = 96.38%
+  ap = 93.65%
+search ranking:
+  mAP = 19.44%
+  top- 1 = 71.75%
+  top- 5 = 81.67%
+  top-10 = 85.12%
+init for oim  [  0/571]  eta: 0:25:04    time: 2.6351  data: 2.3785  max mem: 20585
+init for oim  [ 10/571]  eta: 0:04:12    time: 0.4498  data: 0.2164  max mem: 20585
+init for oim  [ 20/571]  eta: 0:03:08    time: 0.2272  data: 0.0002  max mem: 20585
+init for oim  [ 30/571]  eta: 0:02:44    time: 0.2244  data: 0.0002  max mem: 20585
+init for oim  [ 40/571]  eta: 0:02:32    time: 0.2288  data: 0.0003  max mem: 20585
+init for oim  [ 50/571]  eta: 0:02:23    time: 0.2330  data: 0.0003  max mem: 20585
+init for oim  [ 60/571]  eta: 0:02:17    time: 0.2338  data: 0.0002  max mem: 20585
+init for oim  [ 70/571]  eta: 0:02:11    time: 0.2302  data: 0.0002  max mem: 20585
+init for oim  [ 80/571]  eta: 0:02:07    time: 0.2310  data: 0.0002  max mem: 20585
+init for oim  [ 90/571]  eta: 0:02:03    time: 0.2350  data: 0.0002  max mem: 20585
+init for oim  [100/571]  eta: 0:01:59    time: 0.2320  data: 0.0002  max mem: 20585
+init for oim  [110/571]  eta: 0:01:56    time: 0.2292  data: 0.0002  max mem: 20585
+init for oim  [120/571]  eta: 0:01:52    time: 0.2287  data: 0.0002  max mem: 20585
+init for oim  [130/571]  eta: 0:01:49    time: 0.2332  data: 0.0002  max mem: 20585
+init for oim  [140/571]  eta: 0:01:46    time: 0.2360  data: 0.0002  max mem: 20585
+init for oim  [150/571]  eta: 0:01:44    time: 0.2334  data: 0.0002  max mem: 20585
+init for oim  [160/571]  eta: 0:01:41    time: 0.2341  data: 0.0002  max mem: 20585
+init for oim  [170/571]  eta: 0:01:38    time: 0.2319  data: 0.0002  max mem: 20585
+init for oim  [180/571]  eta: 0:01:35    time: 0.2315  data: 0.0002  max mem: 20585
+init for oim  [190/571]  eta: 0:01:32    time: 0.2326  data: 0.0002  max mem: 20585
+init for oim  [200/571]  eta: 0:01:30    time: 0.2343  data: 0.0002  max mem: 20585
+init for oim  [210/571]  eta: 0:01:27    time: 0.2371  data: 0.0002  max mem: 20585
+init for oim  [220/571]  eta: 0:01:25    time: 0.2322  data: 0.0002  max mem: 20585
+init for oim  [230/571]  eta: 0:01:22    time: 0.2314  data: 0.0002  max mem: 20585
+init for oim  [240/571]  eta: 0:01:20    time: 0.2327  data: 0.0002  max mem: 20585
+init for oim  [250/571]  eta: 0:01:17    time: 0.2371  data: 0.0003  max mem: 20585
+init for oim  [260/571]  eta: 0:01:15    time: 0.2420  data: 0.0003  max mem: 20585
+init for oim  [270/571]  eta: 0:01:12    time: 0.2376  data: 0.0002  max mem: 20585
+init for oim  [280/571]  eta: 0:01:10    time: 0.2335  data: 0.0002  max mem: 20585
+init for oim  [290/571]  eta: 0:01:07    time: 0.2348  data: 0.0003  max mem: 20585
+init for oim  [300/571]  eta: 0:01:05    time: 0.2376  data: 0.0003  max mem: 20585
+init for oim  [310/571]  eta: 0:01:02    time: 0.2364  data: 0.0002  max mem: 20585
+init for oim  [320/571]  eta: 0:01:00    time: 0.2342  data: 0.0002  max mem: 20585
+init for oim  [330/571]  eta: 0:00:57    time: 0.2318  data: 0.0002  max mem: 20585
+init for oim  [340/571]  eta: 0:00:55    time: 0.2343  data: 0.0002  max mem: 20585
+init for oim  [350/571]  eta: 0:00:53    time: 0.2362  data: 0.0002  max mem: 20585
+init for oim  [360/571]  eta: 0:00:50    time: 0.2367  data: 0.0002  max mem: 20585
+init for oim  [370/571]  eta: 0:00:48    time: 0.2388  data: 0.0002  max mem: 20585
+init for oim  [380/571]  eta: 0:00:45    time: 0.2400  data: 0.0002  max mem: 20585
+init for oim  [390/571]  eta: 0:00:43    time: 0.2394  data: 0.0002  max mem: 20585
+init for oim  [400/571]  eta: 0:00:40    time: 0.2325  data: 0.0002  max mem: 20585
+init for oim  [410/571]  eta: 0:00:38    time: 0.2331  data: 0.0002  max mem: 20585
+init for oim  [420/571]  eta: 0:00:36    time: 0.2354  data: 0.0002  max mem: 20585
+init for oim  [430/571]  eta: 0:00:33    time: 0.2315  data: 0.0002  max mem: 20585
+init for oim  [440/571]  eta: 0:00:31    time: 0.2298  data: 0.0002  max mem: 20585
+init for oim  [450/571]  eta: 0:00:28    time: 0.2155  data: 0.0002  max mem: 20585
+init for oim  [460/571]  eta: 0:00:26    time: 0.1876  data: 0.0002  max mem: 20585
+init for oim  [470/571]  eta: 0:00:23    time: 0.1754  data: 0.0002  max mem: 20585
+init for oim  [480/571]  eta: 0:00:21    time: 0.1767  data: 0.0002  max mem: 20585
+init for oim  [490/571]  eta: 0:00:18    time: 0.1766  data: 0.0002  max mem: 20585
+init for oim  [500/571]  eta: 0:00:16    time: 0.1758  data: 0.0002  max mem: 20585
+init for oim  [510/571]  eta: 0:00:14    time: 0.1760  data: 0.0002  max mem: 20585
+init for oim  [520/571]  eta: 0:00:11    time: 0.1777  data: 0.0002  max mem: 20585
+init for oim  [530/571]  eta: 0:00:09    time: 0.1785  data: 0.0002  max mem: 20585
+init for oim  [540/571]  eta: 0:00:07    time: 0.1778  data: 0.0002  max mem: 20585
+init for oim  [550/571]  eta: 0:00:04    time: 0.1783  data: 0.0002  max mem: 20585
+init for oim  [560/571]  eta: 0:00:02    time: 0.1828  data: 0.0002  max mem: 20585
+init for oim  [570/571]  eta: 0:00:00    time: 0.1791  data: 0.0001  max mem: 20585
+init for oim Total time: 0:02:09 (0.2260 s / it)
+Computing jaccard distance...
+Jaccard distance computing time cost: 256.7216775417328
+[  0   1   1 ... 538 507 499]
+number of clusters:============== 1852
+[  0   1   1 ... 538 507 499]
+torch.Size([1852, 2048]) ====
+(18048, 18048)
+torch.Size([18048, 2048])
+Epoch: [13]  [  0/570]  eta: 0:44:56  lr: 0.000300  loss: 1.4874 (1.4874)  loss_proposal_cls: 0.0478 (0.0478)  loss_proposal_reg: 0.4847 (0.4847)  loss_box_cls: 0.0698 (0.0698)  loss_box_reg: 0.0969 (0.0969)  loss_box_reid: 0.7740 (0.7740)  loss_rpn_reg: 0.0051 (0.0051)  loss_rpn_cls: 0.0090 (0.0090)  time: 4.7311  data: 2.3612  max mem: 20585
+Epoch: [13]  [ 10/570]  eta: 0:22:40  lr: 0.000300  loss: 2.2709 (2.2229)  loss_proposal_cls: 0.0478 (0.0480)  loss_proposal_reg: 0.5209 (0.5454)  loss_box_cls: 0.0789 (0.0839)  loss_box_reg: 0.0969 (0.1057)  loss_box_reid: 1.5516 (1.4192)  loss_rpn_reg: 0.0064 (0.0093)  loss_rpn_cls: 0.0096 (0.0115)  time: 2.4294  data: 0.2150  max mem: 20585
+Epoch: [13]  [ 20/570]  eta: 0:21:22  lr: 0.000300  loss: 2.3148 (2.2948)  loss_proposal_cls: 0.0507 (0.0506)  loss_proposal_reg: 0.5325 (0.5350)  loss_box_cls: 0.0853 (0.0858)  loss_box_reg: 0.1015 (0.1047)  loss_box_reid: 1.5516 (1.4958)  loss_rpn_reg: 0.0064 (0.0094)  loss_rpn_cls: 0.0109 (0.0137)  time: 2.2124  data: 0.0004  max mem: 20585
+Epoch: [13]  [ 30/570]  eta: 0:20:38  lr: 0.000300  loss: 2.2962 (2.2847)  loss_proposal_cls: 0.0482 (0.0487)  loss_proposal_reg: 0.5011 (0.5134)  loss_box_cls: 0.0797 (0.0830)  loss_box_reg: 0.1002 (0.1013)  loss_box_reid: 1.4626 (1.5169)  loss_rpn_reg: 0.0074 (0.0088)  loss_rpn_cls: 0.0102 (0.0126)  time: 2.2187  data: 0.0004  max mem: 20585
+Epoch: [13]  [ 40/570]  eta: 0:20:08  lr: 0.000300  loss: 2.2996 (2.3801)  loss_proposal_cls: 0.0461 (0.0490)  loss_proposal_reg: 0.4585 (0.5217)  loss_box_cls: 0.0793 (0.0836)  loss_box_reg: 0.0988 (0.1035)  loss_box_reid: 1.5862 (1.6009)  loss_rpn_reg: 0.0074 (0.0087)  loss_rpn_cls: 0.0102 (0.0127)  time: 2.2272  data: 0.0004  max mem: 20585
+Epoch: [13]  [ 50/570]  eta: 0:19:42  lr: 0.000300  loss: 2.6700 (2.4405)  loss_proposal_cls: 0.0471 (0.0490)  loss_proposal_reg: 0.5099 (0.5240)  loss_box_cls: 0.0800 (0.0840)  loss_box_reg: 0.1049 (0.1042)  loss_box_reid: 1.8899 (1.6584)  loss_rpn_reg: 0.0065 (0.0086)  loss_rpn_cls: 0.0104 (0.0124)  time: 2.2440  data: 0.0004  max mem: 20585
+Epoch: [13]  [ 60/570]  eta: 0:19:17  lr: 0.000300  loss: 2.6687 (2.4632)  loss_proposal_cls: 0.0482 (0.0487)  loss_proposal_reg: 0.4918 (0.5217)  loss_box_cls: 0.0800 (0.0844)  loss_box_reg: 0.1009 (0.1036)  loss_box_reid: 1.8589 (1.6839)  loss_rpn_reg: 0.0072 (0.0084)  loss_rpn_cls: 0.0101 (0.0125)  time: 2.2464  data: 0.0004  max mem: 20585
+Epoch: [13]  [ 70/570]  eta: 0:18:54  lr: 0.000300  loss: 2.3567 (2.4575)  loss_proposal_cls: 0.0482 (0.0482)  loss_proposal_reg: 0.5036 (0.5247)  loss_box_cls: 0.0812 (0.0840)  loss_box_reg: 0.0982 (0.1034)  loss_box_reid: 1.5855 (1.6765)  loss_rpn_reg: 0.0077 (0.0085)  loss_rpn_cls: 0.0094 (0.0122)  time: 2.2560  data: 0.0004  max mem: 20585
+Epoch: [13]  [ 80/570]  eta: 0:18:32  lr: 0.000300  loss: 2.3257 (2.4747)  loss_proposal_cls: 0.0467 (0.0480)  loss_proposal_reg: 0.5077 (0.5242)  loss_box_cls: 0.0788 (0.0841)  loss_box_reg: 0.0973 (0.1029)  loss_box_reid: 1.5819 (1.6949)  loss_rpn_reg: 0.0083 (0.0085)  loss_rpn_cls: 0.0094 (0.0121)  time: 2.2755  data: 0.0004  max mem: 20585
+Epoch: [13]  [ 90/570]  eta: 0:18:10  lr: 0.000300  loss: 2.4756 (2.4782)  loss_proposal_cls: 0.0463 (0.0479)  loss_proposal_reg: 0.4768 (0.5215)  loss_box_cls: 0.0768 (0.0831)  loss_box_reg: 0.1020 (0.1034)  loss_box_reid: 1.8321 (1.7014)  loss_rpn_reg: 0.0090 (0.0087)  loss_rpn_cls: 0.0111 (0.0121)  time: 2.2839  data: 0.0004  max mem: 20585
+Epoch: [13]  [100/570]  eta: 0:17:49  lr: 0.000300  loss: 2.4379 (2.4864)  loss_proposal_cls: 0.0469 (0.0479)  loss_proposal_reg: 0.4808 (0.5208)  loss_box_cls: 0.0825 (0.0845)  loss_box_reg: 0.1020 (0.1030)  loss_box_reid: 1.8144 (1.7096)  loss_rpn_reg: 0.0090 (0.0086)  loss_rpn_cls: 0.0108 (0.0120)  time: 2.2883  data: 0.0004  max mem: 20585
+Epoch: [13]  [110/570]  eta: 0:17:27  lr: 0.000300  loss: 2.4702 (2.4914)  loss_proposal_cls: 0.0489 (0.0480)  loss_proposal_reg: 0.5312 (0.5242)  loss_box_cls: 0.0857 (0.0843)  loss_box_reg: 0.1080 (0.1032)  loss_box_reid: 1.7344 (1.7110)  loss_rpn_reg: 0.0070 (0.0086)  loss_rpn_cls: 0.0100 (0.0121)  time: 2.2994  data: 0.0004  max mem: 20585
+Epoch: [13]  [120/570]  eta: 0:17:05  lr: 0.000300  loss: 2.5274 (2.4973)  loss_proposal_cls: 0.0479 (0.0475)  loss_proposal_reg: 0.5312 (0.5238)  loss_box_cls: 0.0795 (0.0842)  loss_box_reg: 0.1047 (0.1033)  loss_box_reid: 1.5970 (1.7171)  loss_rpn_reg: 0.0065 (0.0085)  loss_rpn_cls: 0.0095 (0.0128)  time: 2.3075  data: 0.0004  max mem: 20585
+Epoch: [13]  [130/570]  eta: 0:16:44  lr: 0.000300  loss: 2.3230 (2.4776)  loss_proposal_cls: 0.0422 (0.0475)  loss_proposal_reg: 0.4531 (0.5190)  loss_box_cls: 0.0755 (0.0841)  loss_box_reg: 0.0979 (0.1031)  loss_box_reid: 1.5838 (1.7027)  loss_rpn_reg: 0.0069 (0.0085)  loss_rpn_cls: 0.0110 (0.0128)  time: 2.3104  data: 0.0004  max mem: 20585
+Epoch: [13]  [140/570]  eta: 0:16:21  lr: 0.000300  loss: 2.2924 (2.4720)  loss_proposal_cls: 0.0438 (0.0474)  loss_proposal_reg: 0.4531 (0.5191)  loss_box_cls: 0.0739 (0.0836)  loss_box_reg: 0.0959 (0.1028)  loss_box_reid: 1.4689 (1.6981)  loss_rpn_reg: 0.0072 (0.0084)  loss_rpn_cls: 0.0094 (0.0126)  time: 2.3049  data: 0.0004  max mem: 20585
+Epoch: [13]  [150/570]  eta: 0:15:59  lr: 0.000300  loss: 2.3133 (2.4623)  loss_proposal_cls: 0.0464 (0.0475)  loss_proposal_reg: 0.4634 (0.5148)  loss_box_cls: 0.0799 (0.0837)  loss_box_reg: 0.0937 (0.1023)  loss_box_reid: 1.5590 (1.6933)  loss_rpn_reg: 0.0060 (0.0083)  loss_rpn_cls: 0.0093 (0.0125)  time: 2.3055  data: 0.0004  max mem: 20585
+Epoch: [13]  [160/570]  eta: 0:15:37  lr: 0.000300  loss: 2.2754 (2.4511)  loss_proposal_cls: 0.0441 (0.0473)  loss_proposal_reg: 0.4900 (0.5163)  loss_box_cls: 0.0868 (0.0839)  loss_box_reg: 0.1015 (0.1023)  loss_box_reid: 1.5111 (1.6804)  loss_rpn_reg: 0.0069 (0.0084)  loss_rpn_cls: 0.0109 (0.0125)  time: 2.3088  data: 0.0004  max mem: 20585
+Epoch: [13]  [170/570]  eta: 0:15:15  lr: 0.000300  loss: 2.2360 (2.4383)  loss_proposal_cls: 0.0397 (0.0469)  loss_proposal_reg: 0.5020 (0.5139)  loss_box_cls: 0.0767 (0.0834)  loss_box_reg: 0.1025 (0.1022)  loss_box_reid: 1.5111 (1.6714)  loss_rpn_reg: 0.0068 (0.0082)  loss_rpn_cls: 0.0096 (0.0123)  time: 2.3048  data: 0.0004  max mem: 20585
+Epoch: [13]  [180/570]  eta: 0:14:52  lr: 0.000300  loss: 2.2360 (2.4393)  loss_proposal_cls: 0.0423 (0.0470)  loss_proposal_reg: 0.4665 (0.5118)  loss_box_cls: 0.0704 (0.0832)  loss_box_reg: 0.0988 (0.1019)  loss_box_reid: 1.5961 (1.6746)  loss_rpn_reg: 0.0061 (0.0083)  loss_rpn_cls: 0.0088 (0.0125)  time: 2.3106  data: 0.0004  max mem: 20585
+Epoch: [13]  [190/570]  eta: 0:14:30  lr: 0.000300  loss: 2.2318 (2.4320)  loss_proposal_cls: 0.0496 (0.0471)  loss_proposal_reg: 0.4507 (0.5137)  loss_box_cls: 0.0752 (0.0831)  loss_box_reg: 0.1033 (0.1022)  loss_box_reid: 1.4968 (1.6653)  loss_rpn_reg: 0.0068 (0.0083)  loss_rpn_cls: 0.0088 (0.0123)  time: 2.3175  data: 0.0004  max mem: 20585
+Epoch: [13]  [200/570]  eta: 0:14:07  lr: 0.000300  loss: 2.2885 (2.4398)  loss_proposal_cls: 0.0500 (0.0473)  loss_proposal_reg: 0.4925 (0.5165)  loss_box_cls: 0.0822 (0.0840)  loss_box_reg: 0.1014 (0.1024)  loss_box_reid: 1.4968 (1.6690)  loss_rpn_reg: 0.0065 (0.0083)  loss_rpn_cls: 0.0091 (0.0123)  time: 2.3106  data: 0.0004  max mem: 20585
+Epoch: [13]  [210/570]  eta: 0:13:45  lr: 0.000300  loss: 2.4102 (2.4407)  loss_proposal_cls: 0.0449 (0.0473)  loss_proposal_reg: 0.5410 (0.5193)  loss_box_cls: 0.0839 (0.0841)  loss_box_reg: 0.1022 (0.1027)  loss_box_reid: 1.5695 (1.6668)  loss_rpn_reg: 0.0073 (0.0083)  loss_rpn_cls: 0.0116 (0.0123)  time: 2.3010  data: 0.0004  max mem: 20585
+Epoch: [13]  [220/570]  eta: 0:13:22  lr: 0.000300  loss: 2.4102 (2.4347)  loss_proposal_cls: 0.0450 (0.0473)  loss_proposal_reg: 0.5587 (0.5195)  loss_box_cls: 0.0784 (0.0840)  loss_box_reg: 0.1084 (0.1029)  loss_box_reid: 1.5695 (1.6605)  loss_rpn_reg: 0.0073 (0.0082)  loss_rpn_cls: 0.0112 (0.0122)  time: 2.2949  data: 0.0005  max mem: 20585
+Epoch: [13]  [230/570]  eta: 0:12:59  lr: 0.000300  loss: 2.3822 (2.4369)  loss_proposal_cls: 0.0460 (0.0470)  loss_proposal_reg: 0.5689 (0.5220)  loss_box_cls: 0.0823 (0.0841)  loss_box_reg: 0.1195 (0.1035)  loss_box_reid: 1.5889 (1.6598)  loss_rpn_reg: 0.0077 (0.0082)  loss_rpn_cls: 0.0110 (0.0123)  time: 2.3061  data: 0.0005  max mem: 20585
+Epoch: [13]  [240/570]  eta: 0:12:37  lr: 0.000300  loss: 2.5042 (2.4375)  loss_proposal_cls: 0.0441 (0.0470)  loss_proposal_reg: 0.5759 (0.5256)  loss_box_cls: 0.0890 (0.0842)  loss_box_reg: 0.1097 (0.1038)  loss_box_reid: 1.6124 (1.6562)  loss_rpn_reg: 0.0081 (0.0083)  loss_rpn_cls: 0.0122 (0.0125)  time: 2.3244  data: 0.0005  max mem: 20585
+Epoch: [13]  [250/570]  eta: 0:12:14  lr: 0.000300  loss: 2.6614 (2.4462)  loss_proposal_cls: 0.0473 (0.0472)  loss_proposal_reg: 0.5392 (0.5282)  loss_box_cls: 0.0847 (0.0845)  loss_box_reg: 0.1075 (0.1040)  loss_box_reid: 1.7339 (1.6615)  loss_rpn_reg: 0.0093 (0.0083)  loss_rpn_cls: 0.0125 (0.0125)  time: 2.3227  data: 0.0005  max mem: 20585
+Epoch: [13]  [260/570]  eta: 0:11:51  lr: 0.000300  loss: 2.4385 (2.4322)  loss_proposal_cls: 0.0455 (0.0472)  loss_proposal_reg: 0.4532 (0.5237)  loss_box_cls: 0.0792 (0.0843)  loss_box_reg: 0.0956 (0.1035)  loss_box_reid: 1.6706 (1.6528)  loss_rpn_reg: 0.0076 (0.0083)  loss_rpn_cls: 0.0102 (0.0124)  time: 2.3086  data: 0.0004  max mem: 20585
+Epoch: [13]  [270/570]  eta: 0:11:28  lr: 0.000300  loss: 2.0889 (2.4287)  loss_proposal_cls: 0.0455 (0.0473)  loss_proposal_reg: 0.4002 (0.5225)  loss_box_cls: 0.0821 (0.0843)  loss_box_reg: 0.0864 (0.1033)  loss_box_reid: 1.3825 (1.6504)  loss_rpn_reg: 0.0074 (0.0083)  loss_rpn_cls: 0.0102 (0.0125)  time: 2.2996  data: 0.0003  max mem: 20585
+Epoch: [13]  [280/570]  eta: 0:11:05  lr: 0.000300  loss: 2.3045 (2.4270)  loss_proposal_cls: 0.0478 (0.0473)  loss_proposal_reg: 0.4420 (0.5214)  loss_box_cls: 0.0844 (0.0844)  loss_box_reg: 0.0928 (0.1033)  loss_box_reid: 1.5978 (1.6500)  loss_rpn_reg: 0.0074 (0.0083)  loss_rpn_cls: 0.0093 (0.0123)  time: 2.2934  data: 0.0003  max mem: 20585
+Epoch: [13]  [290/570]  eta: 0:10:42  lr: 0.000300  loss: 2.2669 (2.4270)  loss_proposal_cls: 0.0480 (0.0474)  loss_proposal_reg: 0.4698 (0.5209)  loss_box_cls: 0.0837 (0.0845)  loss_box_reg: 0.1046 (0.1033)  loss_box_reid: 1.5978 (1.6502)  loss_rpn_reg: 0.0069 (0.0082)  loss_rpn_cls: 0.0103 (0.0125)  time: 2.2982  data: 0.0003  max mem: 20585
+Epoch: [13]  [300/570]  eta: 0:10:20  lr: 0.000300  loss: 2.2669 (2.4273)  loss_proposal_cls: 0.0480 (0.0475)  loss_proposal_reg: 0.5175 (0.5216)  loss_box_cls: 0.0843 (0.0847)  loss_box_reg: 0.1024 (0.1033)  loss_box_reid: 1.6226 (1.6493)  loss_rpn_reg: 0.0085 (0.0083)  loss_rpn_cls: 0.0123 (0.0126)  time: 2.3242  data: 0.0004  max mem: 20585
+Epoch: [13]  [310/570]  eta: 0:09:57  lr: 0.000300  loss: 2.4346 (2.4276)  loss_proposal_cls: 0.0460 (0.0474)  loss_proposal_reg: 0.5374 (0.5223)  loss_box_cls: 0.0839 (0.0845)  loss_box_reg: 0.1024 (0.1034)  loss_box_reid: 1.6470 (1.6492)  loss_rpn_reg: 0.0087 (0.0083)  loss_rpn_cls: 0.0109 (0.0125)  time: 2.3179  data: 0.0004  max mem: 20585
+Epoch: [13]  [320/570]  eta: 0:09:34  lr: 0.000300  loss: 2.4374 (2.4303)  loss_proposal_cls: 0.0416 (0.0474)  loss_proposal_reg: 0.5388 (0.5230)  loss_box_cls: 0.0839 (0.0847)  loss_box_reg: 0.1066 (0.1036)  loss_box_reid: 1.6470 (1.6509)  loss_rpn_reg: 0.0070 (0.0083)  loss_rpn_cls: 0.0097 (0.0125)  time: 2.3048  data: 0.0004  max mem: 20585
+Epoch: [13]  [330/570]  eta: 0:09:11  lr: 0.000300  loss: 2.4103 (2.4276)  loss_proposal_cls: 0.0454 (0.0473)  loss_proposal_reg: 0.4938 (0.5228)  loss_box_cls: 0.0904 (0.0847)  loss_box_reg: 0.0969 (0.1035)  loss_box_reid: 1.5258 (1.6486)  loss_rpn_reg: 0.0062 (0.0082)  loss_rpn_cls: 0.0096 (0.0124)  time: 2.3060  data: 0.0004  max mem: 20585
+Epoch: [13]  [340/570]  eta: 0:08:48  lr: 0.000300  loss: 2.2485 (2.4300)  loss_proposal_cls: 0.0454 (0.0473)  loss_proposal_reg: 0.4938 (0.5217)  loss_box_cls: 0.0786 (0.0845)  loss_box_reg: 0.0954 (0.1033)  loss_box_reid: 1.6111 (1.6526)  loss_rpn_reg: 0.0063 (0.0082)  loss_rpn_cls: 0.0102 (0.0124)  time: 2.3019  data: 0.0004  max mem: 20585
+Epoch: [13]  [350/570]  eta: 0:08:25  lr: 0.000300  loss: 2.4150 (2.4264)  loss_proposal_cls: 0.0413 (0.0472)  loss_proposal_reg: 0.4290 (0.5199)  loss_box_cls: 0.0786 (0.0844)  loss_box_reg: 0.0990 (0.1031)  loss_box_reid: 1.6632 (1.6512)  loss_rpn_reg: 0.0067 (0.0082)  loss_rpn_cls: 0.0102 (0.0124)  time: 2.3100  data: 0.0004  max mem: 20585
+Epoch: [13]  [360/570]  eta: 0:08:02  lr: 0.000300  loss: 2.2154 (2.4203)  loss_proposal_cls: 0.0392 (0.0470)  loss_proposal_reg: 0.4539 (0.5203)  loss_box_cls: 0.0815 (0.0845)  loss_box_reg: 0.0990 (0.1030)  loss_box_reid: 1.5105 (1.6448)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0123 (0.0124)  time: 2.3008  data: 0.0004  max mem: 20585
+Epoch: [13]  [370/570]  eta: 0:07:39  lr: 0.000300  loss: 2.2250 (2.4187)  loss_proposal_cls: 0.0434 (0.0470)  loss_proposal_reg: 0.4963 (0.5203)  loss_box_cls: 0.0815 (0.0844)  loss_box_reg: 0.0930 (0.1028)  loss_box_reid: 1.4107 (1.6437)  loss_rpn_reg: 0.0076 (0.0082)  loss_rpn_cls: 0.0115 (0.0124)  time: 2.2932  data: 0.0004  max mem: 20585
+Epoch: [13]  [380/570]  eta: 0:07:16  lr: 0.000300  loss: 2.2727 (2.4105)  loss_proposal_cls: 0.0451 (0.0470)  loss_proposal_reg: 0.4653 (0.5176)  loss_box_cls: 0.0801 (0.0842)  loss_box_reg: 0.0854 (0.1024)  loss_box_reid: 1.4107 (1.6388)  loss_rpn_reg: 0.0070 (0.0081)  loss_rpn_cls: 0.0091 (0.0124)  time: 2.2940  data: 0.0003  max mem: 20585
+Epoch: [13]  [390/570]  eta: 0:06:53  lr: 0.000300  loss: 2.1306 (2.4038)  loss_proposal_cls: 0.0437 (0.0470)  loss_proposal_reg: 0.4171 (0.5159)  loss_box_cls: 0.0795 (0.0841)  loss_box_reg: 0.0848 (0.1021)  loss_box_reid: 1.4298 (1.6343)  loss_rpn_reg: 0.0059 (0.0081)  loss_rpn_cls: 0.0084 (0.0123)  time: 2.2930  data: 0.0003  max mem: 20585
+Epoch: [13]  [400/570]  eta: 0:06:30  lr: 0.000300  loss: 2.1971 (2.4049)  loss_proposal_cls: 0.0471 (0.0472)  loss_proposal_reg: 0.5185 (0.5186)  loss_box_cls: 0.0817 (0.0844)  loss_box_reg: 0.0979 (0.1024)  loss_box_reid: 1.4514 (1.6320)  loss_rpn_reg: 0.0066 (0.0081)  loss_rpn_cls: 0.0090 (0.0123)  time: 2.3286  data: 0.0004  max mem: 20585
+Epoch: [13]  [410/570]  eta: 0:06:07  lr: 0.000300  loss: 2.1623 (2.3990)  loss_proposal_cls: 0.0461 (0.0472)  loss_proposal_reg: 0.5190 (0.5181)  loss_box_cls: 0.0829 (0.0845)  loss_box_reg: 0.1068 (0.1024)  loss_box_reid: 1.4149 (1.6265)  loss_rpn_reg: 0.0070 (0.0081)  loss_rpn_cls: 0.0107 (0.0123)  time: 2.3273  data: 0.0004  max mem: 20585
+Epoch: [13]  [420/570]  eta: 0:05:44  lr: 0.000300  loss: 2.1623 (2.3977)  loss_proposal_cls: 0.0436 (0.0472)  loss_proposal_reg: 0.4851 (0.5182)  loss_box_cls: 0.0785 (0.0845)  loss_box_reg: 0.1034 (0.1024)  loss_box_reid: 1.4367 (1.6250)  loss_rpn_reg: 0.0069 (0.0081)  loss_rpn_cls: 0.0125 (0.0123)  time: 2.3004  data: 0.0003  max mem: 20585
+Epoch: [13]  [430/570]  eta: 0:05:21  lr: 0.000300  loss: 2.3082 (2.3951)  loss_proposal_cls: 0.0461 (0.0471)  loss_proposal_reg: 0.4813 (0.5175)  loss_box_cls: 0.0785 (0.0844)  loss_box_reg: 0.1010 (0.1024)  loss_box_reid: 1.5043 (1.6234)  loss_rpn_reg: 0.0078 (0.0081)  loss_rpn_cls: 0.0118 (0.0123)  time: 2.3002  data: 0.0003  max mem: 20585
+Epoch: [13]  [440/570]  eta: 0:04:58  lr: 0.000300  loss: 2.4087 (2.3942)  loss_proposal_cls: 0.0456 (0.0471)  loss_proposal_reg: 0.5019 (0.5176)  loss_box_cls: 0.0810 (0.0844)  loss_box_reg: 0.1025 (0.1024)  loss_box_reid: 1.5043 (1.6222)  loss_rpn_reg: 0.0078 (0.0082)  loss_rpn_cls: 0.0110 (0.0123)  time: 2.3033  data: 0.0003  max mem: 20585
+Epoch: [13]  [450/570]  eta: 0:04:36  lr: 0.000300  loss: 2.1543 (2.3906)  loss_proposal_cls: 0.0452 (0.0470)  loss_proposal_reg: 0.4957 (0.5170)  loss_box_cls: 0.0810 (0.0843)  loss_box_reg: 0.1004 (0.1023)  loss_box_reid: 1.4173 (1.6195)  loss_rpn_reg: 0.0074 (0.0082)  loss_rpn_cls: 0.0115 (0.0123)  time: 2.3152  data: 0.0004  max mem: 20585
+Epoch: [13]  [460/570]  eta: 0:04:13  lr: 0.000300  loss: 2.1982 (2.3918)  loss_proposal_cls: 0.0418 (0.0469)  loss_proposal_reg: 0.4685 (0.5166)  loss_box_cls: 0.0857 (0.0844)  loss_box_reg: 0.1004 (0.1023)  loss_box_reid: 1.5041 (1.6210)  loss_rpn_reg: 0.0061 (0.0082)  loss_rpn_cls: 0.0104 (0.0123)  time: 2.3195  data: 0.0004  max mem: 20585
+Epoch: [13]  [470/570]  eta: 0:03:50  lr: 0.000300  loss: 2.3285 (2.3926)  loss_proposal_cls: 0.0424 (0.0469)  loss_proposal_reg: 0.4909 (0.5167)  loss_box_cls: 0.0874 (0.0845)  loss_box_reg: 0.0955 (0.1022)  loss_box_reid: 1.6165 (1.6219)  loss_rpn_reg: 0.0072 (0.0082)  loss_rpn_cls: 0.0094 (0.0123)  time: 2.3111  data: 0.0004  max mem: 20585
+Epoch: [13]  [480/570]  eta: 0:03:27  lr: 0.000300  loss: 2.2894 (2.3909)  loss_proposal_cls: 0.0445 (0.0469)  loss_proposal_reg: 0.4909 (0.5162)  loss_box_cls: 0.0859 (0.0844)  loss_box_reg: 0.0915 (0.1021)  loss_box_reid: 1.5122 (1.6209)  loss_rpn_reg: 0.0073 (0.0082)  loss_rpn_cls: 0.0090 (0.0123)  time: 2.3032  data: 0.0004  max mem: 20585
+Epoch: [13]  [490/570]  eta: 0:03:04  lr: 0.000300  loss: 2.2894 (2.3957)  loss_proposal_cls: 0.0457 (0.0470)  loss_proposal_reg: 0.5294 (0.5185)  loss_box_cls: 0.0830 (0.0846)  loss_box_reg: 0.0970 (0.1023)  loss_box_reid: 1.5122 (1.6227)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0114 (0.0123)  time: 2.3083  data: 0.0004  max mem: 20585
+Epoch: [13]  [500/570]  eta: 0:02:41  lr: 0.000300  loss: 2.4385 (2.3952)  loss_proposal_cls: 0.0457 (0.0469)  loss_proposal_reg: 0.5077 (0.5176)  loss_box_cls: 0.0830 (0.0846)  loss_box_reg: 0.0970 (0.1022)  loss_box_reid: 1.5953 (1.6233)  loss_rpn_reg: 0.0082 (0.0082)  loss_rpn_cls: 0.0114 (0.0124)  time: 2.3039  data: 0.0004  max mem: 20585
+Epoch: [13]  [510/570]  eta: 0:02:18  lr: 0.000300  loss: 2.4274 (2.3927)  loss_proposal_cls: 0.0440 (0.0468)  loss_proposal_reg: 0.4630 (0.5170)  loss_box_cls: 0.0863 (0.0847)  loss_box_reg: 0.0959 (0.1022)  loss_box_reid: 1.5731 (1.6216)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0110 (0.0124)  time: 2.3080  data: 0.0004  max mem: 20585
+Epoch: [13]  [520/570]  eta: 0:01:55  lr: 0.000300  loss: 2.2508 (2.3905)  loss_proposal_cls: 0.0432 (0.0467)  loss_proposal_reg: 0.4627 (0.5164)  loss_box_cls: 0.0859 (0.0845)  loss_box_reg: 0.0959 (0.1021)  loss_box_reid: 1.5241 (1.6203)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0103 (0.0123)  time: 2.3131  data: 0.0004  max mem: 20585
+Epoch: [13]  [530/570]  eta: 0:01:32  lr: 0.000300  loss: 2.3982 (2.3940)  loss_proposal_cls: 0.0416 (0.0467)  loss_proposal_reg: 0.4839 (0.5167)  loss_box_cls: 0.0786 (0.0845)  loss_box_reg: 0.0972 (0.1021)  loss_box_reid: 1.5813 (1.6235)  loss_rpn_reg: 0.0073 (0.0082)  loss_rpn_cls: 0.0103 (0.0123)  time: 2.3125  data: 0.0004  max mem: 20585
+Epoch: [13]  [540/570]  eta: 0:01:09  lr: 0.000300  loss: 2.3284 (2.3902)  loss_proposal_cls: 0.0413 (0.0465)  loss_proposal_reg: 0.4641 (0.5154)  loss_box_cls: 0.0822 (0.0845)  loss_box_reg: 0.0972 (0.1021)  loss_box_reid: 1.6047 (1.6211)  loss_rpn_reg: 0.0075 (0.0082)  loss_rpn_cls: 0.0091 (0.0123)  time: 2.3166  data: 0.0003  max mem: 20585
+Epoch: [13]  [550/570]  eta: 0:00:46  lr: 0.000300  loss: 2.1421 (2.3882)  loss_proposal_cls: 0.0440 (0.0465)  loss_proposal_reg: 0.4339 (0.5156)  loss_box_cls: 0.0889 (0.0846)  loss_box_reg: 0.1028 (0.1021)  loss_box_reid: 1.4702 (1.6187)  loss_rpn_reg: 0.0081 (0.0082)  loss_rpn_cls: 0.0097 (0.0124)  time: 2.3203  data: 0.0004  max mem: 20585
+Epoch: [13]  [560/570]  eta: 0:00:23  lr: 0.000300  loss: 2.3607 (2.3916)  loss_proposal_cls: 0.0474 (0.0466)  loss_proposal_reg: 0.5296 (0.5164)  loss_box_cls: 0.0867 (0.0848)  loss_box_reg: 0.1078 (0.1022)  loss_box_reid: 1.5273 (1.6209)  loss_rpn_reg: 0.0091 (0.0082)  loss_rpn_cls: 0.0111 (0.0124)  time: 2.3535  data: 0.0005  max mem: 20585
+Epoch: [13]  [569/570]  eta: 0:00:02  lr: 0.000300  loss: 2.4050 (2.3923)  loss_proposal_cls: 0.0493 (0.0466)  loss_proposal_reg: 0.4952 (0.5151)  loss_box_cls: 0.0866 (0.0848)  loss_box_reg: 0.1021 (0.1022)  loss_box_reid: 1.5970 (1.6231)  loss_rpn_reg: 0.0075 (0.0082)  loss_rpn_cls: 0.0111 (0.0124)  time: 2.3435  data: 0.0004  max mem: 20585
+Epoch: [13] Total time: 0:21:53 (2.3043 s / it)
+all detection:
+  recall = 96.30%
+  ap = 93.59%
+search ranking:
+  mAP = 19.05%
+  top- 1 = 72.00%
+  top- 5 = 82.11%
+  top-10 = 84.83%
+init for oim  [  0/571]  eta: 0:23:16    time: 2.4457  data: 2.2180  max mem: 20585
+init for oim  [ 10/571]  eta: 0:04:30    time: 0.4827  data: 0.2452  max mem: 20585
+init for oim  [ 20/571]  eta: 0:03:19    time: 0.2588  data: 0.0241  max mem: 20585
+init for oim  [ 30/571]  eta: 0:02:51    time: 0.2267  data: 0.0002  max mem: 20585
+init for oim  [ 40/571]  eta: 0:02:36    time: 0.2241  data: 0.0002  max mem: 20585
+init for oim  [ 50/571]  eta: 0:02:27    time: 0.2293  data: 0.0002  max mem: 20585
+init for oim  [ 60/571]  eta: 0:02:20    time: 0.2333  data: 0.0002  max mem: 20585
+init for oim  [ 70/571]  eta: 0:02:14    time: 0.2329  data: 0.0002  max mem: 20585
+init for oim  [ 80/571]  eta: 0:02:09    time: 0.2336  data: 0.0002  max mem: 20585
+init for oim  [ 90/571]  eta: 0:02:05    time: 0.2325  data: 0.0003  max mem: 20585
+init for oim  [100/571]  eta: 0:02:01    time: 0.2334  data: 0.0003  max mem: 20585
+init for oim  [110/571]  eta: 0:01:57    time: 0.2321  data: 0.0002  max mem: 20585
+init for oim  [120/571]  eta: 0:01:54    time: 0.2293  data: 0.0002  max mem: 20585
+init for oim  [130/571]  eta: 0:01:51    time: 0.2301  data: 0.0002  max mem: 20585
+init for oim  [140/571]  eta: 0:01:47    time: 0.2292  data: 0.0002  max mem: 20585
+init for oim  [150/571]  eta: 0:01:44    time: 0.2335  data: 0.0002  max mem: 20585
+init for oim  [160/571]  eta: 0:01:42    time: 0.2351  data: 0.0002  max mem: 20585
+init for oim  [170/571]  eta: 0:01:39    time: 0.2335  data: 0.0002  max mem: 20585
+init for oim  [180/571]  eta: 0:01:36    time: 0.2330  data: 0.0002  max mem: 20585
+init for oim  [190/571]  eta: 0:01:33    time: 0.2345  data: 0.0002  max mem: 20585
+init for oim  [200/571]  eta: 0:01:31    time: 0.2369  data: 0.0002  max mem: 20585
+init for oim  [210/571]  eta: 0:01:28    time: 0.2372  data: 0.0002  max mem: 20585
+init for oim  [220/571]  eta: 0:01:27    time: 0.2721  data: 0.0007  max mem: 20585
+init for oim  [230/571]  eta: 0:01:24    time: 0.2715  data: 0.0008  max mem: 20585
+init for oim  [240/571]  eta: 0:01:21    time: 0.2337  data: 0.0002  max mem: 20585
+init for oim  [250/571]  eta: 0:01:19    time: 0.2313  data: 0.0002  max mem: 20585
+init for oim  [260/571]  eta: 0:01:16    time: 0.2320  data: 0.0002  max mem: 20585
+init for oim  [270/571]  eta: 0:01:13    time: 0.2293  data: 0.0002  max mem: 20585
+init for oim  [280/571]  eta: 0:01:11    time: 0.2278  data: 0.0002  max mem: 20585
+init for oim  [290/571]  eta: 0:01:08    time: 0.2275  data: 0.0002  max mem: 20585
+init for oim  [300/571]  eta: 0:01:05    time: 0.2260  data: 0.0002  max mem: 20585
+init for oim  [310/571]  eta: 0:01:03    time: 0.2283  data: 0.0002  max mem: 20585
+init for oim  [320/571]  eta: 0:01:00    time: 0.2296  data: 0.0002  max mem: 20585
+init for oim  [330/571]  eta: 0:00:58    time: 0.2285  data: 0.0002  max mem: 20585
+init for oim  [340/571]  eta: 0:00:55    time: 0.2273  data: 0.0002  max mem: 20585
+init for oim  [350/571]  eta: 0:00:53    time: 0.2289  data: 0.0002  max mem: 20585
+init for oim  [360/571]  eta: 0:00:50    time: 0.2314  data: 0.0002  max mem: 20585
+init for oim  [370/571]  eta: 0:00:48    time: 0.2312  data: 0.0002  max mem: 20585
+init for oim  [380/571]  eta: 0:00:45    time: 0.2312  data: 0.0002  max mem: 20585
+init for oim  [390/571]  eta: 0:00:43    time: 0.2309  data: 0.0002  max mem: 20585
+init for oim  [400/571]  eta: 0:00:41    time: 0.2292  data: 0.0002  max mem: 20585
+init for oim  [410/571]  eta: 0:00:38    time: 0.2291  data: 0.0002  max mem: 20585
+init for oim  [420/571]  eta: 0:00:36    time: 0.2333  data: 0.0002  max mem: 20585
+init for oim  [430/571]  eta: 0:00:33    time: 0.2371  data: 0.0002  max mem: 20585
+init for oim  [440/571]  eta: 0:00:31    time: 0.2383  data: 0.0002  max mem: 20585
+init for oim  [450/571]  eta: 0:00:28    time: 0.2235  data: 0.0002  max mem: 20585
+init for oim  [460/571]  eta: 0:00:26    time: 0.1963  data: 0.0002  max mem: 20585
+init for oim  [470/571]  eta: 0:00:23    time: 0.1850  data: 0.0002  max mem: 20585
+init for oim  [480/571]  eta: 0:00:21    time: 0.1859  data: 0.0002  max mem: 20585
+init for oim  [490/571]  eta: 0:00:19    time: 0.2152  data: 0.0002  max mem: 20585
+init for oim  [500/571]  eta: 0:00:16    time: 0.2292  data: 0.0002  max mem: 20585
+init for oim  [510/571]  eta: 0:00:14    time: 0.1992  data: 0.0002  max mem: 20585
+init for oim  [520/571]  eta: 0:00:11    time: 0.1842  data: 0.0002  max mem: 20585
+init for oim  [530/571]  eta: 0:00:09    time: 0.2111  data: 0.0002  max mem: 20585
+init for oim  [540/571]  eta: 0:00:07    time: 0.2115  data: 0.0002  max mem: 20585
+init for oim  [550/571]  eta: 0:00:04    time: 0.1865  data: 0.0002  max mem: 20585
+init for oim  [560/571]  eta: 0:00:02    time: 0.1907  data: 0.0002  max mem: 20585
+init for oim  [570/571]  eta: 0:00:00    time: 0.1850  data: 0.0001  max mem: 20585
+init for oim Total time: 0:02:11 (0.2307 s / it)
+Computing jaccard distance...
+Jaccard distance computing time cost: 167.71229028701782
+[  0   1   1 ... 536 504 495]
+number of clusters:============== 1776
+[  0   1   1 ... 536 504 495]
+torch.Size([1776, 2048]) ====
+(18048, 18048)
+torch.Size([18048, 2048])
+Epoch: [14]  [  0/570]  eta: 0:43:57  lr: 0.000300  loss: 1.3736 (1.3736)  loss_proposal_cls: 0.0487 (0.0487)  loss_proposal_reg: 0.4029 (0.4029)  loss_box_cls: 0.1107 (0.1107)  loss_box_reg: 0.1074 (0.1074)  loss_box_reid: 0.6899 (0.6899)  loss_rpn_reg: 0.0063 (0.0063)  loss_rpn_cls: 0.0078 (0.0078)  time: 4.6280  data: 2.3997  max mem: 20585
+Epoch: [14]  [ 10/570]  eta: 0:25:14  lr: 0.000300  loss: 1.8779 (1.9044)  loss_proposal_cls: 0.0459 (0.0426)  loss_proposal_reg: 0.4165 (0.4322)  loss_box_cls: 0.0757 (0.0768)  loss_box_reg: 0.0935 (0.0973)  loss_box_reid: 1.1940 (1.2388)  loss_rpn_reg: 0.0063 (0.0070)  loss_rpn_cls: 0.0088 (0.0096)  time: 2.7043  data: 0.2184  max mem: 20585
+Epoch: [14]  [ 20/570]  eta: 0:22:39  lr: 0.000300  loss: 1.9557 (2.3008)  loss_proposal_cls: 0.0459 (0.0449)  loss_proposal_reg: 0.4724 (0.4880)  loss_box_cls: 0.0786 (0.0885)  loss_box_reg: 0.1043 (0.1042)  loss_box_reid: 1.2975 (1.5533)  loss_rpn_reg: 0.0085 (0.0085)  loss_rpn_cls: 0.0091 (0.0134)  time: 2.3634  data: 0.0003  max mem: 20585
+Epoch: [14]  [ 30/570]  eta: 0:21:30  lr: 0.000300  loss: 2.4660 (2.3470)  loss_proposal_cls: 0.0466 (0.0460)  loss_proposal_reg: 0.4793 (0.4838)  loss_box_cls: 0.0887 (0.0886)  loss_box_reg: 0.1043 (0.1019)  loss_box_reid: 1.6762 (1.6030)  loss_rpn_reg: 0.0089 (0.0088)  loss_rpn_cls: 0.0138 (0.0149)  time: 2.2163  data: 0.0003  max mem: 20585
+Epoch: [14]  [ 40/570]  eta: 0:20:47  lr: 0.000300  loss: 2.5049 (2.4151)  loss_proposal_cls: 0.0452 (0.0458)  loss_proposal_reg: 0.4890 (0.4932)  loss_box_cls: 0.0916 (0.0896)  loss_box_reg: 0.0997 (0.1033)  loss_box_reid: 1.6762 (1.6607)  loss_rpn_reg: 0.0062 (0.0082)  loss_rpn_cls: 0.0122 (0.0144)  time: 2.2312  data: 0.0003  max mem: 20585
+Epoch: [14]  [ 50/570]  eta: 0:20:13  lr: 0.000300  loss: 2.4991 (2.4041)  loss_proposal_cls: 0.0404 (0.0448)  loss_proposal_reg: 0.4890 (0.4853)  loss_box_cls: 0.0843 (0.0874)  loss_box_reg: 0.0969 (0.1019)  loss_box_reid: 1.7069 (1.6623)  loss_rpn_reg: 0.0062 (0.0084)  loss_rpn_cls: 0.0117 (0.0141)  time: 2.2487  data: 0.0003  max mem: 20585
+Epoch: [14]  [ 60/570]  eta: 0:19:44  lr: 0.000300  loss: 2.6048 (2.4671)  loss_proposal_cls: 0.0363 (0.0450)  loss_proposal_reg: 0.4857 (0.4895)  loss_box_cls: 0.0826 (0.0891)  loss_box_reg: 0.0982 (0.1032)  loss_box_reid: 1.7592 (1.7175)  loss_rpn_reg: 0.0076 (0.0087)  loss_rpn_cls: 0.0117 (0.0141)  time: 2.2597  data: 0.0003  max mem: 20585
+Epoch: [14]  [ 70/570]  eta: 0:19:18  lr: 0.000300  loss: 2.7838 (2.5084)  loss_proposal_cls: 0.0426 (0.0453)  loss_proposal_reg: 0.5124 (0.4993)  loss_box_cls: 0.0868 (0.0886)  loss_box_reg: 0.1039 (0.1038)  loss_box_reid: 1.9119 (1.7484)  loss_rpn_reg: 0.0083 (0.0090)  loss_rpn_cls: 0.0130 (0.0140)  time: 2.2727  data: 0.0003  max mem: 20585
+Epoch: [14]  [ 80/570]  eta: 0:18:53  lr: 0.000300  loss: 2.5918 (2.5189)  loss_proposal_cls: 0.0426 (0.0452)  loss_proposal_reg: 0.4721 (0.5001)  loss_box_cls: 0.0847 (0.0885)  loss_box_reg: 0.1029 (0.1034)  loss_box_reid: 1.8655 (1.7589)  loss_rpn_reg: 0.0073 (0.0090)  loss_rpn_cls: 0.0121 (0.0139)  time: 2.2839  data: 0.0004  max mem: 20585
+Epoch: [14]  [ 90/570]  eta: 0:18:34  lr: 0.000300  loss: 2.6784 (2.5273)  loss_proposal_cls: 0.0479 (0.0461)  loss_proposal_reg: 0.4721 (0.5021)  loss_box_cls: 0.0822 (0.0878)  loss_box_reg: 0.1046 (0.1039)  loss_box_reid: 1.8308 (1.7648)  loss_rpn_reg: 0.0060 (0.0088)  loss_rpn_cls: 0.0109 (0.0137)  time: 2.3441  data: 0.0004  max mem: 20585
+Epoch: [14]  [100/570]  eta: 0:18:11  lr: 0.000300  loss: 2.5725 (2.5270)  loss_proposal_cls: 0.0509 (0.0463)  loss_proposal_reg: 0.4571 (0.4965)  loss_box_cls: 0.0822 (0.0877)  loss_box_reg: 0.1010 (0.1032)  loss_box_reid: 1.8308 (1.7715)  loss_rpn_reg: 0.0057 (0.0085)  loss_rpn_cls: 0.0087 (0.0133)  time: 2.3581  data: 0.0004  max mem: 20585
+Epoch: [14]  [110/570]  eta: 0:17:50  lr: 0.000300  loss: 2.4811 (2.5311)  loss_proposal_cls: 0.0424 (0.0464)  loss_proposal_reg: 0.4436 (0.4943)  loss_box_cls: 0.0808 (0.0874)  loss_box_reg: 0.1010 (0.1030)  loss_box_reid: 1.7110 (1.7785)  loss_rpn_reg: 0.0056 (0.0084)  loss_rpn_cls: 0.0091 (0.0131)  time: 2.3517  data: 0.0004  max mem: 20585
+Epoch: [14]  [120/570]  eta: 0:17:27  lr: 0.000300  loss: 2.3501 (2.5205)  loss_proposal_cls: 0.0469 (0.0467)  loss_proposal_reg: 0.4692 (0.5017)  loss_box_cls: 0.0801 (0.0877)  loss_box_reg: 0.1090 (0.1040)  loss_box_reid: 1.5649 (1.7591)  loss_rpn_reg: 0.0058 (0.0083)  loss_rpn_cls: 0.0100 (0.0130)  time: 2.3600  data: 0.0004  max mem: 20585
+Epoch: [14]  [130/570]  eta: 0:17:04  lr: 0.000300  loss: 2.3115 (2.5127)  loss_proposal_cls: 0.0460 (0.0466)  loss_proposal_reg: 0.4692 (0.5000)  loss_box_cls: 0.0855 (0.0878)  loss_box_reg: 0.1050 (0.1037)  loss_box_reid: 1.5104 (1.7535)  loss_rpn_reg: 0.0058 (0.0082)  loss_rpn_cls: 0.0090 (0.0128)  time: 2.3250  data: 0.0004  max mem: 20585
+Epoch: [14]  [140/570]  eta: 0:16:40  lr: 0.000300  loss: 2.2998 (2.5015)  loss_proposal_cls: 0.0431 (0.0465)  loss_proposal_reg: 0.4627 (0.4997)  loss_box_cls: 0.0855 (0.0880)  loss_box_reg: 0.1009 (0.1037)  loss_box_reid: 1.5579 (1.7424)  loss_rpn_reg: 0.0068 (0.0084)  loss_rpn_cls: 0.0117 (0.0128)  time: 2.3232  data: 0.0004  max mem: 20585
+Epoch: [14]  [150/570]  eta: 0:16:18  lr: 0.000300  loss: 2.4303 (2.5014)  loss_proposal_cls: 0.0458 (0.0468)  loss_proposal_reg: 0.4792 (0.5005)  loss_box_cls: 0.0860 (0.0885)  loss_box_reg: 0.1026 (0.1039)  loss_box_reid: 1.5598 (1.7403)  loss_rpn_reg: 0.0083 (0.0084)  loss_rpn_cls: 0.0126 (0.0130)  time: 2.3352  data: 0.0004  max mem: 20585
+Epoch: [14]  [160/570]  eta: 0:15:54  lr: 0.000300  loss: 2.5043 (2.5026)  loss_proposal_cls: 0.0473 (0.0469)  loss_proposal_reg: 0.5266 (0.5037)  loss_box_cls: 0.0998 (0.0891)  loss_box_reg: 0.1060 (0.1040)  loss_box_reid: 1.6744 (1.7375)  loss_rpn_reg: 0.0084 (0.0084)  loss_rpn_cls: 0.0115 (0.0130)  time: 2.3374  data: 0.0005  max mem: 20585
+Epoch: [14]  [170/570]  eta: 0:15:33  lr: 0.000300  loss: 2.4645 (2.4907)  loss_proposal_cls: 0.0493 (0.0472)  loss_proposal_reg: 0.5293 (0.5036)  loss_box_cls: 0.0939 (0.0892)  loss_box_reg: 0.1062 (0.1042)  loss_box_reid: 1.6269 (1.7252)  loss_rpn_reg: 0.0083 (0.0084)  loss_rpn_cls: 0.0125 (0.0129)  time: 2.3791  data: 0.0004  max mem: 20585
+Epoch: [14]  [180/570]  eta: 0:15:09  lr: 0.000300  loss: 2.3394 (2.4893)  loss_proposal_cls: 0.0455 (0.0467)  loss_proposal_reg: 0.4845 (0.5042)  loss_box_cls: 0.0870 (0.0885)  loss_box_reg: 0.1020 (0.1041)  loss_box_reid: 1.4970 (1.7245)  loss_rpn_reg: 0.0072 (0.0084)  loss_rpn_cls: 0.0099 (0.0128)  time: 2.3626  data: 0.0004  max mem: 20585
+Epoch: [14]  [190/570]  eta: 0:14:46  lr: 0.000300  loss: 2.1849 (2.4802)  loss_proposal_cls: 0.0427 (0.0468)  loss_proposal_reg: 0.4845 (0.5042)  loss_box_cls: 0.0809 (0.0883)  loss_box_reg: 0.1009 (0.1040)  loss_box_reid: 1.4386 (1.7156)  loss_rpn_reg: 0.0072 (0.0084)  loss_rpn_cls: 0.0114 (0.0130)  time: 2.3112  data: 0.0004  max mem: 20585
+Epoch: [14]  [200/570]  eta: 0:14:22  lr: 0.000300  loss: 2.4960 (2.4804)  loss_proposal_cls: 0.0455 (0.0468)  loss_proposal_reg: 0.4585 (0.5005)  loss_box_cls: 0.0835 (0.0882)  loss_box_reg: 0.1014 (0.1036)  loss_box_reid: 1.6604 (1.7200)  loss_rpn_reg: 0.0073 (0.0084)  loss_rpn_cls: 0.0121 (0.0130)  time: 2.3216  data: 0.0004  max mem: 20585
+Epoch: [14]  [210/570]  eta: 0:13:59  lr: 0.000300  loss: 2.3127 (2.4723)  loss_proposal_cls: 0.0458 (0.0468)  loss_proposal_reg: 0.4608 (0.5007)  loss_box_cls: 0.0892 (0.0880)  loss_box_reg: 0.1053 (0.1037)  loss_box_reid: 1.6287 (1.7117)  loss_rpn_reg: 0.0078 (0.0083)  loss_rpn_cls: 0.0112 (0.0129)  time: 2.3241  data: 0.0004  max mem: 20585
+Epoch: [14]  [220/570]  eta: 0:13:36  lr: 0.000300  loss: 2.2229 (2.4622)  loss_proposal_cls: 0.0444 (0.0468)  loss_proposal_reg: 0.4858 (0.5006)  loss_box_cls: 0.0857 (0.0879)  loss_box_reg: 0.0984 (0.1036)  loss_box_reid: 1.4580 (1.7021)  loss_rpn_reg: 0.0076 (0.0084)  loss_rpn_cls: 0.0112 (0.0128)  time: 2.3512  data: 0.0005  max mem: 20585
+Epoch: [14]  [230/570]  eta: 0:13:13  lr: 0.000300  loss: 2.4280 (2.4575)  loss_proposal_cls: 0.0414 (0.0466)  loss_proposal_reg: 0.5107 (0.5022)  loss_box_cls: 0.0832 (0.0879)  loss_box_reg: 0.1011 (0.1039)  loss_box_reid: 1.6062 (1.6958)  loss_rpn_reg: 0.0073 (0.0084)  loss_rpn_cls: 0.0115 (0.0128)  time: 2.3496  data: 0.0004  max mem: 20585
+Epoch: [14]  [240/570]  eta: 0:12:49  lr: 0.000300  loss: 2.4890 (2.4545)  loss_proposal_cls: 0.0411 (0.0465)  loss_proposal_reg: 0.4723 (0.5023)  loss_box_cls: 0.0773 (0.0873)  loss_box_reg: 0.0994 (0.1037)  loss_box_reid: 1.5841 (1.6937)  loss_rpn_reg: 0.0063 (0.0083)  loss_rpn_cls: 0.0111 (0.0127)  time: 2.3281  data: 0.0004  max mem: 20585
+Epoch: [14]  [250/570]  eta: 0:12:26  lr: 0.000300  loss: 2.4600 (2.4590)  loss_proposal_cls: 0.0400 (0.0465)  loss_proposal_reg: 0.4798 (0.5043)  loss_box_cls: 0.0773 (0.0875)  loss_box_reg: 0.1015 (0.1039)  loss_box_reid: 1.5973 (1.6958)  loss_rpn_reg: 0.0063 (0.0083)  loss_rpn_cls: 0.0119 (0.0127)  time: 2.3364  data: 0.0003  max mem: 20585
+Epoch: [14]  [260/570]  eta: 0:12:03  lr: 0.000300  loss: 2.1658 (2.4427)  loss_proposal_cls: 0.0396 (0.0462)  loss_proposal_reg: 0.4451 (0.5012)  loss_box_cls: 0.0862 (0.0873)  loss_box_reg: 0.1009 (0.1035)  loss_box_reid: 1.4505 (1.6835)  loss_rpn_reg: 0.0065 (0.0083)  loss_rpn_cls: 0.0119 (0.0126)  time: 2.3314  data: 0.0004  max mem: 20585
+Epoch: [14]  [270/570]  eta: 0:11:40  lr: 0.000300  loss: 1.9625 (2.4272)  loss_proposal_cls: 0.0396 (0.0462)  loss_proposal_reg: 0.4451 (0.5000)  loss_box_cls: 0.0761 (0.0870)  loss_box_reg: 0.0934 (0.1031)  loss_box_reid: 1.3121 (1.6701)  loss_rpn_reg: 0.0070 (0.0083)  loss_rpn_cls: 0.0089 (0.0126)  time: 2.3398  data: 0.0004  max mem: 20585
+Epoch: [14]  [280/570]  eta: 0:11:16  lr: 0.000300  loss: 2.0152 (2.4201)  loss_proposal_cls: 0.0425 (0.0462)  loss_proposal_reg: 0.4606 (0.4988)  loss_box_cls: 0.0761 (0.0867)  loss_box_reg: 0.0985 (0.1030)  loss_box_reid: 1.3121 (1.6647)  loss_rpn_reg: 0.0070 (0.0082)  loss_rpn_cls: 0.0098 (0.0125)  time: 2.3508  data: 0.0004  max mem: 20585
+Epoch: [14]  [290/570]  eta: 0:10:53  lr: 0.000300  loss: 2.2141 (2.4121)  loss_proposal_cls: 0.0453 (0.0463)  loss_proposal_reg: 0.4334 (0.4981)  loss_box_cls: 0.0815 (0.0866)  loss_box_reg: 0.1032 (0.1030)  loss_box_reid: 1.4239 (1.6574)  loss_rpn_reg: 0.0062 (0.0082)  loss_rpn_cls: 0.0098 (0.0125)  time: 2.3333  data: 0.0004  max mem: 20585
+Epoch: [14]  [300/570]  eta: 0:10:29  lr: 0.000300  loss: 2.2469 (2.4105)  loss_proposal_cls: 0.0459 (0.0464)  loss_proposal_reg: 0.5263 (0.5013)  loss_box_cls: 0.0873 (0.0870)  loss_box_reg: 0.1098 (0.1034)  loss_box_reid: 1.4840 (1.6517)  loss_rpn_reg: 0.0078 (0.0083)  loss_rpn_cls: 0.0100 (0.0125)  time: 2.3224  data: 0.0004  max mem: 20585
+Epoch: [14]  [310/570]  eta: 0:10:06  lr: 0.000300  loss: 2.4522 (2.4114)  loss_proposal_cls: 0.0431 (0.0462)  loss_proposal_reg: 0.5263 (0.5015)  loss_box_cls: 0.0845 (0.0868)  loss_box_reg: 0.1025 (0.1033)  loss_box_reid: 1.5933 (1.6530)  loss_rpn_reg: 0.0068 (0.0082)  loss_rpn_cls: 0.0099 (0.0124)  time: 2.3229  data: 0.0004  max mem: 20585
+Epoch: [14]  [320/570]  eta: 0:09:43  lr: 0.000300  loss: 2.3039 (2.4050)  loss_proposal_cls: 0.0414 (0.0461)  loss_proposal_reg: 0.4656 (0.5007)  loss_box_cls: 0.0821 (0.0867)  loss_box_reg: 0.1000 (0.1033)  loss_box_reid: 1.5893 (1.6476)  loss_rpn_reg: 0.0068 (0.0083)  loss_rpn_cls: 0.0099 (0.0124)  time: 2.3456  data: 0.0004  max mem: 20585
+Epoch: [14]  [330/570]  eta: 0:09:20  lr: 0.000300  loss: 2.2126 (2.4035)  loss_proposal_cls: 0.0434 (0.0462)  loss_proposal_reg: 0.4656 (0.5011)  loss_box_cls: 0.0823 (0.0868)  loss_box_reg: 0.1029 (0.1034)  loss_box_reid: 1.4489 (1.6454)  loss_rpn_reg: 0.0079 (0.0083)  loss_rpn_cls: 0.0107 (0.0124)  time: 2.3459  data: 0.0004  max mem: 20585
+Epoch: [14]  [340/570]  eta: 0:08:56  lr: 0.000300  loss: 2.2568 (2.3998)  loss_proposal_cls: 0.0489 (0.0463)  loss_proposal_reg: 0.4866 (0.5019)  loss_box_cls: 0.0857 (0.0866)  loss_box_reg: 0.1031 (0.1033)  loss_box_reid: 1.5093 (1.6410)  loss_rpn_reg: 0.0090 (0.0083)  loss_rpn_cls: 0.0103 (0.0123)  time: 2.3108  data: 0.0004  max mem: 20585
+Epoch: [14]  [350/570]  eta: 0:08:33  lr: 0.000300  loss: 2.1843 (2.3938)  loss_proposal_cls: 0.0461 (0.0462)  loss_proposal_reg: 0.4629 (0.5009)  loss_box_cls: 0.0856 (0.0866)  loss_box_reg: 0.0983 (0.1031)  loss_box_reid: 1.4221 (1.6363)  loss_rpn_reg: 0.0072 (0.0083)  loss_rpn_cls: 0.0091 (0.0124)  time: 2.3021  data: 0.0004  max mem: 20585
+Epoch: [14]  [360/570]  eta: 0:08:09  lr: 0.000300  loss: 2.1406 (2.3895)  loss_proposal_cls: 0.0453 (0.0463)  loss_proposal_reg: 0.4541 (0.5008)  loss_box_cls: 0.0773 (0.0863)  loss_box_reg: 0.1008 (0.1031)  loss_box_reid: 1.3548 (1.6322)  loss_rpn_reg: 0.0070 (0.0083)  loss_rpn_cls: 0.0089 (0.0124)  time: 2.3059  data: 0.0004  max mem: 20585
+Epoch: [14]  [370/570]  eta: 0:07:46  lr: 0.000300  loss: 2.2595 (2.3896)  loss_proposal_cls: 0.0457 (0.0463)  loss_proposal_reg: 0.4806 (0.5005)  loss_box_cls: 0.0833 (0.0865)  loss_box_reg: 0.1100 (0.1031)  loss_box_reid: 1.5447 (1.6324)  loss_rpn_reg: 0.0070 (0.0083)  loss_rpn_cls: 0.0106 (0.0125)  time: 2.3051  data: 0.0004  max mem: 20585
+Epoch: [14]  [380/570]  eta: 0:07:22  lr: 0.000300  loss: 2.3464 (2.3883)  loss_proposal_cls: 0.0467 (0.0464)  loss_proposal_reg: 0.5114 (0.5009)  loss_box_cls: 0.0885 (0.0864)  loss_box_reg: 0.1021 (0.1032)  loss_box_reid: 1.5619 (1.6305)  loss_rpn_reg: 0.0081 (0.0084)  loss_rpn_cls: 0.0106 (0.0125)  time: 2.3090  data: 0.0004  max mem: 20585
+Epoch: [14]  [390/570]  eta: 0:06:59  lr: 0.000300  loss: 2.1296 (2.3818)  loss_proposal_cls: 0.0452 (0.0463)  loss_proposal_reg: 0.4153 (0.4991)  loss_box_cls: 0.0782 (0.0864)  loss_box_reg: 0.1011 (0.1030)  loss_box_reid: 1.5176 (1.6262)  loss_rpn_reg: 0.0070 (0.0083)  loss_rpn_cls: 0.0097 (0.0125)  time: 2.3101  data: 0.0003  max mem: 20585
+Epoch: [14]  [400/570]  eta: 0:06:35  lr: 0.000300  loss: 2.1400 (2.3811)  loss_proposal_cls: 0.0453 (0.0463)  loss_proposal_reg: 0.3945 (0.4986)  loss_box_cls: 0.0796 (0.0863)  loss_box_reg: 0.0892 (0.1028)  loss_box_reid: 1.5243 (1.6260)  loss_rpn_reg: 0.0060 (0.0083)  loss_rpn_cls: 0.0097 (0.0127)  time: 2.3054  data: 0.0003  max mem: 20585
+Epoch: [14]  [410/570]  eta: 0:06:12  lr: 0.000300  loss: 2.3048 (2.3799)  loss_proposal_cls: 0.0453 (0.0463)  loss_proposal_reg: 0.5027 (0.4995)  loss_box_cls: 0.0808 (0.0862)  loss_box_reg: 0.0957 (0.1028)  loss_box_reid: 1.4945 (1.6239)  loss_rpn_reg: 0.0066 (0.0083)  loss_rpn_cls: 0.0095 (0.0128)  time: 2.3074  data: 0.0004  max mem: 20585
+Epoch: [14]  [420/570]  eta: 0:05:49  lr: 0.000300  loss: 2.2526 (2.3773)  loss_proposal_cls: 0.0455 (0.0464)  loss_proposal_reg: 0.5112 (0.4994)  loss_box_cls: 0.0817 (0.0861)  loss_box_reg: 0.0989 (0.1028)  loss_box_reid: 1.4945 (1.6215)  loss_rpn_reg: 0.0065 (0.0083)  loss_rpn_cls: 0.0094 (0.0128)  time: 2.3037  data: 0.0004  max mem: 20585
+Epoch: [14]  [430/570]  eta: 0:05:25  lr: 0.000300  loss: 2.2088 (2.3715)  loss_proposal_cls: 0.0463 (0.0463)  loss_proposal_reg: 0.4588 (0.4989)  loss_box_cls: 0.0817 (0.0861)  loss_box_reg: 0.0957 (0.1026)  loss_box_reid: 1.3948 (1.6165)  loss_rpn_reg: 0.0058 (0.0082)  loss_rpn_cls: 0.0093 (0.0128)  time: 2.3032  data: 0.0005  max mem: 20585
+Epoch: [14]  [440/570]  eta: 0:05:02  lr: 0.000300  loss: 2.1155 (2.3667)  loss_proposal_cls: 0.0427 (0.0462)  loss_proposal_reg: 0.4971 (0.4995)  loss_box_cls: 0.0855 (0.0862)  loss_box_reg: 0.0967 (0.1027)  loss_box_reid: 1.3551 (1.6111)  loss_rpn_reg: 0.0065 (0.0082)  loss_rpn_cls: 0.0092 (0.0128)  time: 2.3528  data: 0.0005  max mem: 20585
+Epoch: [14]  [450/570]  eta: 0:04:39  lr: 0.000300  loss: 2.3295 (2.3694)  loss_proposal_cls: 0.0427 (0.0462)  loss_proposal_reg: 0.5118 (0.4991)  loss_box_cls: 0.0855 (0.0864)  loss_box_reg: 0.1035 (0.1026)  loss_box_reid: 1.6152 (1.6142)  loss_rpn_reg: 0.0064 (0.0082)  loss_rpn_cls: 0.0096 (0.0127)  time: 2.3521  data: 0.0004  max mem: 20585
+Epoch: [14]  [460/570]  eta: 0:04:16  lr: 0.000300  loss: 2.4162 (2.3708)  loss_proposal_cls: 0.0442 (0.0462)  loss_proposal_reg: 0.4763 (0.4996)  loss_box_cls: 0.0822 (0.0863)  loss_box_reg: 0.1001 (0.1027)  loss_box_reid: 1.6726 (1.6151)  loss_rpn_reg: 0.0069 (0.0082)  loss_rpn_cls: 0.0096 (0.0128)  time: 2.3009  data: 0.0004  max mem: 20585
+Epoch: [14]  [470/570]  eta: 0:03:52  lr: 0.000300  loss: 2.3030 (2.3693)  loss_proposal_cls: 0.0438 (0.0461)  loss_proposal_reg: 0.4718 (0.4987)  loss_box_cls: 0.0767 (0.0861)  loss_box_reg: 0.1001 (0.1024)  loss_box_reid: 1.5543 (1.6150)  loss_rpn_reg: 0.0064 (0.0082)  loss_rpn_cls: 0.0096 (0.0127)  time: 2.2888  data: 0.0004  max mem: 20585
+Epoch: [14]  [480/570]  eta: 0:03:29  lr: 0.000300  loss: 2.3830 (2.3703)  loss_proposal_cls: 0.0423 (0.0461)  loss_proposal_reg: 0.5005 (0.5002)  loss_box_cls: 0.0760 (0.0858)  loss_box_reg: 0.1031 (0.1026)  loss_box_reid: 1.6054 (1.6146)  loss_rpn_reg: 0.0064 (0.0082)  loss_rpn_cls: 0.0098 (0.0127)  time: 2.2883  data: 0.0004  max mem: 20585
+Epoch: [14]  [490/570]  eta: 0:03:06  lr: 0.000300  loss: 2.2704 (2.3657)  loss_proposal_cls: 0.0423 (0.0461)  loss_proposal_reg: 0.4670 (0.4993)  loss_box_cls: 0.0810 (0.0858)  loss_box_reg: 0.0975 (0.1025)  loss_box_reid: 1.4828 (1.6110)  loss_rpn_reg: 0.0083 (0.0083)  loss_rpn_cls: 0.0120 (0.0127)  time: 2.2905  data: 0.0004  max mem: 20585
+Epoch: [14]  [500/570]  eta: 0:02:42  lr: 0.000300  loss: 2.2174 (2.3646)  loss_proposal_cls: 0.0445 (0.0461)  loss_proposal_reg: 0.4647 (0.5000)  loss_box_cls: 0.0812 (0.0858)  loss_box_reg: 0.0945 (0.1025)  loss_box_reid: 1.4343 (1.6092)  loss_rpn_reg: 0.0080 (0.0083)  loss_rpn_cls: 0.0117 (0.0128)  time: 2.2882  data: 0.0004  max mem: 20585
+Epoch: [14]  [510/570]  eta: 0:02:19  lr: 0.000300  loss: 2.2088 (2.3658)  loss_proposal_cls: 0.0445 (0.0461)  loss_proposal_reg: 0.5110 (0.5006)  loss_box_cls: 0.0812 (0.0858)  loss_box_reg: 0.0956 (0.1026)  loss_box_reid: 1.4950 (1.6098)  loss_rpn_reg: 0.0062 (0.0082)  loss_rpn_cls: 0.0105 (0.0127)  time: 2.2867  data: 0.0003  max mem: 20585
+Epoch: [14]  [520/570]  eta: 0:01:56  lr: 0.000300  loss: 2.1456 (2.3623)  loss_proposal_cls: 0.0437 (0.0461)  loss_proposal_reg: 0.4734 (0.5000)  loss_box_cls: 0.0814 (0.0857)  loss_box_reg: 0.0955 (0.1025)  loss_box_reid: 1.5338 (1.6072)  loss_rpn_reg: 0.0058 (0.0082)  loss_rpn_cls: 0.0075 (0.0127)  time: 2.2842  data: 0.0003  max mem: 20585
+Epoch: [14]  [530/570]  eta: 0:01:32  lr: 0.000300  loss: 2.3233 (2.3635)  loss_proposal_cls: 0.0488 (0.0461)  loss_proposal_reg: 0.4869 (0.5011)  loss_box_cls: 0.0804 (0.0856)  loss_box_reg: 0.0972 (0.1026)  loss_box_reid: 1.4834 (1.6072)  loss_rpn_reg: 0.0062 (0.0082)  loss_rpn_cls: 0.0104 (0.0127)  time: 2.2888  data: 0.0004  max mem: 20585
+Epoch: [14]  [540/570]  eta: 0:01:09  lr: 0.000300  loss: 2.3925 (2.3627)  loss_proposal_cls: 0.0477 (0.0461)  loss_proposal_reg: 0.5158 (0.5012)  loss_box_cls: 0.0723 (0.0854)  loss_box_reg: 0.1031 (0.1026)  loss_box_reid: 1.5727 (1.6068)  loss_rpn_reg: 0.0069 (0.0082)  loss_rpn_cls: 0.0104 (0.0126)  time: 2.2881  data: 0.0004  max mem: 20585
+Epoch: [14]  [550/570]  eta: 0:00:46  lr: 0.000300  loss: 2.2847 (2.3596)  loss_proposal_cls: 0.0408 (0.0460)  loss_proposal_reg: 0.4370 (0.4997)  loss_box_cls: 0.0754 (0.0854)  loss_box_reg: 0.0926 (0.1023)  loss_box_reid: 1.5727 (1.6056)  loss_rpn_reg: 0.0060 (0.0081)  loss_rpn_cls: 0.0090 (0.0126)  time: 2.3114  data: 0.0004  max mem: 20585
+Epoch: [14]  [560/570]  eta: 0:00:23  lr: 0.000300  loss: 2.2847 (2.3581)  loss_proposal_cls: 0.0408 (0.0459)  loss_proposal_reg: 0.4580 (0.5001)  loss_box_cls: 0.0800 (0.0853)  loss_box_reg: 0.0911 (0.1024)  loss_box_reid: 1.5179 (1.6039)  loss_rpn_reg: 0.0065 (0.0081)  loss_rpn_cls: 0.0112 (0.0125)  time: 2.3242  data: 0.0005  max mem: 20585
+Epoch: [14]  [569/570]  eta: 0:00:02  lr: 0.000300  loss: 2.1107 (2.3557)  loss_proposal_cls: 0.0428 (0.0458)  loss_proposal_reg: 0.4676 (0.4995)  loss_box_cls: 0.0782 (0.0852)  loss_box_reg: 0.0926 (0.1023)  loss_box_reid: 1.3825 (1.6023)  loss_rpn_reg: 0.0066 (0.0081)  loss_rpn_cls: 0.0106 (0.0125)  time: 2.3008  data: 0.0004  max mem: 20585
+Epoch: [14] Total time: 0:22:03 (2.3218 s / it)
+all detection:
+  recall = 96.24%
+  ap = 93.59%
+search ranking:
+  mAP = 19.15%
+  top- 1 = 72.00%
+  top- 5 = 81.58%
+  top-10 = 84.39%
+init for oim  [  0/571]  eta: 0:24:47    time: 2.6057  data: 2.2236  max mem: 20585
+init for oim  [ 10/571]  eta: 0:04:14    time: 0.4545  data: 0.2023  max mem: 20585
+init for oim  [ 20/571]  eta: 0:03:11    time: 0.2338  data: 0.0002  max mem: 20585
+init for oim  [ 30/571]  eta: 0:02:47    time: 0.2299  data: 0.0002  max mem: 20585
+init for oim  [ 40/571]  eta: 0:02:33    time: 0.2280  data: 0.0002  max mem: 20585
+init for oim  [ 50/571]  eta: 0:02:25    time: 0.2308  data: 0.0002  max mem: 20585
+init for oim  [ 60/571]  eta: 0:02:18    time: 0.2361  data: 0.0003  max mem: 20585
+init for oim  [ 70/571]  eta: 0:02:12    time: 0.2309  data: 0.0003  max mem: 20585
+init for oim  [ 80/571]  eta: 0:02:08    time: 0.2314  data: 0.0002  max mem: 20585
+init for oim  [ 90/571]  eta: 0:02:04    time: 0.2357  data: 0.0002  max mem: 20585
+init for oim  [100/571]  eta: 0:02:00    time: 0.2340  data: 0.0002  max mem: 20585
+init for oim  [110/571]  eta: 0:01:57    time: 0.2330  data: 0.0002  max mem: 20585
+init for oim  [120/571]  eta: 0:01:54    time: 0.2366  data: 0.0002  max mem: 20585
+init for oim  [130/571]  eta: 0:01:51    time: 0.2418  data: 0.0003  max mem: 20585
+init for oim  [140/571]  eta: 0:01:48    time: 0.2387  data: 0.0003  max mem: 20585
+init for oim  [150/571]  eta: 0:01:44    time: 0.2308  data: 0.0002  max mem: 20585
+init for oim  [160/571]  eta: 0:01:42    time: 0.2362  data: 0.0003  max mem: 20585
+init for oim  [170/571]  eta: 0:01:39    time: 0.2400  data: 0.0002  max mem: 20585
+init for oim  [180/571]  eta: 0:01:36    time: 0.2387  data: 0.0002  max mem: 20585
+init for oim  [190/571]  eta: 0:01:34    time: 0.2418  data: 0.0002  max mem: 20585
+init for oim  [200/571]  eta: 0:01:31    time: 0.2426  data: 0.0002  max mem: 20585
+init for oim  [210/571]  eta: 0:01:29    time: 0.2467  data: 0.0003  max mem: 20585
+init for oim  [220/571]  eta: 0:01:26    time: 0.2502  data: 0.0004  max mem: 20585
+init for oim  [230/571]  eta: 0:01:24    time: 0.2571  data: 0.0005  max mem: 20585
+init for oim  [240/571]  eta: 0:01:22    time: 0.2734  data: 0.0007  max mem: 20585
+init for oim  [250/571]  eta: 0:01:21    time: 0.3119  data: 0.0007  max mem: 20585
+init for oim  [260/571]  eta: 0:01:19    time: 0.3146  data: 0.0008  max mem: 20585
+init for oim  [270/571]  eta: 0:01:16    time: 0.2644  data: 0.0007  max mem: 20585
+init for oim  [280/571]  eta: 0:01:13    time: 0.2415  data: 0.0004  max mem: 20585
+init for oim  [290/571]  eta: 0:01:11    time: 0.2398  data: 0.0002  max mem: 20585
+init for oim  [300/571]  eta: 0:01:08    time: 0.2374  data: 0.0002  max mem: 20585
+init for oim  [310/571]  eta: 0:01:05    time: 0.2341  data: 0.0002  max mem: 20585
+init for oim  [320/571]  eta: 0:01:03    time: 0.2334  data: 0.0002  max mem: 20585
+init for oim  [330/571]  eta: 0:01:00    time: 0.2354  data: 0.0002  max mem: 20585
+init for oim  [340/571]  eta: 0:00:57    time: 0.2376  data: 0.0002  max mem: 20585
+init for oim  [350/571]  eta: 0:00:55    time: 0.2427  data: 0.0002  max mem: 20585
+init for oim  [360/571]  eta: 0:00:52    time: 0.2382  data: 0.0002  max mem: 20585
+init for oim  [370/571]  eta: 0:00:50    time: 0.2373  data: 0.0002  max mem: 20585
+init for oim  [380/571]  eta: 0:00:47    time: 0.2384  data: 0.0002  max mem: 20585
+init for oim  [390/571]  eta: 0:00:45    time: 0.2376  data: 0.0003  max mem: 20585
+init for oim  [400/571]  eta: 0:00:42    time: 0.2375  data: 0.0002  max mem: 20585
+init for oim  [410/571]  eta: 0:00:40    time: 0.2352  data: 0.0002  max mem: 20585
+init for oim  [420/571]  eta: 0:00:37    time: 0.2367  data: 0.0002  max mem: 20585
+init for oim  [430/571]  eta: 0:00:34    time: 0.2379  data: 0.0002  max mem: 20585
+init for oim  [440/571]  eta: 0:00:32    time: 0.2373  data: 0.0002  max mem: 20585
+init for oim  [450/571]  eta: 0:00:29    time: 0.2198  data: 0.0002  max mem: 20585
+init for oim  [460/571]  eta: 0:00:27    time: 0.1896  data: 0.0002  max mem: 20585
+init for oim  [470/571]  eta: 0:00:24    time: 0.1765  data: 0.0002  max mem: 20585
+init for oim  [480/571]  eta: 0:00:22    time: 0.1773  data: 0.0002  max mem: 20585
+init for oim  [490/571]  eta: 0:00:19    time: 0.1863  data: 0.0002  max mem: 20585
+init for oim  [500/571]  eta: 0:00:17    time: 0.1893  data: 0.0002  max mem: 20585
+init for oim  [510/571]  eta: 0:00:14    time: 0.1809  data: 0.0002  max mem: 20585
+init for oim  [520/571]  eta: 0:00:12    time: 0.1889  data: 0.0002  max mem: 20585
+init for oim  [530/571]  eta: 0:00:09    time: 0.2022  data: 0.0002  max mem: 20585
+init for oim  [540/571]  eta: 0:00:07    time: 0.1919  data: 0.0002  max mem: 20585
+init for oim  [550/571]  eta: 0:00:04    time: 0.1796  data: 0.0002  max mem: 20585
+init for oim  [560/571]  eta: 0:00:02    time: 0.1844  data: 0.0002  max mem: 20585
+init for oim  [570/571]  eta: 0:00:00    time: 0.1798  data: 0.0001  max mem: 20585
+init for oim Total time: 0:02:13 (0.2342 s / it)
+Computing jaccard distance...
+Jaccard distance computing time cost: 194.4267451763153
+[  0   1   1 ... 540 446 501]
+number of clusters:============== 1776
+[  0   1   1 ... 540 446 501]
+torch.Size([1776, 2048]) ====
+(18048, 18048)
+torch.Size([18048, 2048])
+Epoch: [15]  [  0/570]  eta: 0:54:23  lr: 0.000300  loss: 1.5990 (1.5990)  loss_proposal_cls: 0.0585 (0.0585)  loss_proposal_reg: 0.5038 (0.5038)  loss_box_cls: 0.0923 (0.0923)  loss_box_reg: 0.1033 (0.1033)  loss_box_reid: 0.8243 (0.8243)  loss_rpn_reg: 0.0055 (0.0055)  loss_rpn_cls: 0.0112 (0.0112)  time: 5.7257  data: 2.8636  max mem: 20585
+Epoch: [15]  [ 10/570]  eta: 0:23:54  lr: 0.000300  loss: 1.9644 (1.9676)  loss_proposal_cls: 0.0476 (0.0483)  loss_proposal_reg: 0.4987 (0.5062)  loss_box_cls: 0.0923 (0.0911)  loss_box_reg: 0.0991 (0.0981)  loss_box_reid: 1.2432 (1.2008)  loss_rpn_reg: 0.0079 (0.0096)  loss_rpn_cls: 0.0115 (0.0137)  time: 2.5608  data: 0.2608  max mem: 20585
+Epoch: [15]  [ 20/570]  eta: 0:21:57  lr: 0.000300  loss: 2.1264 (2.1589)  loss_proposal_cls: 0.0467 (0.0462)  loss_proposal_reg: 0.4754 (0.5091)  loss_box_cls: 0.0860 (0.0883)  loss_box_reg: 0.1002 (0.1029)  loss_box_reid: 1.3672 (1.3902)  loss_rpn_reg: 0.0073 (0.0095)  loss_rpn_cls: 0.0115 (0.0127)  time: 2.2299  data: 0.0005  max mem: 20585
+Epoch: [15]  [ 30/570]  eta: 0:21:03  lr: 0.000300  loss: 2.3563 (2.2342)  loss_proposal_cls: 0.0418 (0.0455)  loss_proposal_reg: 0.4495 (0.4932)  loss_box_cls: 0.0860 (0.0884)  loss_box_reg: 0.1035 (0.1011)  loss_box_reid: 1.5554 (1.4836)  loss_rpn_reg: 0.0072 (0.0089)  loss_rpn_cls: 0.0124 (0.0134)  time: 2.2189  data: 0.0004  max mem: 20585
+Epoch: [15]  [ 40/570]  eta: 0:20:26  lr: 0.000300  loss: 2.1296 (2.2239)  loss_proposal_cls: 0.0417 (0.0451)  loss_proposal_reg: 0.3898 (0.4771)  loss_box_cls: 0.0802 (0.0858)  loss_box_reg: 0.0890 (0.0986)  loss_box_reid: 1.5494 (1.4961)  loss_rpn_reg: 0.0062 (0.0083)  loss_rpn_cls: 0.0119 (0.0128)  time: 2.2289  data: 0.0004  max mem: 20585
+Epoch: [15]  [ 50/570]  eta: 0:19:56  lr: 0.000300  loss: 2.1455 (2.2368)  loss_proposal_cls: 0.0409 (0.0450)  loss_proposal_reg: 0.4318 (0.4726)  loss_box_cls: 0.0773 (0.0851)  loss_box_reg: 0.0912 (0.0984)  loss_box_reid: 1.4938 (1.5153)  loss_rpn_reg: 0.0058 (0.0080)  loss_rpn_cls: 0.0103 (0.0125)  time: 2.2396  data: 0.0004  max mem: 20585
+Epoch: [15]  [ 60/570]  eta: 0:19:29  lr: 0.000300  loss: 2.1902 (2.2435)  loss_proposal_cls: 0.0415 (0.0449)  loss_proposal_reg: 0.4395 (0.4682)  loss_box_cls: 0.0852 (0.0862)  loss_box_reg: 0.0970 (0.0976)  loss_box_reid: 1.5078 (1.5263)  loss_rpn_reg: 0.0060 (0.0080)  loss_rpn_cls: 0.0099 (0.0123)  time: 2.2509  data: 0.0004  max mem: 20585
+Epoch: [15]  [ 70/570]  eta: 0:19:05  lr: 0.000300  loss: 2.2397 (2.2318)  loss_proposal_cls: 0.0433 (0.0451)  loss_proposal_reg: 0.4380 (0.4668)  loss_box_cls: 0.0776 (0.0862)  loss_box_reg: 0.0970 (0.0975)  loss_box_reid: 1.4996 (1.5148)  loss_rpn_reg: 0.0074 (0.0082)  loss_rpn_cls: 0.0099 (0.0133)  time: 2.2684  data: 0.0003  max mem: 20585
+Epoch: [15]  [ 80/570]  eta: 0:18:42  lr: 0.000300  loss: 2.2566 (2.2493)  loss_proposal_cls: 0.0433 (0.0449)  loss_proposal_reg: 0.4136 (0.4678)  loss_box_cls: 0.0789 (0.0869)  loss_box_reg: 0.0953 (0.0982)  loss_box_reid: 1.5735 (1.5301)  loss_rpn_reg: 0.0074 (0.0083)  loss_rpn_cls: 0.0093 (0.0131)  time: 2.2811  data: 0.0004  max mem: 20585
+Epoch: [15]  [ 90/570]  eta: 0:18:20  lr: 0.000300  loss: 2.1984 (2.2601)  loss_proposal_cls: 0.0422 (0.0451)  loss_proposal_reg: 0.4080 (0.4658)  loss_box_cls: 0.0789 (0.0865)  loss_box_reg: 0.0949 (0.0978)  loss_box_reid: 1.5741 (1.5439)  loss_rpn_reg: 0.0069 (0.0082)  loss_rpn_cls: 0.0106 (0.0129)  time: 2.2948  data: 0.0004  max mem: 20585
+Epoch: [15]  [100/570]  eta: 0:17:58  lr: 0.000300  loss: 2.2257 (2.2713)  loss_proposal_cls: 0.0485 (0.0458)  loss_proposal_reg: 0.4384 (0.4659)  loss_box_cls: 0.0841 (0.0866)  loss_box_reg: 0.0980 (0.0982)  loss_box_reid: 1.5967 (1.5534)  loss_rpn_reg: 0.0072 (0.0084)  loss_rpn_cls: 0.0120 (0.0131)  time: 2.3086  data: 0.0004  max mem: 20585
+Epoch: [15]  [110/570]  eta: 0:17:38  lr: 0.000300  loss: 2.3072 (2.2864)  loss_proposal_cls: 0.0499 (0.0460)  loss_proposal_reg: 0.4186 (0.4648)  loss_box_cls: 0.0841 (0.0861)  loss_box_reg: 0.0980 (0.0977)  loss_box_reid: 1.6187 (1.5706)  loss_rpn_reg: 0.0078 (0.0083)  loss_rpn_cls: 0.0094 (0.0129)  time: 2.3398  data: 0.0004  max mem: 20585
+Epoch: [15]  [120/570]  eta: 0:17:15  lr: 0.000300  loss: 2.3954 (2.2958)  loss_proposal_cls: 0.0499 (0.0462)  loss_proposal_reg: 0.4603 (0.4697)  loss_box_cls: 0.0843 (0.0866)  loss_box_reg: 0.1007 (0.0986)  loss_box_reid: 1.6187 (1.5737)  loss_rpn_reg: 0.0077 (0.0083)  loss_rpn_cls: 0.0094 (0.0128)  time: 2.3394  data: 0.0004  max mem: 20585
+Epoch: [15]  [130/570]  eta: 0:16:53  lr: 0.000300  loss: 2.1437 (2.2883)  loss_proposal_cls: 0.0418 (0.0456)  loss_proposal_reg: 0.4802 (0.4661)  loss_box_cls: 0.0800 (0.0859)  loss_box_reg: 0.1015 (0.0979)  loss_box_reid: 1.4333 (1.5717)  loss_rpn_reg: 0.0073 (0.0083)  loss_rpn_cls: 0.0094 (0.0126)  time: 2.3099  data: 0.0004  max mem: 20585
+Epoch: [15]  [140/570]  eta: 0:16:30  lr: 0.000300  loss: 2.1437 (2.2805)  loss_proposal_cls: 0.0419 (0.0456)  loss_proposal_reg: 0.4869 (0.4664)  loss_box_cls: 0.0800 (0.0865)  loss_box_reg: 0.1015 (0.0983)  loss_box_reid: 1.3288 (1.5627)  loss_rpn_reg: 0.0071 (0.0084)  loss_rpn_cls: 0.0094 (0.0125)  time: 2.3185  data: 0.0004  max mem: 20585
+Epoch: [15]  [150/570]  eta: 0:16:10  lr: 0.000300  loss: 2.2251 (2.2818)  loss_proposal_cls: 0.0424 (0.0456)  loss_proposal_reg: 0.4622 (0.4643)  loss_box_cls: 0.0829 (0.0862)  loss_box_reg: 0.1019 (0.0984)  loss_box_reid: 1.4922 (1.5665)  loss_rpn_reg: 0.0075 (0.0084)  loss_rpn_cls: 0.0111 (0.0124)  time: 2.3613  data: 0.0004  max mem: 20585
+Epoch: [15]  [160/570]  eta: 0:15:47  lr: 0.000300  loss: 2.3171 (2.2872)  loss_proposal_cls: 0.0424 (0.0454)  loss_proposal_reg: 0.4254 (0.4665)  loss_box_cls: 0.0748 (0.0859)  loss_box_reg: 0.0970 (0.0985)  loss_box_reid: 1.6841 (1.5702)  loss_rpn_reg: 0.0060 (0.0083)  loss_rpn_cls: 0.0111 (0.0124)  time: 2.3508  data: 0.0005  max mem: 20585
+Epoch: [15]  [170/570]  eta: 0:15:24  lr: 0.000300  loss: 2.3761 (2.2889)  loss_proposal_cls: 0.0447 (0.0454)  loss_proposal_reg: 0.4370 (0.4658)  loss_box_cls: 0.0821 (0.0860)  loss_box_reg: 0.0968 (0.0987)  loss_box_reid: 1.6841 (1.5724)  loss_rpn_reg: 0.0054 (0.0082)  loss_rpn_cls: 0.0098 (0.0124)  time: 2.3115  data: 0.0004  max mem: 20585
+Epoch: [15]  [180/570]  eta: 0:15:00  lr: 0.000300  loss: 2.4378 (2.3058)  loss_proposal_cls: 0.0474 (0.0458)  loss_proposal_reg: 0.5093 (0.4753)  loss_box_cls: 0.0847 (0.0867)  loss_box_reg: 0.1076 (0.0999)  loss_box_reid: 1.6208 (1.5774)  loss_rpn_reg: 0.0086 (0.0083)  loss_rpn_cls: 0.0119 (0.0124)  time: 2.3089  data: 0.0004  max mem: 20585
+Epoch: [15]  [190/570]  eta: 0:14:38  lr: 0.000300  loss: 2.4903 (2.3075)  loss_proposal_cls: 0.0474 (0.0458)  loss_proposal_reg: 0.5637 (0.4774)  loss_box_cls: 0.0874 (0.0869)  loss_box_reg: 0.1076 (0.0998)  loss_box_reid: 1.6208 (1.5770)  loss_rpn_reg: 0.0086 (0.0083)  loss_rpn_cls: 0.0111 (0.0122)  time: 2.3144  data: 0.0004  max mem: 20585
+Epoch: [15]  [200/570]  eta: 0:14:14  lr: 0.000300  loss: 2.3556 (2.3066)  loss_proposal_cls: 0.0425 (0.0458)  loss_proposal_reg: 0.4357 (0.4761)  loss_box_cls: 0.0923 (0.0871)  loss_box_reg: 0.0989 (0.0997)  loss_box_reid: 1.6474 (1.5774)  loss_rpn_reg: 0.0062 (0.0083)  loss_rpn_cls: 0.0080 (0.0122)  time: 2.3146  data: 0.0004  max mem: 20585
+Epoch: [15]  [210/570]  eta: 0:13:51  lr: 0.000300  loss: 2.3556 (2.3160)  loss_proposal_cls: 0.0438 (0.0459)  loss_proposal_reg: 0.4649 (0.4805)  loss_box_cls: 0.0913 (0.0873)  loss_box_reg: 0.0924 (0.1000)  loss_box_reid: 1.6298 (1.5817)  loss_rpn_reg: 0.0065 (0.0083)  loss_rpn_cls: 0.0093 (0.0123)  time: 2.3001  data: 0.0004  max mem: 20585
+Epoch: [15]  [220/570]  eta: 0:13:28  lr: 0.000300  loss: 2.2901 (2.3121)  loss_proposal_cls: 0.0487 (0.0460)  loss_proposal_reg: 0.4937 (0.4803)  loss_box_cls: 0.0884 (0.0873)  loss_box_reg: 0.1043 (0.1000)  loss_box_reid: 1.5617 (1.5778)  loss_rpn_reg: 0.0079 (0.0083)  loss_rpn_cls: 0.0123 (0.0124)  time: 2.3058  data: 0.0004  max mem: 20585
+Epoch: [15]  [230/570]  eta: 0:13:05  lr: 0.000300  loss: 1.9635 (2.2956)  loss_proposal_cls: 0.0429 (0.0457)  loss_proposal_reg: 0.4827 (0.4785)  loss_box_cls: 0.0760 (0.0866)  loss_box_reg: 0.0994 (0.0999)  loss_box_reid: 1.2214 (1.5637)  loss_rpn_reg: 0.0085 (0.0083)  loss_rpn_cls: 0.0123 (0.0127)  time: 2.3256  data: 0.0004  max mem: 20585
+Epoch: [15]  [240/570]  eta: 0:12:42  lr: 0.000300  loss: 1.9377 (2.2901)  loss_proposal_cls: 0.0416 (0.0457)  loss_proposal_reg: 0.4215 (0.4785)  loss_box_cls: 0.0760 (0.0868)  loss_box_reg: 0.0982 (0.1002)  loss_box_reid: 1.2090 (1.5579)  loss_rpn_reg: 0.0066 (0.0083)  loss_rpn_cls: 0.0097 (0.0127)  time: 2.3225  data: 0.0004  max mem: 20585
+Epoch: [15]  [250/570]  eta: 0:12:19  lr: 0.000300  loss: 2.0115 (2.2779)  loss_proposal_cls: 0.0445 (0.0457)  loss_proposal_reg: 0.4256 (0.4769)  loss_box_cls: 0.0820 (0.0866)  loss_box_reg: 0.0982 (0.1000)  loss_box_reid: 1.2635 (1.5479)  loss_rpn_reg: 0.0068 (0.0083)  loss_rpn_cls: 0.0097 (0.0126)  time: 2.3085  data: 0.0004  max mem: 20585
+Epoch: [15]  [260/570]  eta: 0:11:56  lr: 0.000300  loss: 2.0785 (2.2724)  loss_proposal_cls: 0.0426 (0.0455)  loss_proposal_reg: 0.4295 (0.4759)  loss_box_cls: 0.0820 (0.0865)  loss_box_reg: 0.1009 (0.1000)  loss_box_reid: 1.3266 (1.5438)  loss_rpn_reg: 0.0073 (0.0082)  loss_rpn_cls: 0.0097 (0.0125)  time: 2.3144  data: 0.0004  max mem: 20585
+Epoch: [15]  [270/570]  eta: 0:11:33  lr: 0.000300  loss: 2.0785 (2.2648)  loss_proposal_cls: 0.0378 (0.0452)  loss_proposal_reg: 0.4423 (0.4749)  loss_box_cls: 0.0725 (0.0857)  loss_box_reg: 0.0968 (0.0997)  loss_box_reid: 1.4346 (1.5387)  loss_rpn_reg: 0.0072 (0.0082)  loss_rpn_cls: 0.0099 (0.0124)  time: 2.3090  data: 0.0004  max mem: 20585
+Epoch: [15]  [280/570]  eta: 0:11:10  lr: 0.000300  loss: 2.0176 (2.2557)  loss_proposal_cls: 0.0416 (0.0452)  loss_proposal_reg: 0.4312 (0.4733)  loss_box_cls: 0.0756 (0.0859)  loss_box_reg: 0.0964 (0.0997)  loss_box_reid: 1.3238 (1.5310)  loss_rpn_reg: 0.0072 (0.0082)  loss_rpn_cls: 0.0109 (0.0124)  time: 2.3005  data: 0.0004  max mem: 20585
+Epoch: [15]  [290/570]  eta: 0:10:46  lr: 0.000300  loss: 1.9912 (2.2552)  loss_proposal_cls: 0.0447 (0.0452)  loss_proposal_reg: 0.4299 (0.4735)  loss_box_cls: 0.0869 (0.0858)  loss_box_reg: 0.0972 (0.0997)  loss_box_reid: 1.3238 (1.5304)  loss_rpn_reg: 0.0076 (0.0082)  loss_rpn_cls: 0.0119 (0.0125)  time: 2.3040  data: 0.0004  max mem: 20585
+Epoch: [15]  [300/570]  eta: 0:10:23  lr: 0.000300  loss: 2.0753 (2.2528)  loss_proposal_cls: 0.0409 (0.0452)  loss_proposal_reg: 0.4104 (0.4734)  loss_box_cls: 0.0850 (0.0859)  loss_box_reg: 0.0925 (0.0996)  loss_box_reid: 1.3947 (1.5280)  loss_rpn_reg: 0.0069 (0.0082)  loss_rpn_cls: 0.0129 (0.0125)  time: 2.3109  data: 0.0003  max mem: 20585
+Epoch: [15]  [310/570]  eta: 0:10:00  lr: 0.000300  loss: 2.0753 (2.2506)  loss_proposal_cls: 0.0410 (0.0453)  loss_proposal_reg: 0.4361 (0.4752)  loss_box_cls: 0.0867 (0.0859)  loss_box_reg: 0.0942 (0.0998)  loss_box_reid: 1.3947 (1.5237)  loss_rpn_reg: 0.0077 (0.0082)  loss_rpn_cls: 0.0129 (0.0125)  time: 2.3117  data: 0.0003  max mem: 20585
+Epoch: [15]  [320/570]  eta: 0:09:37  lr: 0.000300  loss: 2.0686 (2.2441)  loss_proposal_cls: 0.0425 (0.0453)  loss_proposal_reg: 0.4267 (0.4744)  loss_box_cls: 0.0834 (0.0859)  loss_box_reg: 0.0928 (0.0995)  loss_box_reid: 1.2800 (1.5182)  loss_rpn_reg: 0.0076 (0.0083)  loss_rpn_cls: 0.0106 (0.0125)  time: 2.3132  data: 0.0003  max mem: 20585
+Epoch: [15]  [330/570]  eta: 0:09:14  lr: 0.000300  loss: 2.1828 (2.2505)  loss_proposal_cls: 0.0463 (0.0453)  loss_proposal_reg: 0.4941 (0.4765)  loss_box_cls: 0.0753 (0.0856)  loss_box_reg: 0.1024 (0.0998)  loss_box_reid: 1.4832 (1.5225)  loss_rpn_reg: 0.0068 (0.0082)  loss_rpn_cls: 0.0111 (0.0125)  time: 2.3134  data: 0.0004  max mem: 20585
+Epoch: [15]  [340/570]  eta: 0:08:51  lr: 0.000300  loss: 2.2809 (2.2438)  loss_proposal_cls: 0.0463 (0.0453)  loss_proposal_reg: 0.4873 (0.4758)  loss_box_cls: 0.0751 (0.0855)  loss_box_reg: 0.1056 (0.0997)  loss_box_reid: 1.5715 (1.5166)  loss_rpn_reg: 0.0083 (0.0083)  loss_rpn_cls: 0.0111 (0.0125)  time: 2.3026  data: 0.0004  max mem: 20585
+Epoch: [15]  [350/570]  eta: 0:08:28  lr: 0.000300  loss: 1.9934 (2.2384)  loss_proposal_cls: 0.0397 (0.0452)  loss_proposal_reg: 0.4483 (0.4752)  loss_box_cls: 0.0753 (0.0853)  loss_box_reg: 0.0974 (0.0995)  loss_box_reid: 1.2960 (1.5125)  loss_rpn_reg: 0.0083 (0.0082)  loss_rpn_cls: 0.0101 (0.0124)  time: 2.3023  data: 0.0005  max mem: 20585
+Epoch: [15]  [360/570]  eta: 0:08:05  lr: 0.000300  loss: 2.0721 (2.2381)  loss_proposal_cls: 0.0386 (0.0451)  loss_proposal_reg: 0.4828 (0.4762)  loss_box_cls: 0.0751 (0.0851)  loss_box_reg: 0.0975 (0.0996)  loss_box_reid: 1.3195 (1.5115)  loss_rpn_reg: 0.0057 (0.0082)  loss_rpn_cls: 0.0099 (0.0124)  time: 2.3241  data: 0.0005  max mem: 20585
+Epoch: [15]  [370/570]  eta: 0:07:42  lr: 0.000300  loss: 2.0738 (2.2344)  loss_proposal_cls: 0.0387 (0.0450)  loss_proposal_reg: 0.4289 (0.4744)  loss_box_cls: 0.0728 (0.0848)  loss_box_reg: 0.0953 (0.0992)  loss_box_reid: 1.3272 (1.5105)  loss_rpn_reg: 0.0064 (0.0081)  loss_rpn_cls: 0.0104 (0.0123)  time: 2.3252  data: 0.0004  max mem: 20585
+Epoch: [15]  [380/570]  eta: 0:07:19  lr: 0.000300  loss: 2.0505 (2.2325)  loss_proposal_cls: 0.0427 (0.0450)  loss_proposal_reg: 0.4426 (0.4752)  loss_box_cls: 0.0737 (0.0849)  loss_box_reg: 0.0936 (0.0993)  loss_box_reid: 1.3200 (1.5075)  loss_rpn_reg: 0.0067 (0.0082)  loss_rpn_cls: 0.0102 (0.0123)  time: 2.3215  data: 0.0004  max mem: 20585
+Epoch: [15]  [390/570]  eta: 0:06:56  lr: 0.000300  loss: 2.0608 (2.2302)  loss_proposal_cls: 0.0467 (0.0450)  loss_proposal_reg: 0.4522 (0.4746)  loss_box_cls: 0.0787 (0.0848)  loss_box_reg: 0.0976 (0.0992)  loss_box_reid: 1.3139 (1.5061)  loss_rpn_reg: 0.0080 (0.0082)  loss_rpn_cls: 0.0118 (0.0124)  time: 2.3195  data: 0.0004  max mem: 20585
+Epoch: [15]  [400/570]  eta: 0:06:32  lr: 0.000300  loss: 2.2884 (2.2340)  loss_proposal_cls: 0.0431 (0.0450)  loss_proposal_reg: 0.4686 (0.4756)  loss_box_cls: 0.0757 (0.0846)  loss_box_reg: 0.0969 (0.0991)  loss_box_reid: 1.5237 (1.5091)  loss_rpn_reg: 0.0062 (0.0082)  loss_rpn_cls: 0.0110 (0.0124)  time: 2.3083  data: 0.0004  max mem: 20585
+Epoch: [15]  [410/570]  eta: 0:06:09  lr: 0.000300  loss: 2.1654 (2.2294)  loss_proposal_cls: 0.0431 (0.0449)  loss_proposal_reg: 0.4758 (0.4753)  loss_box_cls: 0.0741 (0.0844)  loss_box_reg: 0.0924 (0.0990)  loss_box_reid: 1.4901 (1.5052)  loss_rpn_reg: 0.0060 (0.0081)  loss_rpn_cls: 0.0086 (0.0124)  time: 2.3112  data: 0.0004  max mem: 20585
+Epoch: [15]  [420/570]  eta: 0:05:46  lr: 0.000300  loss: 2.1604 (2.2302)  loss_proposal_cls: 0.0459 (0.0450)  loss_proposal_reg: 0.4897 (0.4768)  loss_box_cls: 0.0780 (0.0843)  loss_box_reg: 0.0967 (0.0990)  loss_box_reid: 1.3793 (1.5048)  loss_rpn_reg: 0.0061 (0.0081)  loss_rpn_cls: 0.0091 (0.0123)  time: 2.3157  data: 0.0004  max mem: 20585
+Epoch: [15]  [430/570]  eta: 0:05:23  lr: 0.000300  loss: 2.1729 (2.2263)  loss_proposal_cls: 0.0439 (0.0449)  loss_proposal_reg: 0.4970 (0.4761)  loss_box_cls: 0.0767 (0.0841)  loss_box_reg: 0.0952 (0.0989)  loss_box_reid: 1.4114 (1.5020)  loss_rpn_reg: 0.0060 (0.0081)  loss_rpn_cls: 0.0089 (0.0122)  time: 2.3301  data: 0.0004  max mem: 20585
+Epoch: [15]  [440/570]  eta: 0:05:00  lr: 0.000300  loss: 2.1729 (2.2255)  loss_proposal_cls: 0.0439 (0.0450)  loss_proposal_reg: 0.4970 (0.4773)  loss_box_cls: 0.0721 (0.0841)  loss_box_reg: 0.0960 (0.0990)  loss_box_reid: 1.3746 (1.4999)  loss_rpn_reg: 0.0049 (0.0081)  loss_rpn_cls: 0.0089 (0.0122)  time: 2.3333  data: 0.0004  max mem: 20585
+Epoch: [15]  [450/570]  eta: 0:04:37  lr: 0.000300  loss: 2.0363 (2.2218)  loss_proposal_cls: 0.0437 (0.0450)  loss_proposal_reg: 0.4560 (0.4765)  loss_box_cls: 0.0849 (0.0839)  loss_box_reg: 0.0963 (0.0989)  loss_box_reid: 1.3330 (1.4972)  loss_rpn_reg: 0.0054 (0.0081)  loss_rpn_cls: 0.0103 (0.0122)  time: 2.3176  data: 0.0004  max mem: 20585
+Epoch: [15]  [460/570]  eta: 0:04:14  lr: 0.000300  loss: 1.9881 (2.2166)  loss_proposal_cls: 0.0416 (0.0449)  loss_proposal_reg: 0.4231 (0.4757)  loss_box_cls: 0.0706 (0.0837)  loss_box_reg: 0.0956 (0.0988)  loss_box_reid: 1.2825 (1.4931)  loss_rpn_reg: 0.0064 (0.0081)  loss_rpn_cls: 0.0127 (0.0123)  time: 2.3068  data: 0.0004  max mem: 20585
+Epoch: [15]  [470/570]  eta: 0:03:51  lr: 0.000300  loss: 1.9914 (2.2179)  loss_proposal_cls: 0.0406 (0.0448)  loss_proposal_reg: 0.4682 (0.4767)  loss_box_cls: 0.0742 (0.0837)  loss_box_reg: 0.1034 (0.0989)  loss_box_reid: 1.2540 (1.4933)  loss_rpn_reg: 0.0067 (0.0081)  loss_rpn_cls: 0.0116 (0.0123)  time: 2.3088  data: 0.0004  max mem: 20585
+Epoch: [15]  [480/570]  eta: 0:03:28  lr: 0.000300  loss: 2.0062 (2.2167)  loss_proposal_cls: 0.0441 (0.0449)  loss_proposal_reg: 0.5070 (0.4772)  loss_box_cls: 0.0780 (0.0836)  loss_box_reg: 0.1029 (0.0989)  loss_box_reid: 1.3831 (1.4916)  loss_rpn_reg: 0.0073 (0.0081)  loss_rpn_cls: 0.0116 (0.0124)  time: 2.3472  data: 0.0003  max mem: 20585
+Epoch: [15]  [490/570]  eta: 0:03:05  lr: 0.000300  loss: 2.1770 (2.2163)  loss_proposal_cls: 0.0436 (0.0448)  loss_proposal_reg: 0.4582 (0.4770)  loss_box_cls: 0.0778 (0.0836)  loss_box_reg: 0.1030 (0.0989)  loss_box_reid: 1.3999 (1.4912)  loss_rpn_reg: 0.0075 (0.0082)  loss_rpn_cls: 0.0109 (0.0126)  time: 2.3859  data: 0.0004  max mem: 20585
+Epoch: [15]  [500/570]  eta: 0:02:42  lr: 0.000300  loss: 2.3773 (2.2220)  loss_proposal_cls: 0.0436 (0.0448)  loss_proposal_reg: 0.5133 (0.4795)  loss_box_cls: 0.0820 (0.0838)  loss_box_reg: 0.1096 (0.0992)  loss_box_reid: 1.4461 (1.4940)  loss_rpn_reg: 0.0072 (0.0082)  loss_rpn_cls: 0.0103 (0.0126)  time: 2.3402  data: 0.0004  max mem: 20585
+Epoch: [15]  [510/570]  eta: 0:02:18  lr: 0.000300  loss: 2.2905 (2.2239)  loss_proposal_cls: 0.0462 (0.0449)  loss_proposal_reg: 0.6053 (0.4802)  loss_box_cls: 0.0777 (0.0836)  loss_box_reg: 0.1054 (0.0992)  loss_box_reid: 1.5838 (1.4953)  loss_rpn_reg: 0.0067 (0.0081)  loss_rpn_cls: 0.0092 (0.0125)  time: 2.2976  data: 0.0004  max mem: 20585
+Epoch: [15]  [520/570]  eta: 0:01:55  lr: 0.000300  loss: 2.1574 (2.2211)  loss_proposal_cls: 0.0420 (0.0448)  loss_proposal_reg: 0.4488 (0.4798)  loss_box_cls: 0.0794 (0.0837)  loss_box_reg: 0.0946 (0.0991)  loss_box_reid: 1.4360 (1.4930)  loss_rpn_reg: 0.0062 (0.0081)  loss_rpn_cls: 0.0092 (0.0125)  time: 2.3046  data: 0.0004  max mem: 20585
+Epoch: [15]  [530/570]  eta: 0:01:32  lr: 0.000300  loss: 1.9811 (2.2183)  loss_proposal_cls: 0.0397 (0.0448)  loss_proposal_reg: 0.4541 (0.4801)  loss_box_cls: 0.0795 (0.0836)  loss_box_reg: 0.1007 (0.0993)  loss_box_reid: 1.3307 (1.4898)  loss_rpn_reg: 0.0062 (0.0081)  loss_rpn_cls: 0.0095 (0.0126)  time: 2.3386  data: 0.0004  max mem: 20585
+Epoch: [15]  [540/570]  eta: 0:01:09  lr: 0.000300  loss: 2.0070 (2.2158)  loss_proposal_cls: 0.0431 (0.0448)  loss_proposal_reg: 0.4307 (0.4798)  loss_box_cls: 0.0723 (0.0834)  loss_box_reg: 0.1007 (0.0992)  loss_box_reid: 1.3265 (1.4879)  loss_rpn_reg: 0.0059 (0.0081)  loss_rpn_cls: 0.0093 (0.0126)  time: 2.3375  data: 0.0004  max mem: 20585
+Epoch: [15]  [550/570]  eta: 0:00:46  lr: 0.000300  loss: 2.2278 (2.2189)  loss_proposal_cls: 0.0446 (0.0448)  loss_proposal_reg: 0.4431 (0.4796)  loss_box_cls: 0.0750 (0.0834)  loss_box_reg: 0.1008 (0.0993)  loss_box_reid: 1.4085 (1.4910)  loss_rpn_reg: 0.0061 (0.0081)  loss_rpn_cls: 0.0094 (0.0126)  time: 2.3123  data: 0.0003  max mem: 20585
+Epoch: [15]  [560/570]  eta: 0:00:23  lr: 0.000300  loss: 2.3908 (2.2233)  loss_proposal_cls: 0.0481 (0.0449)  loss_proposal_reg: 0.4482 (0.4791)  loss_box_cls: 0.0806 (0.0835)  loss_box_reg: 0.1008 (0.0992)  loss_box_reid: 1.6367 (1.4961)  loss_rpn_reg: 0.0058 (0.0080)  loss_rpn_cls: 0.0094 (0.0126)  time: 2.3548  data: 0.0003  max mem: 20585
+Epoch: [15]  [569/570]  eta: 0:00:02  lr: 0.000300  loss: 2.2832 (2.2244)  loss_proposal_cls: 0.0481 (0.0449)  loss_proposal_reg: 0.4511 (0.4807)  loss_box_cls: 0.0840 (0.0835)  loss_box_reg: 0.1002 (0.0993)  loss_box_reid: 1.5854 (1.4952)  loss_rpn_reg: 0.0066 (0.0080)  loss_rpn_cls: 0.0100 (0.0126)  time: 2.3544  data: 0.0003  max mem: 20585
+Epoch: [15] Total time: 0:22:00 (2.3172 s / it)
+all detection:
+  recall = 96.49%
+  ap = 93.83%
+search ranking:
+  mAP = 19.11%
+  top- 1 = 72.10%
+  top- 5 = 81.62%.
+  
+  top-10 = 84.35%
+init for oim  [  0/571]  eta: 0:22:33    time: 2.3701  data: 2.1381  max mem: 20585
+init for oim  [ 10/571]  eta: 0:04:08    time: 0.4436  data: 0.2154  max mem: 20585
+init for oim  [ 20/571]  eta: 0:03:06    time: 0.2364  data: 0.0117  max mem: 20585
+init for oim  [ 30/571]  eta: 0:02:43    time: 0.2247  data: 0.0002  max mem: 20585
+init for oim  [ 40/571]  eta: 0:02:30    time: 0.2264  data: 0.0002  max mem: 20585
+init for oim  [ 50/571]  eta: 0:02:22    time: 0.2277  data: 0.0002  max mem: 20585
+init for oim  [ 60/571]  eta: 0:02:15    time: 0.2281  data: 0.0002  max mem: 20585
+init for oim  [ 70/571]  eta: 0:02:10    time: 0.2254  data: 0.0002  max mem: 20585
+init for oim  [ 80/571]  eta: 0:02:05    time: 0.2248  data: 0.0002  max mem: 20585
+init for oim  [ 90/571]  eta: 0:02:01    time: 0.2277  data: 0.0002  max mem: 20585
+init for oim  [100/571]  eta: 0:01:57    time: 0.2298  data: 0.0002  max mem: 20585
+init for oim  [110/571]  eta: 0:01:54    time: 0.2311  data: 0.0002  max mem: 20585
+init for oim  [120/571]  eta: 0:01:51    time: 0.2331  data: 0.0002  max mem: 20585
+init for oim  [130/571]  eta: 0:01:48    time: 0.2326  data: 0.0002  max mem: 20585
+init for oim  [140/571]  eta: 0:01:45    time: 0.2339  data: 0.0002  max mem: 20585
+init for oim  [150/571]  eta: 0:01:43    time: 0.2356  data: 0.0002  max mem: 20585
+init for oim  [160/571]  eta: 0:01:40    time: 0.2347  data: 0.0002  max mem: 20585
+init for oim  [170/571]  eta: 0:01:37    time: 0.2336  data: 0.0002  max mem: 20585
+init for oim  [180/571]  eta: 0:01:34    time: 0.2330  data: 0.0002  max mem: 20585
+init for oim  [190/571]  eta: 0:01:32    time: 0.2315  data: 0.0002  max mem: 20585
+init for oim  [200/571]  eta: 0:01:29    time: 0.2323  data: 0.0002  max mem: 20585
+init for oim  [210/571]  eta: 0:01:27    time: 0.2342  data: 0.0002  max mem: 20585
+init for oim  [220/571]  eta: 0:01:24    time: 0.2338  data: 0.0002  max mem: 20585
+init for oim  [230/571]  eta: 0:01:22    time: 0.2335  data: 0.0002  max mem: 20585
+init for oim  [240/571]  eta: 0:01:19    time: 0.2332  data: 0.0002  max mem: 20585
+init for oim  [250/571]  eta: 0:01:17    time: 0.2330  data: 0.0002  max mem: 20585
+init for oim  [260/571]  eta: 0:01:14    time: 0.2314  data: 0.0002  max mem: 20585
+init for oim  [270/571]  eta: 0:01:12    time: 0.2281  data: 0.0002  max mem: 20585
+init for oim  [280/571]  eta: 0:01:09    time: 0.2265  data: 0.0002  max mem: 20585
+init for oim  [290/571]  eta: 0:01:06    time: 0.2259  data: 0.0002  max mem: 20585
+init for oim  [300/571]  eta: 0:01:04    time: 0.2280  data: 0.0002  max mem: 20585
+init for oim  [310/571]  eta: 0:01:02    time: 0.2308  data: 0.0002  max mem: 20585
+init for oim  [320/571]  eta: 0:00:59    time: 0.2310  data: 0.0002  max mem: 20585
+init for oim  [330/571]  eta: 0:00:57    time: 0.2290  data: 0.0002  max mem: 20585
+init for oim  [340/571]  eta: 0:00:54    time: 0.2291  data: 0.0002  max mem: 20585
+init for oim  [350/571]  eta: 0:00:52    time: 0.2295  data: 0.0002  max mem: 20585
+init for oim  [360/571]  eta: 0:00:49    time: 0.2316  data: 0.0002  max mem: 20585
+init for oim  [370/571]  eta: 0:00:47    time: 0.2348  data: 0.0002  max mem: 20585
+init for oim  [380/571]  eta: 0:00:45    time: 0.2325  data: 0.0002  max mem: 20585
+init for oim  [390/571]  eta: 0:00:42    time: 0.2318  data: 0.0002  max mem: 20585
+init for oim  [400/571]  eta: 0:00:40    time: 0.2333  data: 0.0002  max mem: 20585
+init for oim  [410/571]  eta: 0:00:38    time: 0.2329  data: 0.0002  max mem: 20585
+init for oim  [420/571]  eta: 0:00:35    time: 0.2334  data: 0.0002  max mem: 20585
+init for oim  [430/571]  eta: 0:00:33    time: 0.2342  data: 0.0002  max mem: 20585
+init for oim  [440/571]  eta: 0:00:30    time: 0.2345  data: 0.0002  max mem: 20585
+init for oim  [450/571]  eta: 0:00:28    time: 0.2250  data: 0.0002  max mem: 20585
+init for oim  [460/571]  eta: 0:00:26    time: 0.1982  data: 0.0001  max mem: 20585
+init for oim  [470/571]  eta: 0:00:23    time: 0.1842  data: 0.0002  max mem: 20585
+init for oim  [480/571]  eta: 0:00:21    time: 0.1975  data: 0.0002  max mem: 20585
+init for oim  [490/571]  eta: 0:00:18    time: 0.1970  data: 0.0002  max mem: 20585
+init for oim  [500/571]  eta: 0:00:16    time: 0.1849  data: 0.0002  max mem: 20585
+init for oim  [510/571]  eta: 0:00:14    time: 0.1882  data: 0.0002  max mem: 20585
+init for oim  [520/571]  eta: 0:00:11    time: 0.1919  data: 0.0001  max mem: 20585
+init for oim  [530/571]  eta: 0:00:09    time: 0.1923  data: 0.0001  max mem: 20585
+init for oim  [540/571]  eta: 0:00:07    time: 0.1915  data: 0.0001  max mem: 20585
+init for oim  [550/571]  eta: 0:00:04    time: 0.1946  data: 0.0002  max mem: 20585
+init for oim  [560/571]  eta: 0:00:02    time: 0.1978  data: 0.0001  max mem: 20585
+init for oim  [570/571]  eta: 0:00:00    time: 0.1874  data: 0.0001  max mem: 20585
+init for oim Total time: 0:02:09 (0.2268 s / it)
+Computing jaccard distance...
+Jaccard distance computing time cost: 194.3475308418274
+[  0   1   1 ... 543 448 504]
+number of clusters:============== 1686
+[  0   1   1 ... 543 448 504]
+torch.Size([1686, 2048]) ====
+(18048, 18048)
+torch.Size([18048, 2048])
+Epoch: [16]  [  0/570]  eta: 0:46:01  lr: 0.000300  loss: 1.6128 (1.6128)  loss_proposal_cls: 0.0590 (0.0590)  loss_proposal_reg: 0.5400 (0.5400)  loss_box_cls: 0.1150 (0.1150)  loss_box_reg: 0.1081 (0.1081)  loss_box_reid: 0.7703 (0.7703)  loss_rpn_reg: 0.0078 (0.0078)  loss_rpn_cls: 0.0126 (0.0126)  time: 4.8445  data: 2.5031  max mem: 20585
+Epoch: [16]  [ 10/570]  eta: 0:22:34  lr: 0.000300  loss: 1.7160 (1.8986)  loss_proposal_cls: 0.0500 (0.0475)  loss_proposal_reg: 0.4418 (0.4377)  loss_box_cls: 0.0851 (0.0928)  loss_box_reg: 0.0974 (0.0986)  loss_box_reid: 1.1646 (1.2031)  loss_rpn_reg: 0.0077 (0.0075)  loss_rpn_cls: 0.0096 (0.0114)  time: 2.4179  data: 0.2279  max mem: 20585
+Epoch: [16]  [ 20/570]  eta: 0:21:10  lr: 0.000300  loss: 1.9648 (2.0493)  loss_proposal_cls: 0.0428 (0.0456)  loss_proposal_reg: 0.4418 (0.4280)  loss_box_cls: 0.0811 (0.0842)  loss_box_reg: 0.0966 (0.0939)  loss_box_reid: 1.3184 (1.3818)  loss_rpn_reg: 0.0059 (0.0061)  loss_rpn_cls: 0.0086 (0.0097)  time: 2.1830  data: 0.0004  max mem: 20585
+Epoch: [16]  [ 30/570]  eta: 0:20:28  lr: 0.000300  loss: 2.1812 (2.1088)  loss_proposal_cls: 0.0441 (0.0460)  loss_proposal_reg: 0.3871 (0.4157)  loss_box_cls: 0.0736 (0.0824)  loss_box_reg: 0.0914 (0.0936)  loss_box_reid: 1.6129 (1.4536)  loss_rpn_reg: 0.0062 (0.0072)  loss_rpn_cls: 0.0084 (0.0102)  time: 2.1978  data: 0.0004  max mem: 20585
+Epoch: [16]  [ 40/570]  eta: 0:19:57  lr: 0.000300  loss: 2.2154 (2.1800)  loss_proposal_cls: 0.0452 (0.0461)  loss_proposal_reg: 0.4305 (0.4340)  loss_box_cls: 0.0766 (0.0821)  loss_box_reg: 0.0914 (0.0946)  loss_box_reid: 1.5788 (1.5033)  loss_rpn_reg: 0.0073 (0.0075)  loss_rpn_cls: 0.0097 (0.0124)  time: 2.2054  data: 0.0004  max mem: 20585
+Epoch: [16]  [ 50/570]  eta: 0:19:32  lr: 0.000300  loss: 2.2154 (2.1595)  loss_proposal_cls: 0.0441 (0.0463)  loss_proposal_reg: 0.4430 (0.4339)  loss_box_cls: 0.0743 (0.0808)  loss_box_reg: 0.0944 (0.0947)  loss_box_reid: 1.4836 (1.4831)  loss_rpn_reg: 0.0076 (0.0075)  loss_rpn_cls: 0.0105 (0.0132)  time: 2.2201  data: 0.0004  max mem: 20585
+Epoch: [16]  [ 60/570]  eta: 0:19:06  lr: 0.000300  loss: 2.2171 (2.1886)  loss_proposal_cls: 0.0434 (0.0459)  loss_proposal_reg: 0.4430 (0.4394)  loss_box_cls: 0.0765 (0.0821)  loss_box_reg: 0.0952 (0.0949)  loss_box_reid: 1.5613 (1.5053)  loss_rpn_reg: 0.0067 (0.0077)  loss_rpn_cls: 0.0103 (0.0132)  time: 2.2256  data: 0.0004  max mem: 20585
+Epoch: [16]  [ 70/570]  eta: 0:18:43  lr: 0.000300  loss: 2.3303 (2.1957)  loss_proposal_cls: 0.0456 (0.0463)  loss_proposal_reg: 0.4601 (0.4486)  loss_box_cls: 0.0840 (0.0832)  loss_box_reg: 0.0952 (0.0959)  loss_box_reid: 1.5996 (1.5006)  loss_rpn_reg: 0.0080 (0.0077)  loss_rpn_cls: 0.0113 (0.0133)  time: 2.2322  data: 0.0004  max mem: 20585
+Epoch: [16]  [ 80/570]  eta: 0:18:26  lr: 0.000300  loss: 2.0805 (2.1844)  loss_proposal_cls: 0.0462 (0.0459)  loss_proposal_reg: 0.4488 (0.4473)  loss_box_cls: 0.0802 (0.0824)  loss_box_reg: 0.0934 (0.0957)  loss_box_reid: 1.4371 (1.4923)  loss_rpn_reg: 0.0082 (0.0077)  loss_rpn_cls: 0.0115 (0.0130)  time: 2.2898  data: 0.0004  max mem: 20585
+Epoch: [16]  [ 90/570]  eta: 0:18:10  lr: 0.000300  loss: 2.1403 (2.2006)  loss_proposal_cls: 0.0426 (0.0456)  loss_proposal_reg: 0.4796 (0.4547)  loss_box_cls: 0.0729 (0.0816)  loss_box_reg: 0.0974 (0.0963)  loss_box_reid: 1.4098 (1.5013)  loss_rpn_reg: 0.0072 (0.0079)  loss_rpn_cls: 0.0122 (0.0131)  time: 2.3526  data: 0.0007  max mem: 20585
+Epoch: [16]  [100/570]  eta: 0:17:46  lr: 0.000300  loss: 2.1403 (2.1852)  loss_proposal_cls: 0.0378 (0.0452)  loss_proposal_reg: 0.4183 (0.4480)  loss_box_cls: 0.0728 (0.0811)  loss_box_reg: 0.0967 (0.0958)  loss_box_reid: 1.4249 (1.4946)  loss_rpn_reg: 0.0071 (0.0077)  loss_rpn_cls: 0.0095 (0.0128)  time: 2.3116  data: 0.0007  max mem: 20585
+Epoch: [16]  [110/570]  eta: 0:17:23  lr: 0.000300  loss: 2.0060 (2.1730)  loss_proposal_cls: 0.0365 (0.0451)  loss_proposal_reg: 0.3832 (0.4505)  loss_box_cls: 0.0802 (0.0813)  loss_box_reg: 0.0966 (0.0957)  loss_box_reid: 1.3961 (1.4803)  loss_rpn_reg: 0.0057 (0.0076)  loss_rpn_cls: 0.0086 (0.0125)  time: 2.2538  data: 0.0004  max mem: 20585
+Epoch: [16]  [120/570]  eta: 0:17:00  lr: 0.000300  loss: 1.9661 (2.1568)  loss_proposal_cls: 0.0416 (0.0452)  loss_proposal_reg: 0.4204 (0.4480)  loss_box_cls: 0.0802 (0.0809)  loss_box_reg: 0.0918 (0.0956)  loss_box_reid: 1.2231 (1.4671)  loss_rpn_reg: 0.0058 (0.0076)  loss_rpn_cls: 0.0100 (0.0124)  time: 2.2670  data: 0.0004  max mem: 20585
+Epoch: [16]  [130/570]  eta: 0:16:38  lr: 0.000300  loss: 1.9936 (2.1710)  loss_proposal_cls: 0.0428 (0.0453)  loss_proposal_reg: 0.3878 (0.4498)  loss_box_cls: 0.0799 (0.0811)  loss_box_reg: 0.0890 (0.0957)  loss_box_reid: 1.3671 (1.4792)  loss_rpn_reg: 0.0066 (0.0077)  loss_rpn_cls: 0.0100 (0.0123)  time: 2.2712  data: 0.0004  max mem: 20585
+Epoch: [16]  [140/570]  eta: 0:16:15  lr: 0.000300  loss: 2.0924 (2.1619)  loss_proposal_cls: 0.0445 (0.0453)  loss_proposal_reg: 0.4470 (0.4501)  loss_box_cls: 0.0839 (0.0811)  loss_box_reg: 0.0944 (0.0956)  loss_box_reid: 1.4432 (1.4700)  loss_rpn_reg: 0.0070 (0.0076)  loss_rpn_cls: 0.0089 (0.0122)  time: 2.2689  data: 0.0004  max mem: 20585
+Epoch: [16]  [150/570]  eta: 0:15:53  lr: 0.000300  loss: 1.9866 (2.1475)  loss_proposal_cls: 0.0445 (0.0451)  loss_proposal_reg: 0.4409 (0.4467)  loss_box_cls: 0.0796 (0.0809)  loss_box_reg: 0.0910 (0.0949)  loss_box_reid: 1.2328 (1.4602)  loss_rpn_reg: 0.0053 (0.0076)  loss_rpn_cls: 0.0091 (0.0121)  time: 2.2746  data: 0.0004  max mem: 20585
+Epoch: [16]  [160/570]  eta: 0:15:30  lr: 0.000300  loss: 2.0198 (2.1482)  loss_proposal_cls: 0.0438 (0.0449)  loss_proposal_reg: 0.4196 (0.4485)  loss_box_cls: 0.0738 (0.0805)  loss_box_reg: 0.0919 (0.0951)  loss_box_reid: 1.2970 (1.4594)  loss_rpn_reg: 0.0072 (0.0076)  loss_rpn_cls: 0.0111 (0.0121)  time: 2.2800  data: 0.0004  max mem: 20585
+Epoch: [16]  [170/570]  eta: 0:15:08  lr: 0.000300  loss: 2.0198 (2.1425)  loss_proposal_cls: 0.0456 (0.0452)  loss_proposal_reg: 0.4196 (0.4472)  loss_box_cls: 0.0772 (0.0811)  loss_box_reg: 0.0961 (0.0951)  loss_box_reid: 1.3493 (1.4542)  loss_rpn_reg: 0.0078 (0.0077)  loss_rpn_cls: 0.0084 (0.0120)  time: 2.2823  data: 0.0004  max mem: 20585
+Epoch: [16]  [180/570]  eta: 0:14:45  lr: 0.000300  loss: 2.0110 (2.1397)  loss_proposal_cls: 0.0448 (0.0450)  loss_proposal_reg: 0.4435 (0.4498)  loss_box_cls: 0.0799 (0.0812)  loss_box_reg: 0.0960 (0.0956)  loss_box_reid: 1.3493 (1.4483)  loss_rpn_reg: 0.0076 (0.0078)  loss_rpn_cls: 0.0089 (0.0119)  time: 2.2805  data: 0.0004  max mem: 20585
+Epoch: [16]  [190/570]  eta: 0:14:23  lr: 0.000300  loss: 2.0601 (2.1314)  loss_proposal_cls: 0.0424 (0.0451)  loss_proposal_reg: 0.4911 (0.4529)  loss_box_cls: 0.0796 (0.0812)  loss_box_reg: 0.0977 (0.0958)  loss_box_reid: 1.3199 (1.4368)  loss_rpn_reg: 0.0079 (0.0078)  loss_rpn_cls: 0.0106 (0.0119)  time: 2.2913  data: 0.0004  max mem: 20585
+Epoch: [16]  [200/570]  eta: 0:14:01  lr: 0.000300  loss: 1.9363 (2.1274)  loss_proposal_cls: 0.0424 (0.0450)  loss_proposal_reg: 0.4115 (0.4524)  loss_box_cls: 0.0786 (0.0811)  loss_box_reg: 0.0910 (0.0959)  loss_box_reid: 1.2244 (1.4335)  loss_rpn_reg: 0.0077 (0.0078)  loss_rpn_cls: 0.0097 (0.0118)  time: 2.3051  data: 0.0005  max mem: 20585
+Epoch: [16]  [210/570]  eta: 0:13:38  lr: 0.000300  loss: 1.9363 (2.1268)  loss_proposal_cls: 0.0453 (0.0451)  loss_proposal_reg: 0.4067 (0.4534)  loss_box_cls: 0.0734 (0.0815)  loss_box_reg: 0.0917 (0.0961)  loss_box_reid: 1.3014 (1.4309)  loss_rpn_reg: 0.0080 (0.0080)  loss_rpn_cls: 0.0097 (0.0119)  time: 2.2952  data: 0.0004  max mem: 20585
+Epoch: [16]  [220/570]  eta: 0:13:16  lr: 0.000300  loss: 2.0377 (2.1217)  loss_proposal_cls: 0.0458 (0.0451)  loss_proposal_reg: 0.4053 (0.4522)  loss_box_cls: 0.0736 (0.0815)  loss_box_reg: 0.0917 (0.0959)  loss_box_reid: 1.3743 (1.4271)  loss_rpn_reg: 0.0080 (0.0080)  loss_rpn_cls: 0.0122 (0.0119)  time: 2.2844  data: 0.0004  max mem: 20585
+Epoch: [16]  [230/570]  eta: 0:12:53  lr: 0.000300  loss: 2.0643 (2.1203)  loss_proposal_cls: 0.0441 (0.0452)  loss_proposal_reg: 0.4371 (0.4538)  loss_box_cls: 0.0850 (0.0819)  loss_box_reg: 0.0877 (0.0959)  loss_box_reid: 1.3857 (1.4235)  loss_rpn_reg: 0.0066 (0.0080)  loss_rpn_cls: 0.0117 (0.0121)  time: 2.2881  data: 0.0004  max mem: 20585
+Epoch: [16]  [240/570]  eta: 0:12:31  lr: 0.000300  loss: 2.0643 (2.1213)  loss_proposal_cls: 0.0449 (0.0452)  loss_proposal_reg: 0.4778 (0.4559)  loss_box_cls: 0.0861 (0.0820)  loss_box_reg: 0.1026 (0.0962)  loss_box_reid: 1.3535 (1.4219)  loss_rpn_reg: 0.0062 (0.0079)  loss_rpn_cls: 0.0107 (0.0120)  time: 2.2911  data: 0.0004  max mem: 20585
+Epoch: [16]  [250/570]  eta: 0:12:08  lr: 0.000300  loss: 2.0494 (2.1166)  loss_proposal_cls: 0.0467 (0.0452)  loss_proposal_reg: 0.4761 (0.4577)  loss_box_cls: 0.0763 (0.0820)  loss_box_reg: 0.1026 (0.0964)  loss_box_reid: 1.2978 (1.4153)  loss_rpn_reg: 0.0062 (0.0080)  loss_rpn_cls: 0.0116 (0.0120)  time: 2.2911  data: 0.0006  max mem: 20585
+Epoch: [16]  [260/570]  eta: 0:11:46  lr: 0.000300  loss: 2.0669 (2.1229)  loss_proposal_cls: 0.0445 (0.0450)  loss_proposal_reg: 0.4752 (0.4588)  loss_box_cls: 0.0771 (0.0821)  loss_box_reg: 0.0950 (0.0965)  loss_box_reid: 1.3357 (1.4203)  loss_rpn_reg: 0.0071 (0.0080)  loss_rpn_cls: 0.0116 (0.0120)  time: 2.2948  data: 0.0006  max mem: 20585
+Epoch: [16]  [270/570]  eta: 0:11:23  lr: 0.000300  loss: 1.9934 (2.1225)  loss_proposal_cls: 0.0425 (0.0450)  loss_proposal_reg: 0.4103 (0.4563)  loss_box_cls: 0.0853 (0.0824)  loss_box_reg: 0.0905 (0.0963)  loss_box_reid: 1.4243 (1.4223)  loss_rpn_reg: 0.0079 (0.0080)  loss_rpn_cls: 0.0109 (0.0121)  time: 2.2990  data: 0.0004  max mem: 20585
+Epoch: [16]  [280/570]  eta: 0:11:01  lr: 0.000300  loss: 2.1342 (2.1302)  loss_proposal_cls: 0.0425 (0.0451)  loss_proposal_reg: 0.4248 (0.4583)  loss_box_cls: 0.0806 (0.0825)  loss_box_reg: 0.0988 (0.0965)  loss_box_reid: 1.4243 (1.4275)  loss_rpn_reg: 0.0079 (0.0080)  loss_rpn_cls: 0.0119 (0.0123)  time: 2.2988  data: 0.0005  max mem: 20585
+Epoch: [16]  [290/570]  eta: 0:10:38  lr: 0.000300  loss: 2.2318 (2.1314)  loss_proposal_cls: 0.0430 (0.0451)  loss_proposal_reg: 0.5008 (0.4601)  loss_box_cls: 0.0806 (0.0825)  loss_box_reg: 0.0994 (0.0966)  loss_box_reid: 1.4854 (1.4266)  loss_rpn_reg: 0.0072 (0.0080)  loss_rpn_cls: 0.0115 (0.0124)  time: 2.2904  data: 0.0005  max mem: 20585
+Epoch: [16]  [300/570]  eta: 0:10:15  lr: 0.000300  loss: 2.2676 (2.1379)  loss_proposal_cls: 0.0480 (0.0452)  loss_proposal_reg: 0.4951 (0.4613)  loss_box_cls: 0.0784 (0.0825)  loss_box_reg: 0.0942 (0.0966)  loss_box_reid: 1.4854 (1.4320)  loss_rpn_reg: 0.0070 (0.0080)  loss_rpn_cls: 0.0115 (0.0124)  time: 2.2933  data: 0.0004  max mem: 20585
+Epoch: [16]  [310/570]  eta: 0:09:53  lr: 0.000300  loss: 2.2811 (2.1404)  loss_proposal_cls: 0.0472 (0.0451)  loss_proposal_reg: 0.4536 (0.4621)  loss_box_cls: 0.0735 (0.0822)  loss_box_reg: 0.0909 (0.0965)  loss_box_reid: 1.4730 (1.4338)  loss_rpn_reg: 0.0074 (0.0081)  loss_rpn_cls: 0.0115 (0.0126)  time: 2.3009  data: 0.0004  max mem: 20585
+Epoch: [16]  [320/570]  eta: 0:09:30  lr: 0.000300  loss: 2.0605 (2.1394)  loss_proposal_cls: 0.0425 (0.0450)  loss_proposal_reg: 0.4536 (0.4619)  loss_box_cls: 0.0758 (0.0822)  loss_box_reg: 0.0909 (0.0965)  loss_box_reid: 1.3678 (1.4331)  loss_rpn_reg: 0.0086 (0.0080)  loss_rpn_cls: 0.0115 (0.0126)  time: 2.2882  data: 0.0005  max mem: 20585
+Epoch: [16]  [330/570]  eta: 0:09:07  lr: 0.000300  loss: 1.8700 (2.1312)  loss_proposal_cls: 0.0392 (0.0449)  loss_proposal_reg: 0.4093 (0.4598)  loss_box_cls: 0.0758 (0.0820)  loss_box_reg: 0.0892 (0.0962)  loss_box_reid: 1.2732 (1.4278)  loss_rpn_reg: 0.0062 (0.0080)  loss_rpn_cls: 0.0100 (0.0126)  time: 2.2772  data: 0.0004  max mem: 20585
+Epoch: [16]  [340/570]  eta: 0:08:44  lr: 0.000300  loss: 1.8700 (2.1265)  loss_proposal_cls: 0.0391 (0.0448)  loss_proposal_reg: 0.3801 (0.4579)  loss_box_cls: 0.0741 (0.0819)  loss_box_reg: 0.0834 (0.0959)  loss_box_reid: 1.2630 (1.4255)  loss_rpn_reg: 0.0060 (0.0080)  loss_rpn_cls: 0.0100 (0.0126)  time: 2.2805  data: 0.0004  max mem: 20585
+Epoch: [16]  [350/570]  eta: 0:08:21  lr: 0.000300  loss: 2.0485 (2.1255)  loss_proposal_cls: 0.0431 (0.0449)  loss_proposal_reg: 0.3805 (0.4590)  loss_box_cls: 0.0803 (0.0822)  loss_box_reg: 0.0898 (0.0961)  loss_box_reid: 1.2884 (1.4227)  loss_rpn_reg: 0.0070 (0.0080)  loss_rpn_cls: 0.0115 (0.0126)  time: 2.2870  data: 0.0004  max mem: 20585
+Epoch: [16]  [360/570]  eta: 0:07:59  lr: 0.000300  loss: 2.0114 (2.1264)  loss_proposal_cls: 0.0387 (0.0447)  loss_proposal_reg: 0.4242 (0.4604)  loss_box_cls: 0.0788 (0.0822)  loss_box_reg: 0.1000 (0.0961)  loss_box_reid: 1.3681 (1.4223)  loss_rpn_reg: 0.0066 (0.0080)  loss_rpn_cls: 0.0120 (0.0126)  time: 2.2956  data: 0.0004  max mem: 20585
+Epoch: [16]  [370/570]  eta: 0:07:36  lr: 0.000300  loss: 2.0114 (2.1256)  loss_proposal_cls: 0.0391 (0.0447)  loss_proposal_reg: 0.4580 (0.4606)  loss_box_cls: 0.0783 (0.0821)  loss_box_reg: 0.0934 (0.0962)  loss_box_reid: 1.3887 (1.4214)  loss_rpn_reg: 0.0061 (0.0080)  loss_rpn_cls: 0.0117 (0.0126)  time: 2.3398  data: 0.0007  max mem: 20585
+Epoch: [16]  [380/570]  eta: 0:07:13  lr: 0.000300  loss: 1.8336 (2.1175)  loss_proposal_cls: 0.0434 (0.0447)  loss_proposal_reg: 0.4177 (0.4596)  loss_box_cls: 0.0784 (0.0822)  loss_box_reg: 0.0901 (0.0960)  loss_box_reid: 1.2043 (1.4144)  loss_rpn_reg: 0.0064 (0.0080)  loss_rpn_cls: 0.0106 (0.0125)  time: 2.3285  data: 0.0007  max mem: 20585
+Epoch: [16]  [390/570]  eta: 0:06:51  lr: 0.000300  loss: 1.8336 (2.1123)  loss_proposal_cls: 0.0430 (0.0447)  loss_proposal_reg: 0.4177 (0.4590)  loss_box_cls: 0.0800 (0.0823)  loss_box_reg: 0.0914 (0.0960)  loss_box_reid: 1.1462 (1.4099)  loss_rpn_reg: 0.0063 (0.0080)  loss_rpn_cls: 0.0099 (0.0125)  time: 2.2911  data: 0.0004  max mem: 20585
+Epoch: [16]  [400/570]  eta: 0:06:28  lr: 0.000300  loss: 1.9522 (2.1119)  loss_proposal_cls: 0.0441 (0.0447)  loss_proposal_reg: 0.4548 (0.4595)  loss_box_cls: 0.0756 (0.0824)  loss_box_reg: 0.0924 (0.0960)  loss_box_reid: 1.2232 (1.4089)  loss_rpn_reg: 0.0060 (0.0080)  loss_rpn_cls: 0.0091 (0.0124)  time: 2.2964  data: 0.0004  max mem: 20585
+Epoch: [16]  [410/570]  eta: 0:06:05  lr: 0.000300  loss: 1.9825 (2.1115)  loss_proposal_cls: 0.0440 (0.0447)  loss_proposal_reg: 0.4479 (0.4591)  loss_box_cls: 0.0726 (0.0824)  loss_box_reg: 0.0933 (0.0959)  loss_box_reid: 1.3301 (1.4093)  loss_rpn_reg: 0.0063 (0.0079)  loss_rpn_cls: 0.0078 (0.0123)  time: 2.2932  data: 0.0004  max mem: 20585
+Epoch: [16]  [420/570]  eta: 0:05:42  lr: 0.000300  loss: 1.9633 (2.1096)  loss_proposal_cls: 0.0414 (0.0446)  loss_proposal_reg: 0.4173 (0.4578)  loss_box_cls: 0.0727 (0.0821)  loss_box_reg: 0.0933 (0.0958)  loss_box_reid: 1.3435 (1.4090)  loss_rpn_reg: 0.0063 (0.0080)  loss_rpn_cls: 0.0086 (0.0123)  time: 2.2909  data: 0.0004  max mem: 20585
+Epoch: [16]  [430/570]  eta: 0:05:20  lr: 0.000300  loss: 1.8479 (2.1064)  loss_proposal_cls: 0.0384 (0.0445)  loss_proposal_reg: 0.3892 (0.4570)  loss_box_cls: 0.0727 (0.0820)  loss_box_reg: 0.0920 (0.0957)  loss_box_reid: 1.2820 (1.4068)  loss_rpn_reg: 0.0066 (0.0080)  loss_rpn_cls: 0.0088 (0.0125)  time: 2.3023  data: 0.0004  max mem: 20585
+Epoch: [16]  [440/570]  eta: 0:04:57  lr: 0.000300  loss: 1.8479 (2.1071)  loss_proposal_cls: 0.0419 (0.0445)  loss_proposal_reg: 0.3889 (0.4568)  loss_box_cls: 0.0751 (0.0820)  loss_box_reg: 0.0902 (0.0956)  loss_box_reid: 1.2820 (1.4078)  loss_rpn_reg: 0.0067 (0.0080)  loss_rpn_cls: 0.0101 (0.0125)  time: 2.3051  data: 0.0004  max mem: 20585
+Epoch: [16]  [450/570]  eta: 0:04:34  lr: 0.000300  loss: 2.3195 (2.1119)  loss_proposal_cls: 0.0458 (0.0445)  loss_proposal_reg: 0.4436 (0.4587)  loss_box_cls: 0.0816 (0.0821)  loss_box_reg: 0.1025 (0.0959)  loss_box_reid: 1.4338 (1.4103)  loss_rpn_reg: 0.0055 (0.0080)  loss_rpn_cls: 0.0104 (0.0124)  time: 2.2893  data: 0.0004  max mem: 20585
+Epoch: [16]  [460/570]  eta: 0:04:11  lr: 0.000300  loss: 2.1697 (2.1112)  loss_proposal_cls: 0.0439 (0.0446)  loss_proposal_reg: 0.4804 (0.4600)  loss_box_cls: 0.0799 (0.0820)  loss_box_reg: 0.1025 (0.0959)  loss_box_reid: 1.3034 (1.4081)  loss_rpn_reg: 0.0057 (0.0080)  loss_rpn_cls: 0.0097 (0.0125)  time: 2.2881  data: 0.0004  max mem: 20585
+Epoch: [16]  [470/570]  eta: 0:03:48  lr: 0.000300  loss: 1.9960 (2.1109)  loss_proposal_cls: 0.0431 (0.0446)  loss_proposal_reg: 0.4204 (0.4592)  loss_box_cls: 0.0702 (0.0818)  loss_box_reg: 0.0889 (0.0958)  loss_box_reid: 1.2444 (1.4090)  loss_rpn_reg: 0.0069 (0.0080)  loss_rpn_cls: 0.0114 (0.0124)  time: 2.2895  data: 0.0004  max mem: 20585
+Epoch: [16]  [480/570]  eta: 0:03:25  lr: 0.000300  loss: 2.0568 (2.1149)  loss_proposal_cls: 0.0429 (0.0446)  loss_proposal_reg: 0.4364 (0.4606)  loss_box_cls: 0.0693 (0.0817)  loss_box_reg: 0.0965 (0.0960)  loss_box_reid: 1.4779 (1.4115)  loss_rpn_reg: 0.0055 (0.0080)  loss_rpn_cls: 0.0104 (0.0125)  time: 2.2987  data: 0.0004  max mem: 20585
+Epoch: [16]  [490/570]  eta: 0:03:03  lr: 0.000300  loss: 2.0900 (2.1135)  loss_proposal_cls: 0.0369 (0.0445)  loss_proposal_reg: 0.4414 (0.4598)  loss_box_cls: 0.0727 (0.0815)  loss_box_reg: 0.0985 (0.0959)  loss_box_reid: 1.3892 (1.4113)  loss_rpn_reg: 0.0060 (0.0080)  loss_rpn_cls: 0.0078 (0.0124)  time: 2.3289  data: 0.0005  max mem: 20585
+Epoch: [16]  [500/570]  eta: 0:02:40  lr: 0.000300  loss: 1.9336 (2.1090)  loss_proposal_cls: 0.0366 (0.0445)  loss_proposal_reg: 0.4019 (0.4592)  loss_box_cls: 0.0783 (0.0815)  loss_box_reg: 0.0918 (0.0960)  loss_box_reid: 1.2726 (1.4076)  loss_rpn_reg: 0.0060 (0.0080)  loss_rpn_cls: 0.0078 (0.0124)  time: 2.3173  data: 0.0005  max mem: 20585
+Epoch: [16]  [510/570]  eta: 0:02:17  lr: 0.000300  loss: 1.9336 (2.1101)  loss_proposal_cls: 0.0388 (0.0444)  loss_proposal_reg: 0.4179 (0.4602)  loss_box_cls: 0.0783 (0.0815)  loss_box_reg: 0.1034 (0.0961)  loss_box_reid: 1.1675 (1.4076)  loss_rpn_reg: 0.0068 (0.0080)  loss_rpn_cls: 0.0088 (0.0124)  time: 2.2831  data: 0.0004  max mem: 20585
+Epoch: [16]  [520/570]  eta: 0:01:54  lr: 0.000300  loss: 2.0873 (2.1087)  loss_proposal_cls: 0.0405 (0.0444)  loss_proposal_reg: 0.5008 (0.4613)  loss_box_cls: 0.0677 (0.0813)  loss_box_reg: 0.1041 (0.0962)  loss_box_reid: 1.3086 (1.4051)  loss_rpn_reg: 0.0077 (0.0080)  loss_rpn_cls: 0.0107 (0.0123)  time: 2.2883  data: 0.0004  max mem: 20585
+Epoch: [16]  [530/570]  eta: 0:01:31  lr: 0.000300  loss: 2.0873 (2.1107)  loss_proposal_cls: 0.0430 (0.0444)  loss_proposal_reg: 0.4892 (0.4619)  loss_box_cls: 0.0763 (0.0815)  loss_box_reg: 0.0991 (0.0963)  loss_box_reid: 1.3524 (1.4063)  loss_rpn_reg: 0.0086 (0.0080)  loss_rpn_cls: 0.0092 (0.0123)  time: 2.2991  data: 0.0004  max mem: 20585
+Epoch: [16]  [540/570]  eta: 0:01:08  lr: 0.000300  loss: 2.0794 (2.1101)  loss_proposal_cls: 0.0387 (0.0443)  loss_proposal_reg: 0.4278 (0.4601)  loss_box_cls: 0.0803 (0.0813)  loss_box_reg: 0.0926 (0.0961)  loss_box_reid: 1.3902 (1.4080)  loss_rpn_reg: 0.0065 (0.0080)  loss_rpn_cls: 0.0087 (0.0123)  time: 2.2996  data: 0.0004  max mem: 20585
+Epoch: [16]  [550/570]  eta: 0:00:45  lr: 0.000300  loss: 2.1480 (2.1130)  loss_proposal_cls: 0.0400 (0.0444)  loss_proposal_reg: 0.4134 (0.4614)  loss_box_cls: 0.0809 (0.0816)  loss_box_reg: 0.0923 (0.0963)  loss_box_reid: 1.3579 (1.4091)  loss_rpn_reg: 0.0066 (0.0080)  loss_rpn_cls: 0.0085 (0.0122)  time: 2.3140  data: 0.0004  max mem: 20585
+Epoch: [16]  [560/570]  eta: 0:00:22  lr: 0.000300  loss: 2.0271 (2.1114)  loss_proposal_cls: 0.0428 (0.0443)  loss_proposal_reg: 0.4728 (0.4623)  loss_box_cls: 0.0832 (0.0816)  loss_box_reg: 0.1045 (0.0965)  loss_box_reid: 1.2953 (1.4065)  loss_rpn_reg: 0.0067 (0.0080)  loss_rpn_cls: 0.0091 (0.0122)  time: 2.3222  data: 0.0004  max mem: 20585
+Epoch: [16]  [569/570]  eta: 0:00:02  lr: 0.000300  loss: 2.0234 (2.1131)  loss_proposal_cls: 0.0412 (0.0444)  loss_proposal_reg: 0.4632 (0.4628)  loss_box_cls: 0.0797 (0.0816)  loss_box_reg: 0.0983 (0.0965)  loss_box_reid: 1.2421 (1.4076)  loss_rpn_reg: 0.0069 (0.0080)  loss_rpn_cls: 0.0112 (0.0123)  time: 2.3083  data: 0.0004  max mem: 20585
+Epoch: [16] Total time: 0:21:45 (2.2903 s / it)
