@@ -148,8 +148,24 @@ class OIMUnsupervisedLoss(nn.Module):
     #     loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
     #     feature_consistency = torch.mean(1-torch.cosine_similarity(re_id_features, inputs))
     #     return loss_oim+feature_consistency
-    # def criterion_instence(self, re_id_features, inputs, label):
-    #     logits = torch.einsum("nc, kc->nk", [inputs, self.lut_instence.clone().detach()])
+    def criterion_instance(self, inputs, label):
+        outputs_instance = inputs.mm(self.lut_instance.t())
+        outputs_instance*= self.oim_scalar
+        # logits = torch.einsum("nc, kc->nk", [inputs, self.lut_instence.clone().detach()])
+        loss_instance_batch =0 
+        for k in range(outputs_instance.shape[0]):
+            loss_instance = 0
+            negtive_label = torch.nonzero(self.reid_labels != label[k]).squeeze(-1)
+            positive_label = torch.nonzero(self.reid_labels == label[k]).squeeze(-1)
+            for pos in positive_label:
+                input_instance = torch.cat((outputs_instance[k][pos].unsqueeze(-1), outputs_instance[k, negtive_label]),dim=0)
+                instance_target =  torch.zeros(len(input_instance), dtype = input_instance.dtype).cuda()
+                instance_target[0] = 1
+                loss_instance +=  -1* (F.log_softmax(input_instance.unsqueeze(0), dim = 1) * instance_target.unsqueeze(0)).sum()
+            loss_instance_batch += loss_instance/len(positive_label)
+        loss_instance_batch /= outputs_instance.shape[0]
+        # pass
+        return loss_instance_batch
 
     def forward(self, inputs, roi_label):
         targets = torch.cat(roi_label)
@@ -172,12 +188,13 @@ class OIMUnsupervisedLoss(nn.Module):
         index_reid = label_reid>=0
         label_reid = label_reid[index_reid]
         inputs_reid = inputs[index_reid.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+        instance_loss = self.criterion_instance(inputs_reid, label_reid)
         outputs_reid = inputs_reid.mm(self.reid_lut.t())
         outputs_reid *= self.oim_scalar
         # print(label_reid, label_reid.shape, outputs_reid.shape, projected.shape, label)
         loss_oim_reid = F.cross_entropy(outputs_reid, label_reid, ignore_index=5554)
         # print(inputs.shape, label)
-        return feature_consistency+loss_oim_reid # +loss_oim
+        return feature_consistency+loss_oim_reid +instance_loss # +loss_oim
 
 
     # def forward(self, inputs, roi_label):
@@ -208,7 +225,6 @@ class OIMUnsupervisedLoss(nn.Module):
     #     outputs_reid *= self.oim_scalar
     #     # print(label_reid, label_reid.shape, outputs_reid.shape, projected.shape, label)
     #     loss_oim_reid = F.cross_entropy(outputs_reid, label_reid, ignore_index=5554)
-
     #     # print(inputs.shape, label)
     #     return feature_consistency+loss_oim_reid # +loss_oim
     

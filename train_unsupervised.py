@@ -46,7 +46,7 @@ def main(args):
     device = torch.device(cfg.DEVICE)
     if cfg.SEED >= 0:
         set_random_seed(cfg.SEED)
-    sys.stdout = Logger(osp.join("./", 'log_oim_consistency_cluster_reuse_openlayer_mse_loss2.txt'))
+    sys.stdout = Logger(osp.join("./", 'zhanka_instance_loss2.txt'))
     print("Creating model")
     model = SeqNet(cfg)
     model.to(device)

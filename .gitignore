@@ -7,6 +7,10 @@ data
 exp*
 vis
 .vscode
+model_best.pth.tar
+zhanka.txt
+zhanka_instance_loss.txt
+zhanka_instance_loss2.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

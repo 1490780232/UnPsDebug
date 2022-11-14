@@ -50,3 +50,5 @@ for i, ann in tqdm.tqdm(enumerate(dataset.annotations)):
         pid = pids[i_box]
         cv2.imwrite(os.path.join(root, "crop_query_imgs",str(pid).zfill(5)+"_"+str(count).zfill(5)+".jpg"), im[y1:y2,x1:x2])
         count+=1
+
+
