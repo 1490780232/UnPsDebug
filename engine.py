@@ -165,7 +165,7 @@ def evaluate_performance(
 
 @torch.no_grad()
 def evaluate_performance_twostage(
-    gallery_loader, query_loader, device, use_gt=False, use_cache=False, use_cbgm=False
+    gallery_loader, query_loader, gallery_features,query_features , device,  use_cbgm=False
 ):
     """
     Args:
@@ -175,57 +175,60 @@ def evaluate_performance_twostage(
         use_cbgm (bool, optional): Whether to use Context Bipartite Graph Matching algorithm.
                                 Defaults to False.
     """
-    if use_cache:
-        eval_cache = torch.load("data/eval_cache/eval_cache.pth")
-        gallery_dets = eval_cache["gallery_dets"]
-        gallery_feats = eval_cache["gallery_feats"]
-        query_dets = eval_cache["query_dets"]
-        query_feats = eval_cache["query_feats"]
-        query_box_feats = eval_cache["query_box_feats"]
-    else:
-        gallery_dets, gallery_feats = [], []
-        for images, targets in tqdm(gallery_loader, ncols=0):
-            images, targets = to_device(images, targets, device)
-            boxes = targets[0]["boxes"]
-            n_boxes = boxes.size(0)
-            outputs = [
-                {
-                    "boxes": boxes,
-                    "embeddings": torch.ones(n_boxes, 2048).to(device),
-                    "labels": torch.ones(n_boxes).to(device),
-                    "scores": torch.ones(n_boxes).to(device),
-                }
-            ]
-            for output in outputs:
-                box_w_scores = torch.cat([output["boxes"], output["scores"].unsqueeze(1)], dim=1)
-                gallery_dets.append(box_w_scores.cpu().numpy())
-                gallery_feats.append(output["embeddings"].cpu().numpy())
 
-        # regarding query image as gallery to detect all people
-        # i.e. query person + surrounding people (context information)
-        query_dets, query_feats = [], []
-        # extract the features of query boxes
-        query_box_feats = []
-        for images, targets in tqdm(query_loader, ncols=0):
-            images, targets = to_device(images, targets, device)
-            # embeddings = model(images, targets)
-            # assert len(embeddings) == 1, "batch size in test phase should be 1"
-            query_box_feats.append(torch.ones(2048).numpy())
-        mkdir("data/eval_cache")
-        save_dict = {
-            "gallery_dets": gallery_dets,
-            "gallery_feats": gallery_feats,
-            "query_dets": query_dets,
-            "query_feats": query_feats,
-            "query_box_feats": query_box_feats,
-        }
-        torch.save(save_dict, "data/eval_cache/eval_cache.pth")
+    gallery_dets, gallery_feats = [], []
+    # gallery_features = torch.load("gallery_feature.pt")
+    # query_features = torch.load("query_feature.pt")
+    index_gellery = 0
+    index_query = 0
 
+    for images, targets in tqdm(gallery_loader, ncols=0):
+        images, targets = to_device(images, targets, device)
+        boxes = targets[0]["boxes"]
+        n_boxes = boxes.size(0)
+        outputs = [
+            {
+                "boxes": boxes,
+                "embeddings": gallery_features[index_gellery:index_gellery+n_boxes],
+                "labels": torch.ones(n_boxes).to(device),
+                "scores": torch.ones(n_boxes).to(device),
+            }
+        ]
+        index_gellery = index_gellery+n_boxes
+        for output in outputs:
+            box_w_scores = torch.cat([output["boxes"], output["scores"].unsqueeze(1)], dim=1)
+            gallery_dets.append(box_w_scores.cpu().numpy())
+            gallery_feats.append(output["embeddings"].cpu().numpy())
+    print(len(gallery_feats))
+    # regarding query image as gallery to detect all people
+    # i.e. query person + surrounding people (context information)
+    query_dets, query_feats = [], []
+    # extract the features of query boxes
+    query_box_feats = []
+
+    for images, targets in tqdm(query_loader, ncols=0):
+        images, targets = to_device(images, targets, device)
+        # embeddings = model(images, targets)
+        # assert len(embeddings) == 1, "batch size in test phase should be 1"
+        query_box_feats.append(query_features[index_query].numpy())
+        index_query+=1
+    
+    print(len(query_box_feats))
+    
+    mkdir("data/eval_cache")
+    save_dict = {
+        "gallery_dets": gallery_dets,
+        "gallery_feats": gallery_feats,
+        "query_dets": query_dets,
+        "query_feats": query_feats,
+        "query_box_feats": query_box_feats,
+    }
+    torch.save(save_dict, "data/eval_cache/eval_cache.pth")
     eval_detection(gallery_loader.dataset, gallery_dets, det_thresh=0.01)
     eval_search_func = (
         eval_search_cuhk if gallery_loader.dataset.name == "CUHK-SYSU" else eval_search_prw
     )
-    eval_search_func(
+    ret = eval_search_func(
         gallery_loader.dataset,
         query_loader.dataset,
         gallery_dets,
@@ -235,3 +238,5 @@ def evaluate_performance_twostage(
         query_feats,
         cbgm=use_cbgm,
     )
+    # print(ret )
+    return ret

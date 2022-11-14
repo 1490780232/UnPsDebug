@@ -18,7 +18,7 @@ class CUHK(BaseImageDataset):
             self.img_pid[img.split('/')[-1]]=i
         train = self._process_dir_train(self.train_dir, relabel=True)
         query = self._process_dir(self.query_dir, relabel=False,gallery=False)
-        gallery = [] #self._process_dir(self.gallery_dir, relabel=False,gallery=True)
+        gallery = self._process_dir(self.gallery_dir, relabel=False,gallery=True)
         if verbose:
             print("=> prw loaded")
             self.print_dataset_statistics(train, query, gallery)
@@ -33,7 +33,8 @@ class CUHK(BaseImageDataset):
 
     def _process_dir(self, data_dir, relabel=True, gallery=False):
         img_paths = glob.glob(osp.join(data_dir, '*.jpg'))  #
-        pattern = re.compile(r'(\d+)_(\d+)')
+        # pattern = re.compile(r'(\d+)_(\d+)')
+        img_paths = sorted(img_paths)
         # pid_container = set()
         # for img_path in img_paths:
         #     pid, _ = map(int, pattern.search(img_path).groups())
@@ -47,11 +48,7 @@ class CUHK(BaseImageDataset):
         #         print(label,"=========",pid)
         dataset = []
         for img_path in img_paths:
-            pid, index = map(int, pattern.search(img_path).groups())
-            if gallery:
-                dataset.append((img_path, pid, -1))
-                continue
-            dataset.append((img_path, pid, 1))
+            dataset.append((img_path, 1, 1))
         return dataset
     def _process_dir_train(self, data_dir, relabel=True, gallery=False):
         img_paths = glob.glob(osp.join(data_dir, '*.jpg'))  #

@@ -8,6 +8,13 @@ exp*
 vis
 .vscode
 
+
+cuhk_min_sample2_0.45_2instance/
+gallery_feature.pt
+cuhk_min_sample_0.7/
+query_feature.pt
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
