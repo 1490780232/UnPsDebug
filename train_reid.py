@@ -28,7 +28,8 @@ from reid.utils.logging import Logger
 from reid.utils.serialization import load_checkpoint, save_checkpoint
 from reid.utils.faiss_rerank import compute_jaccard_distance
 from reid.utils.data.sampler import RandomMultipleGallerySampler, RandomMultipleGallerySamplerNoCam
-
+from datasets.build import *
+from engine import evaluate_performance_twostage
 start_epoch = best_mAP = 0
 
 def get_data(name, data_dir):
@@ -100,6 +101,29 @@ def create_model(args):
     model = nn.DataParallel(model)
     return model
 
+def build_test_loader_ps():
+    transforms = build_transforms(is_train=False)
+    # gallery_set = build_dataset("CUHK-SYSU", "data/cuhk_sysu", transforms, "train")
+    gallery_set = build_dataset("CUHKUnsupervised", "data/cuhk_sysu", transforms, "gallery")
+    query_set = build_dataset("CUHKUnsupervised", "data/cuhk_sysu", transforms, "query")
+    gallery_loader = torch.utils.data.DataLoader(
+        gallery_set,
+        batch_size=1,
+        shuffle=False,
+        num_workers=4,
+        pin_memory=True,
+        collate_fn=collate_fn,
+    )
+    query_loader = torch.utils.data.DataLoader(
+        query_set,
+        batch_size=1,
+        shuffle=False,
+        num_workers=4,
+        pin_memory=True,
+        collate_fn=collate_fn,
+    )
+    return gallery_loader, query_loader
+
 def main():
     args = parser.parse_args()
 
@@ -126,9 +150,26 @@ def main_worker(args):
     print("==> Load unlabeled dataset")
     dataset = get_data(args.dataset, args.data_dir)
     test_loader = get_test_loader(dataset, args.height, args.width, args.batch_size, args.workers)
-
     # Create model
     model = create_model(args)
+    gallery_loader, query_loader =build_test_loader_ps()
+    # model.load_state_dict(torch.load("/home/lzy/UN_PS/UnPsDebug/instance_8_test_0.7_cuhk/model_best.pth.tar")['state_dict'], strict=True)
+
+    # features, _ = extract_features(model, test_loader)
+    # query_features = torch.cat([features[f].unsqueeze(0) for f, _, _ in dataset.query], 0)
+    # gallery_features = torch.cat([features[f].unsqueeze(0) for f, _, _ in dataset.gallery], 0)
+    # ret = evaluate_performance_twostage(
+    #     gallery_loader,
+    #     query_loader,
+    #     gallery_features, 
+    #     query_features,
+    #     "cuda",
+    #     use_cbgm=False,
+    # )
+
+    # exit(0)
+
+
 
     # Evaluator
     evaluator = Evaluator(model)
@@ -196,6 +237,7 @@ def main_worker(args):
                 pseudo_labeled_dataset.append((fname, label.item(), cid))
 
         print('==> Statistics for epoch {}: {} clusters'.format(epoch, num_cluster))
+        print('==> Statistics for outliers: {}'.format(sum(pseudo_labels==-1)))
 
         train_loader = get_train_loader(args, dataset, args.height, args.width,
                                         args.batch_size, args.workers, args.num_instances, iters,
@@ -207,8 +249,31 @@ def main_worker(args):
                       print_freq=args.print_freq, train_iters=len(train_loader))
 
         if (epoch + 1) % args.eval_step == 0 or (epoch == args.epochs - 1):
-            mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, cmc_flag=False)
+            torch.save(memory, "memory_feature_cuhk_0.7.pt")
+            torch.save(pseudo_labels, "pseudo_labels_cuhk_0.7.pt")
+            save_checkpoint({
+                'state_dict': model.state_dict(),
+                'epoch': epoch + 1,
+                'best_mAP': 1,
+            }, True, fpath=osp.join(args.logs_dir, 'checkpoint.pth.tar'))
+
+
+        if (epoch + 1) % args.eval_step == 0 or (epoch == args.epochs - 1):
+            features, _ = extract_features(model, test_loader)
+            query_features = torch.cat([features[f].unsqueeze(0) for f, _, _ in dataset.query], 0)
+            gallery_features = torch.cat([features[f].unsqueeze(0) for f, _, _ in dataset.gallery], 0)
+            ret = evaluate_performance_twostage(
+                gallery_loader,
+                query_loader,
+                gallery_features, 
+                query_features,
+                "cuda",
+                use_cbgm=False,
+            )
+            mAP = ret["mAP"]
             is_best = (mAP > best_mAP)
+        #     mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, cmc_flag=False)
+        #     is_best = (mAP > best_mAP)
             if is_best:
                 torch.save(memory, "memory_feature.pt")
                 torch.save(pseudo_labels, "pseudo_labels.pt")
@@ -227,7 +292,17 @@ def main_worker(args):
     print('==> Test with the best model:')
     checkpoint = load_checkpoint(osp.join(args.logs_dir, 'model_best.pth.tar'))
     model.load_state_dict(checkpoint['state_dict'])
-    evaluator.evaluate(test_loader, dataset.query, dataset.gallery, cmc_flag=True)
+    features, _ = extract_features(model, test_loader)
+    query_features = torch.cat([features[f].unsqueeze(0) for f, _, _ in dataset.query], 0)
+    gallery_features = torch.cat([features[f].unsqueeze(0) for f, _, _ in dataset.gallery], 0)
+    ret = evaluate_performance_twostage(
+        gallery_loader,
+        query_loader,
+        gallery_features, 
+        query_features,
+        "cuda",
+        use_cbgm=False,
+    )
 
     end_time = time.monotonic()
     print('Total running time: ', timedelta(seconds=end_time - start_time))
