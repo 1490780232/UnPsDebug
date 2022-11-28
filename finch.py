@@ -23,7 +23,8 @@ def clust_rank(mat, image_in=None, initial_rank=None, distance='cosine'):
         orig_dist = []
     elif s <= RUN_FLANN:
         orig_dist = metrics.pairwise.pairwise_distances(mat, mat, metric=distance)
-        orig_dist[image_in==image_in.T]=999
+        if image_in:
+            orig_dist[image_in==image_in.T]=999
         np.fill_diagonal(orig_dist, 1000.0)
         initial_rank = np.argmin(orig_dist, axis=1)
     else:
@@ -35,7 +36,6 @@ def clust_rank(mat, image_in=None, initial_rank=None, distance='cosine'):
         initial_rank = result[:, 1]
         orig_dist = []
         print('Step flann done ...')
-    if image_in:
         
     # The Clustering Equation
     A = sp.csr_matrix((np.ones_like(initial_rank, dtype=np.float32), (np.arange(0, s), initial_rank)), shape=(s, s))
