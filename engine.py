@@ -199,7 +199,7 @@ def evaluate_performance_twostage(
             box_w_scores = torch.cat([output["boxes"], output["scores"].unsqueeze(1)], dim=1)
             gallery_dets.append(box_w_scores.cpu().numpy())
             gallery_feats.append(output["embeddings"].cpu().numpy())
-    print(len(gallery_feats))
+    print(len(gallery_feats),)
     # regarding query image as gallery to detect all people
     # i.e. query person + surrounding people (context information)
     query_dets, query_feats = [], []

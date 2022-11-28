@@ -35,6 +35,7 @@ def build_cluster_loader(cfg):
         collate_fn=collate_fn,
     )
 
+
 def main(args):
     cfg = get_default_cfg()
     if args.cfg_file:

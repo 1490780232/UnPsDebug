@@ -154,6 +154,13 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
-
+ 
 # Cython debug symbols
 cython_debug/
+cuhk*
+prw*
+spcl*
+*.pt
+SpCL
+memory_feature_cuhk_0.7.pt
+memory_feature.pt

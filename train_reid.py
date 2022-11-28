@@ -27,7 +27,7 @@ from reid.utils.data.preprocessor import Preprocessor
 from reid.utils.logging import Logger
 from reid.utils.serialization import load_checkpoint, save_checkpoint
 from reid.utils.faiss_rerank import compute_jaccard_distance
-from reid.utils.data.sampler import RandomMultipleGallerySampler, RandomMultipleGallerySamplerNoCam
+from reid.utils.data.sampler import RandomMultipleGallerySampler, RandomMultipleGallerySamplerNoCam, RandomSampler
 from datasets.build import *
 from engine import evaluate_performance_twostage
 start_epoch = best_mAP = 0
@@ -64,6 +64,7 @@ def get_train_loader(args, dataset, height, width, batch_size, workers,
             sampler = RandomMultipleGallerySampler(train_set, num_instances)
     else:
         sampler = None
+    # sampler = RandomSampler(train_set)
     train_loader = IterLoader(
         DataLoader(Preprocessor(train_set, root=dataset.images_dir, transform=train_transformer),
                    batch_size=batch_size, num_workers=workers, sampler=sampler,
@@ -104,8 +105,8 @@ def create_model(args):
 def build_test_loader_ps():
     transforms = build_transforms(is_train=False)
     # gallery_set = build_dataset("CUHK-SYSU", "data/cuhk_sysu", transforms, "train")
-    gallery_set = build_dataset("CUHKUnsupervised", "data/cuhk_sysu", transforms, "gallery")
-    query_set = build_dataset("CUHKUnsupervised", "data/cuhk_sysu", transforms, "query")
+    gallery_set = build_dataset("CUHKUnsupervised", "data/CUHK-SYSU", transforms, "gallery")
+    query_set = build_dataset("CUHKUnsupervised", "data/CUHK-SYSU", transforms, "query")
     gallery_loader = torch.utils.data.DataLoader(
         gallery_set,
         batch_size=1,
@@ -182,6 +183,10 @@ def main_worker(args):
     # Trainer
     trainer = ClusterContrastTrainer(model)
 
+
+
+
+
     for epoch in range(args.epochs):
         with torch.no_grad():
             print('==> Create pseudo labels for unlabeled data')
@@ -197,9 +202,82 @@ def main_worker(args):
                 eps = args.eps
                 print('Clustering criterion: eps: {:.3f}'.format(eps))
                 cluster = DBSCAN(eps=eps, min_samples=4, metric='precomputed', n_jobs=-1)
+                cluster_tight = DBSCAN(eps=eps-0.02, min_samples=4, metric='precomputed', n_jobs=-1)
+                cluster_loose = DBSCAN(eps=eps+0.02, min_samples=4, metric='precomputed', n_jobs=-1)
 
-            # select & cluster images as training set of this epochs
             pseudo_labels = cluster.fit_predict(rerank_dist)
+
+
+        #     pseudo_labels_tight = cluster_tight.fit_predict(rerank_dist)
+        #     pseudo_labels_loose = cluster_loose.fit_predict(rerank_dist)
+
+        #     num_ids = len(set(pseudo_labels)) - (1 if -1 in pseudo_labels else 0)
+        #     num_ids_tight = len(set(pseudo_labels_tight)) - (1 if -1 in pseudo_labels_tight else 0)
+        #     num_ids_loose = len(set(pseudo_labels_loose)) - (1 if -1 in pseudo_labels_loose else 0)
+        #     # # select & cluster images as training set of this epochs
+        #     # pseudo_labels = cluster.fit_predict(rerank_dist)
+        # # generate new dataset and calculate cluster centers
+        #     def generate_pseudo_labels(cluster_id, num):
+        #         labels = []
+        #         outliers = 0
+        #         for i, ((fname, _, cid), id) in enumerate(zip(sorted(dataset.train), cluster_id)):
+        #             if id!=-1:
+        #                 labels.append(id)
+        #             else:
+        #                 labels.append(num+outliers)
+        #                 outliers += 1
+        #         return torch.Tensor(labels).long()
+
+        #     pseudo_labels = generate_pseudo_labels(pseudo_labels, num_ids)
+        #     pseudo_labels_tight = generate_pseudo_labels(pseudo_labels_tight, num_ids_tight)
+        #     pseudo_labels_loose = generate_pseudo_labels(pseudo_labels_loose, num_ids_loose)
+
+        #     N = pseudo_labels.size(0)
+        #     label_sim = pseudo_labels.expand(N, N).eq(pseudo_labels.expand(N, N).t()).float()
+        #     label_sim_tight = pseudo_labels_tight.expand(N, N).eq(pseudo_labels_tight.expand(N, N).t()).float()
+        #     label_sim_loose = pseudo_labels_loose.expand(N, N).eq(pseudo_labels_loose.expand(N, N).t()).float()
+
+        #     R_comp = 1-torch.min(label_sim, label_sim_tight).sum(-1)/torch.max(label_sim, label_sim_tight).sum(-1)
+        #     R_indep = 1-torch.min(label_sim, label_sim_loose).sum(-1)/torch.max(label_sim, label_sim_loose).sum(-1)
+        #     assert((R_comp.min()>=0) and (R_comp.max()<=1))
+        #     assert((R_indep.min()>=0) and (R_indep.max()<=1))
+
+        #     cluster_R_comp, cluster_R_indep = collections.defaultdict(list), collections.defaultdict(list)
+        #     cluster_img_num = collections.defaultdict(int)
+        #     for i, (comp, indep, label) in enumerate(zip(R_comp, R_indep, pseudo_labels)):
+        #         cluster_R_comp[label.item()].append(comp.item())
+        #         cluster_R_indep[label.item()].append(indep.item())
+        #         cluster_img_num[label.item()]+=1
+
+        #     cluster_R_comp = [min(cluster_R_comp[i]) for i in sorted(cluster_R_comp.keys())]
+        #     cluster_R_indep = [min(cluster_R_indep[i]) for i in sorted(cluster_R_indep.keys())]
+        #     cluster_R_indep_noins = [iou for iou, num in zip(cluster_R_indep, sorted(cluster_img_num.keys())) if cluster_img_num[num]>1]
+        #     if (epoch==0):
+        #         indep_thres = np.sort(cluster_R_indep_noins)[min(len(cluster_R_indep_noins)-1,np.round(len(cluster_R_indep_noins)*0.9).astype('int'))]
+
+        #     pseudo_labeled_dataset = []
+        #     outliers = 0
+        #     for i, ((fname, _, cid), label) in enumerate(zip(sorted(dataset.train), pseudo_labels)):
+        #         indep_score = cluster_R_indep[label.item()]
+        #         comp_score = R_comp[i]
+        #         if ((indep_score<=indep_thres) and (comp_score.item()<=cluster_R_comp[label.item()])):
+        #             pseudo_labeled_dataset.append((fname,label.item(),cid))
+        #         else:
+        #             # continue
+        #             pseudo_labeled_dataset.append((fname,len(cluster_R_indep)+outliers,cid))
+        #             pseudo_labels[i] = len(cluster_R_indep)+outliers
+        #             outliers+=1
+
+
+
+            num_clusters = len(set(pseudo_labels)) - (1 if -1 in pseudo_labels else 0)
+            outliners = 0
+            for index, la in enumerate(pseudo_labels):
+                if la == -1:
+                    pseudo_labels[index] = num_clusters+outliners
+                    outliners +=1
+
+        
             num_cluster = len(set(pseudo_labels)) - (1 if -1 in pseudo_labels else 0)
 
             # print("epoch: {} \n pseudo_labels: {}".format(epoch, pseudo_labels.tolist()[:100]))
@@ -274,9 +352,9 @@ def main_worker(args):
             is_best = (mAP > best_mAP)
         #     mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, cmc_flag=False)
         #     is_best = (mAP > best_mAP)
-            if is_best:
-                torch.save(memory, "memory_feature.pt")
-                torch.save(pseudo_labels, "pseudo_labels.pt")
+            # if is_best:
+                # torch.save(memory, "memory_feature.pt")
+                # torch.save(pseudo_labels, "pseudo_labels.pt")
             best_mAP = max(mAP, best_mAP)
             save_checkpoint({
                 'state_dict': model.state_dict(),

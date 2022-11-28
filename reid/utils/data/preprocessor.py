@@ -26,7 +26,7 @@ class Preprocessor(Dataset):
         fpath = fname
         if self.root is not None:
             fpath = osp.join(self.root, fname)
-
+        # print(fpath)
         img = Image.open(fpath).convert('RGB')
 
         if self.transform is not None:

@@ -1,10 +1,10 @@
 OUTPUT_DIR: "./exp_cuhk"
 INPUT:
   DATASET: "CUHKUnsupervised"
-  DATA_ROOT: "data/cuhk_sysu"
-  BATCH_SIZE_TRAIN: 2
+  DATA_ROOT: "data/CUHK-SYSU"
+  BATCH_SIZE_TRAIN: 4
 SOLVER:
-  MAX_EPOCHS: 20
+  MAX_EPOCHS: 50
 MODEL:
   LOSS:
     LUT_SIZE: 5532

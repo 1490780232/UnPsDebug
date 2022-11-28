@@ -8,7 +8,7 @@ from ..utils.data import BaseImageDataset
 class CUHK(BaseImageDataset):
     def __init__(self, data_dir = 'data_dir', verbose = True):
         super(CUHK, self).__init__()
-        self.dataset_dir = osp.join(data_dir, 'cuhk_sysu')
+        self.dataset_dir = osp.join(data_dir, 'CUHK-SYSU')
         print(data_dir)
         self.train_dir = osp.join(self.dataset_dir, 'crop_train_imgs')
         self.query_dir = osp.join(self.dataset_dir, 'crop_query_imgs')
@@ -24,7 +24,7 @@ class CUHK(BaseImageDataset):
             self.print_dataset_statistics(train, query, gallery)
 
         self.train = train
-        self.query = query
+        self.query = query 
         self.gallery = gallery
 
         self.num_train_pids, self.num_train_imgs, self.num_train_cams = self.get_imagedata_info(self.train)
@@ -56,11 +56,18 @@ class CUHK(BaseImageDataset):
         pid_container = set()
         for img_path in img_paths:
             pid = int(img_path[-10:-4])
+            # _, pid = map(int, pattern.search(img_path).groups())
+            # if pid == 5555:
+            #     continue
+
             pid_container.add(pid)
         pid2label = {pid: label for label, pid in enumerate(pid_container)}
+        # pid2label[5555] = 5555 #{pid: label for label, pid in enumerate(pid_container)}
+
         dataset = []
         for img_path in img_paths:
             pid = int(img_path[-10:-4])
+            # _, pid = map(int, pattern.search(img_path).groups())
             if relabel:
                 pid = pid2label[pid]
             dataset.append((img_path, pid, 1))

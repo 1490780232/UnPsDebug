@@ -123,27 +123,61 @@ def oim(inputs, targets, lut, momentum=0.5):
     return OIM.apply(inputs, targets, lut, torch.tensor(momentum))
 
 
+# class OIMLoss(nn.Module):
+#     def __init__(self, num_features,  num_pids, oim_momentum, oim_scalar,num_samples=0):
+#         super(OIMLoss, self).__init__()
+#         self.num_features = num_features
+#         self.num_pids = num_pids
+#         self.momentum = oim_momentum
+#         self.oim_scalar = oim_scalar
+#         self.num_samples = num_samples
+#         self.register_buffer("lut", torch.zeros(self.num_pids, self.num_features))
+
+#     def forward(self, inputs, roi_label):
+#         # # merge into one batch, background label = 0
+#         # targets = torch.cat(roi_label)
+#         # label = targets 
+#         # 
+#         #  1  # background label = -1
+#         # inds = label >= 0
+#         # label = label[inds]
+#         # inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+#         # projected = oim(inputs, label, self.lut, momentum=self.momentum)
+#         # projected *= self.oim_scalar
+#         # loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
+#         loss_oim = 0
+#         return loss_oim
+
+
+
+
 class OIMLoss(nn.Module):
-    def __init__(self, num_features,  num_pids, oim_momentum, oim_scalar,num_samples=0):
+    def __init__(self, num_features, num_pids, num_cq_size, oim_momentum, oim_scalar):
         super(OIMLoss, self).__init__()
         self.num_features = num_features
         self.num_pids = num_pids
+        self.num_unlabeled = num_cq_size
         self.momentum = oim_momentum
         self.oim_scalar = oim_scalar
-        self.num_samples = num_samples
+
         self.register_buffer("lut", torch.zeros(self.num_pids, self.num_features))
+        self.register_buffer("cq", torch.zeros(self.num_unlabeled, self.num_features))
+
+        self.header_cq = 0
 
     def forward(self, inputs, roi_label):
-        # # merge into one batch, background label = 0
-        # targets = torch.cat(roi_label)
-        # label = targets 
-        # 
-        #  1  # background label = -1
-        # inds = label >= 0
-        # label = label[inds]
-        # inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
-        # projected = oim(inputs, label, self.lut, momentum=self.momentum)
-        # projected *= self.oim_scalar
-        # loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
-        loss_oim = 0
+        # merge into one batch, background label = 0
+        targets = torch.cat(roi_label)
+        label = targets - 1  # background label = -1
+        inds = label >= 0
+        label = label[inds]
+        inputs = inputs[inds.unsqueeze(1).expand_as(inputs)].view(-1, self.num_features)
+
+        projected = oim(inputs, label, self.lut, self.cq, self.header_cq, momentum=self.momentum)
+        projected *= self.oim_scalar
+
+        self.header_cq = (
+            self.header_cq + (label >= self.num_pids).long().sum().item()
+        ) % self.num_unlabeled
+        loss_oim = F.cross_entropy(projected, label, ignore_index=5554)
         return loss_oim

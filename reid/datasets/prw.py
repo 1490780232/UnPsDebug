@@ -11,8 +11,8 @@ class PRW(BaseImageDataset):
         self.dataset_dir = osp.join(data_dir, 'PRW')
         print(data_dir)
         self.train_dir = osp.join(self.dataset_dir, 'crop_train_imgs')
-        self.query_dir = osp.join(self.dataset_dir, 'crop_query_imgs')
-        self.gallery_dir = osp.join(self.dataset_dir, 'crop_gallery_imgs')
+        self.query_dir = osp.join(self.dataset_dir, 'crop_query_imgs2')
+        self.gallery_dir = osp.join(self.dataset_dir, 'crop_gallery_imgs2')
         self.img_pid = {}
         for i, img in enumerate(glob.glob(osp.join(self.dataset_dir, 'gallery','*jpg'))):
             self.img_pid[img.split('/')[-1]]=i
@@ -31,9 +31,34 @@ class PRW(BaseImageDataset):
         self.num_query_pids, self.num_query_imgs, self.num_query_cams = self.get_imagedata_info(self.query)
         self.num_gallery_pids, self.num_gallery_imgs, self.num_gallery_cams = self.get_imagedata_info(self.gallery)
 
+    # def _process_dir(self, data_dir, relabel=True, gallery=False):
+    #     img_paths = glob.glob(osp.join(data_dir, '*.jpg'))  #
+    #     pattern = re.compile(r'(\d+)_(\d+)')
+    #     # pid_container = set()
+    #     # for img_path in img_paths:
+    #     #     pid, _ = map(int, pattern.search(img_path).groups())
+    #     #     if pid >=5000:
+    #     #         continue
+    #     #     if pid == -1: continue  # junk images are just ignored
+    #     #     pid_container.add(pid)
+    #     # pid2label = {pid: label for label, pid in enumerate(pid_container)}
+    #     # if not gallery:
+    #     #     for label, pid in enumerate(pid_container):
+    #     #         print(label,"=========",pid)
+    #     dataset = []
+    #     for img_path in img_paths:
+    #         pid, index = map(int, pattern.search(img_path).groups())
+    #         if gallery:
+    #             dataset.append((img_path, pid, -1))
+    #             continue
+    #         dataset.append((img_path, pid, 1))
+    #     return dataset
+        
+
     def _process_dir(self, data_dir, relabel=True, gallery=False):
         img_paths = glob.glob(osp.join(data_dir, '*.jpg'))  #
-        pattern = re.compile(r'(\d+)_(\d+)')
+        # pattern = re.compile(r'(\d+)_(\d+)')
+        img_paths = sorted(img_paths)
         # pid_container = set()
         # for img_path in img_paths:
         #     pid, _ = map(int, pattern.search(img_path).groups())
@@ -47,23 +72,20 @@ class PRW(BaseImageDataset):
         #         print(label,"=========",pid)
         dataset = []
         for img_path in img_paths:
-            pid, index = map(int, pattern.search(img_path).groups())
-            if gallery:
-                dataset.append((img_path, pid, -1))
-                continue
-            dataset.append((img_path, pid, 1))
+            dataset.append((img_path, 1, 1))
         return dataset
+
     def _process_dir_train(self, data_dir, relabel=True, gallery=False):
         img_paths = glob.glob(osp.join(data_dir, '*.jpg'))  #
         pattern = re.compile(r'(\d+)_(\d+)')
         pid_container = set()
         for img_path in img_paths:
-            pid = int(img_path[-10:-4])
+            pid = int(img_path[-9:-4])
             pid_container.add(pid)
         pid2label = {pid: label for label, pid in enumerate(pid_container)}
         dataset = []
         for img_path in img_paths:
-            pid = int(img_path[-10:-4])
+            pid = int(img_path[-9:-4])
             if relabel:
                 pid = pid2label[pid]
             dataset.append((img_path, pid, 1))
